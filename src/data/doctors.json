@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Avantika S",
+    "specialties": ["Paediatrics", "Neonatal Care"],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Rajesh Kumar",
+    "specialties": ["Cardiology", "Internal Medicine"],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Priya Sharma",
+    "specialties": ["Gynaecology", "Obstetrics"],
+    "image": "doctor",
+    "schedule": "Tue-Sat : 9:00 AM - 4:00 PM"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Amit Patel",
+    "specialties": ["Orthopedics", "Sports Medicine"],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 8:00 AM - 3:00 PM"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Amit Patel",
+    "specialties": ["Orthopedics", "Sports Medicine"],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 8:00 AM - 3:00 PM"
+  }
+]
