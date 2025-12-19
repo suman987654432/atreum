@@ -3,7 +3,7 @@ import doctor from "../../images/doctor.png";
 
 const DoctorCard = ({ doctorData }) => {
   return (
-      <div className="flex items-center min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] bg-transparent px-1 sm:px-2">
+      <div className="flex items-center min-h-[50vh] sm:min-h-[55vh] md:min-h-[70vh] bg-transparent px-1 sm:px-2">
                 <div
                     className="relative rounded-[20px] sm:rounded-[24px] bg-[#18628D] px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-10 flex flex-col sm:flex-row items-center sm:items-start w-full"
                     style={{

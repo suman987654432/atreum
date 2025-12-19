@@ -6,15 +6,15 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 md:top-10 left-0 right-0 w-full flex justify-center px-4 z-50 bg-transparent">
-      <div className="flex items-center justify-between w-full md:w-[95%] bg-white rounded-full shadow-lg px-4 md:px-8 py-3">
+    <nav className="fixed top-4 md:top-8 lg:top-10 left-0 right-0 w-full flex justify-center px-2 md:px-4 lg:px-6 z-50 bg-transparent">
+      <div className="flex items-center justify-between w-full max-w-[98%] md:max-w-[95%] lg:max-w-7xl bg-white rounded-full shadow-lg px-3 md:px-4 lg:px-8 py-2 md:py-2.5 lg:py-3">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain" />
+        <img src={logo} alt="Logo" className="h-9 w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 object-contain flex-shrink-0" />
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6 xl:gap-10 font-medium">
+        <ul className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-10 font-medium text-sm xl:text-base">
           <li>
-            <a href="#" className="relative text-gray-500 font-semibold hover:text-[#19628D] transition-colors group">
+            <a href="#" className="relative text-gray-500 font-semibold hover:text-[#19628D] transition-colors group whitespace-nowrap">
               Home
               <span className="pointer-events-none absolute left-0 -bottom-1 w-full h-0.5 bg-[#19628D] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 rounded-full"></span>
             </a>
@@ -24,21 +24,21 @@ const Navbar = () => {
           <li className="relative group">
             <a
               href="#"
-              className="flex items-center gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors"
+              className="flex items-center gap-0.5 lg:gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap"
             >
               Departments
               <ChevronDown
-                size={18}
-                className="transition-transform group-hover:rotate-180"
+                size={16}
+                className="transition-transform group-hover:rotate-180 lg:w-[18px] lg:h-[18px]"
               />
             </a>
 
-            <ul className="absolute left-0 top-full mt-2 min-w-[200px] bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30">
+            <ul className="absolute left-0 top-full mt-2 min-w-[180px] lg:min-w-[200px] bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30">
               {["Cardiology", "Neurology", "Orthopedics", "Pediatrics"].map((item, index) => (
                 <li key={item}>
                   <a
                     href="#"
-                    className={`block px-5 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
+                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
                       index === 0 ? 'rounded-t-lg' : ''
                     } ${index === 3 ? 'rounded-b-lg' : ''}`}
                   >
@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors">
+            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               Doctors
             </a>
           </li>
@@ -59,25 +59,21 @@ const Navbar = () => {
           <li className="relative group">
             <a
               href="#"
-              className="flex items-center gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors"
+              className="flex items-center gap-0.5 lg:gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap"
             >
               Health Packages
               <ChevronDown
-                size={18}
-                className="transition-transform group-hover:rotate-180"
+                size={16}
+                className="transition-transform group-hover:rotate-180 lg:w-[18px] lg:h-[18px]"
               />
             </a>
 
-            <ul className="absolute left-0 top-full mt-2 min-w-[240px] bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30">
-              {[
-                "Basic Health Checkup",
-                "Executive Health Checkup",
-                "Senior Citizen Package",
-              ].map((item, index) => (
+            <ul className="absolute left-0 top-full mt-2 min-w-[200px] lg:min-w-[240px] bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30">
+              {["Basic Health Checkup", "Executive Health Checkup", "Senior Citizen Package"].map((item, index) => (
                 <li key={item}>
                   <a
                     href="#"
-                    className={`block px-5 py-3 text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
+                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
                       index === 0 ? 'rounded-t-lg' : ''
                     } ${index === 2 ? 'rounded-b-lg' : ''}`}
                   >
@@ -89,26 +85,26 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors">
+            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               Patient Resources
             </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors">
+            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               About Us
             </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors">
+            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               Careers
             </a>
           </li>
         </ul>
 
         {/* Desktop Button */}
-        <button className="hidden lg:block bg-[#18628D] text-white font-medium rounded-full px-5 xl:px-7 py-2 shadow-md hover:bg-[#155072] transition-colors text-sm xl:text-base">
+        <button className="hidden lg:block bg-[#18628D] text-white font-medium rounded-full px-4 lg:px-5 xl:px-7 py-2 shadow-md hover:bg-[#155072] transition-colors text-xs lg:text-sm xl:text-base whitespace-nowrap flex-shrink-0">
           BOOK APPOINTMENT
         </button>
 
@@ -123,7 +119,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl p-6 z-40 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden fixed top-20 left-2 right-2 bg-white rounded-2xl shadow-2xl p-6 z-40 max-h-[80vh] overflow-y-auto">
           <ul className="flex flex-col gap-4">
             <li>
               <a href="#" className="relative block text-gray-700 font-semibold hover:text-[#19628D] transition-colors py-2 group">

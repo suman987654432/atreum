@@ -92,15 +92,15 @@ const Feedback = () => {
     };
 
     return (
-        <section className="relative py-16 bg-[#EDF8FF] px-4 sm:px-6 md:px-12 overflow-hidden">
-            <div className="absolute -right-10 sm:-right-16 md:-right-20 top-[1%] w-30 h-30 sm:w-40 sm:h-40 md:w-40 md:h-40 bg-[#12B0A6] rounded-full z-0 transition-all duration-300"></div>
+        <section className="relative py-6 sm:py-12 md:py-16 bg-[#EDF8FF] px-1 sm:px-6 md:px-12 overflow-hidden">
+            <div className="absolute -right-10 sm:-right-16 md:-right-20 top-[1%] w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-[#12B0A6] rounded-full z-0 transition-all duration-300"></div>
             
             {/* Heading */}
-            <div className="max-w-7xl mx-auto mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#02908B] mb-4">
+            <div className="max-w-7xl mx-auto mb-4 sm:mb-10 md:mb-12 px-2">
+                <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-[#02908B] mb-2 sm:mb-4">
                     PATIENTS SPEAK
                 </h2>
-                <p className="text-gray-700 max-w-2xl text-base md:text-lg">
+                <p className="text-gray-700 max-w-2xl text-xs sm:text-base md:text-lg">
                     Comprehensive patient reflections on their care, recovery, and overall treatment outcomes.
                 </p>
             </div>
@@ -111,13 +111,16 @@ const Feedback = () => {
                     ref={sliderRef}
                     onMouseEnter={() => setIsHover(true)}
                     onMouseLeave={() => setIsHover(false)}
-                    className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide items-stretch"
+                    className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide items-stretch gap-2 sm:gap-4 md:gap-6 px-1"
                 >
                     {feedbackData.map((item, idx) => (
-                        <div key={item.id} className="snap-center min-w-[80%] md:min-w-[55%] flex justify-center items-start">
-                            <div className="flex flex-col md:flex-row gap-4 items-start h-full">
+                        <div
+                            key={item.id}
+                            className="snap-center min-w-[260px] max-w-[320px] sm:min-w-[320px] sm:max-w-[380px] md:min-w-[700px] lg:min-w-[750px] flex justify-center items-start flex-shrink-0"
+                        >
+                            <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 items-start w-full">
                                 {/* Image / Video Card */}
-                                <div className="relative w-[320px] h-[420px] rounded-[24px] overflow-hidden bg-gray-300 group">
+                                <div className="relative w-[120px] sm:w-[150px] md:w-[320px] lg:w-[340px] h-[170px] sm:h-[220px] md:h-[420px] rounded-[10px] sm:rounded-[16px] md:rounded-[24px] overflow-hidden bg-gray-300 group flex-shrink-0">
                                     {item.video ? (
                                         isYouTubeUrl(item.video) ? (
                                             <>
@@ -194,18 +197,18 @@ const Feedback = () => {
                                     )}
 
                                     {/* Name */}
-                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                                        <p className="text-white font-semibold tracking-wide">{item.name}</p>
+                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-1.5 sm:p-3 md:p-5">
+                                        <p className="text-white font-semibold tracking-wide text-[10px] sm:text-xs md:text-base truncate">{item.name}</p>
                                     </div>
                                 </div>
 
                                 {/* Content Card */}
-                                <div className="w-[360px] h-[420px] rounded-[24px] bg-[#18628D] p-8 flex flex-col justify-between">
-                                    <div>
-                                        <h3 className="text-white text-2xl font-bold mb-4">{item.title}</h3>
-                                        <p className="text-[#D4E9F1] text-base leading-relaxed">{item.desc}</p>
+                                <div className="w-[120px] sm:w-[150px] md:w-[340px] lg:w-[360px] h-[170px] sm:h-[220px] md:h-[420px] rounded-[10px] sm:rounded-[16px] md:rounded-[24px] bg-[#18628D] p-2 sm:p-4 md:p-8 flex flex-col justify-between flex-shrink-0 overflow-hidden">
+                                    <div className="overflow-hidden">
+                                        <h3 className="text-white text-xs sm:text-base md:text-2xl font-bold mb-1.5 sm:mb-3 md:mb-4 line-clamp-2">{item.title}</h3>
+                                        <p className="text-[#D4E9F1] text-[10px] sm:text-xs md:text-base leading-snug sm:leading-relaxed line-clamp-3 sm:line-clamp-6 md:line-clamp-none">{item.desc}</p>
                                     </div>
-                                    <p className="text-white font-bold tracking-wide uppercase">{item.name}</p>
+                                    <p className="text-white font-bold tracking-wide uppercase text-[9px] sm:text-xs md:text-base truncate mt-2">{item.name}</p>
                                 </div>
                             </div>
                         </div>

@@ -19,30 +19,33 @@ const Hero = () => {
                     <Navbar />
                 </div>
                 {/* Background Image (hide on mobile) */}
-               <img
-  src={hero}
-  alt="Hero"
-  className="absolute inset-0 w-full h-full object-cover will-change-transform"
-  style={{
-    filter: `blur(${scrollEffect.blur}px)`,
-    opacity: scrollEffect.opacity,
-  }}
-/>
+                <img
+                    src={hero}
+                    alt="Hero"
+                    className="absolute inset-0 w-full h-full object-cover will-change-transform"
+                    style={{
+                        filter: `blur(${scrollEffect.blur}px)`,
+                        opacity: scrollEffect.opacity,
+                    }}
+                />
 
 
                 {/* Text Overlay */}
                 <div
-                    className="relative z-10 h-full flex items-center px-4 transition-all duration-300 bg-white/90 sm:bg-transparent"
+                    className="relative z-10 h-full flex items-center px-2 sm:px-6 md:px-8 lg:px-4 xl:px-24 transition-all duration-300 bg-white/90 sm:bg-transparent"
                     style={{ filter: `blur(${scrollEffect.blur}px)`, opacity: scrollEffect.opacity }}
                 >
                     <div className="w-full flex flex-col items-center sm:items-start justify-center">
-                        <h1 className="text-4xl xs:text-5xl font-bold leading-tight text-[#19628D] text-center sm:text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl sm:leading-tight max-w-3xl
-                            mt-24 sm:mt-0 mb-8 sm:mb-0
-                            sm:ml-8 md:ml-12 lg:ml-20 xl:ml-24
-                            "
-                        >
-                            <span className="block sm:hidden mb-8"></span>
-                            <span className="block sm:hidden text-5xl xs:text-6xl font-extrabold mb-8 mt-8">
+                        <h1 className="
+                            text-3xl xs:text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                            font-bold leading-tight text-[#19628D] text-center sm:text-left
+                            max-w-xl sm:max-w-2xl md:max-w-3xl
+                            mt-16 sm:mt-0 mb-6 sm:mb-0
+                            sm:ml-0 md:ml-2 lg:ml-6 xl:ml-12
+                            mx-auto sm:mx-0
+                        ">
+                            <span className="block sm:hidden mb-6"></span>
+                            <span className="block sm:hidden text-3xl xs:text-4xl font-extrabold mb-6 mt-6">
                                 YOUR JOURNEY<br />
                                 TOWARDS BETTER<br />
                                 HEALTH STARTS<br />
@@ -57,7 +60,7 @@ const Hero = () => {
                         </h1>
                         {/* Mobile Only Button */}
                         <button
-                            className="block sm:hidden mt-10 bg-[#18628D] text-white font-semibold rounded-full px-8 py-4 text-xl shadow-lg"
+                            className="block sm:hidden mt-8 bg-[#18628D] text-white font-semibold rounded-full px-6 py-3 text-lg shadow-lg"
                         >
                             BOOK APPOINTMENT
                         </button>
