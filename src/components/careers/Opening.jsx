@@ -9,7 +9,7 @@ const Opening = () => {
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-teal-600 text-xl font-bold uppercase mb-6">
+        <h2 className="text-teal-600 text-2xl uppercase font-semibold font-oswald mb-6">
           Job Openings
         </h2>
 
