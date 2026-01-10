@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
+            <a href="/doctor" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               Doctors
             </a>
           </li>
@@ -147,7 +147,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="#" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
+              <a href="/doctor" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
                 Doctors
               </a>
             </li>

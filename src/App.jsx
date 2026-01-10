@@ -4,6 +4,7 @@ import Navbar from './components/LandingPage/Navbar';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
+import DoctorPage from './pages/DoctorPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
               <Route path='/' element={<LandingPage />} />
               <Route path='/about' element={<AboutPage />} />
               <Route path='/careers' element={<CareersPage />} />
+              <Route path='/doctor' element={<DoctorPage />} />
             </Routes>
           </div>
         </BrowserRouter>
