@@ -122,7 +122,7 @@ const Navbar = () => {
         <div className="lg:hidden fixed top-20 left-2 right-2 bg-white rounded-2xl shadow-2xl p-6 z-40 max-h-[80vh] overflow-y-auto">
           <ul className="flex flex-col gap-4">
             <li>
-              <a href="#" className="relative block text-gray-700 font-semibold hover:text-[#19628D] transition-colors py-2 group">
+              <a href="/" className="relative block text-gray-700 font-semibold hover:text-[#19628D] transition-colors py-2 group">
                 Home
                 <span className="pointer-events-none absolute left-0 -bottom-0.5 w-full h-0.5 bg-[#19628D] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 rounded-full"></span>
               </a>

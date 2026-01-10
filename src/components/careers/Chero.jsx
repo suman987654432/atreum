@@ -25,7 +25,7 @@ const Chero = () => {
       <div className="hidden sm:flex flex-1 h-full justify-end items-end pr-4 sm:pr-6 md:pr-10 lg:pr-12 xl:pr-16">
         <img
           src={career}
-          alt="Career"
+        
           className="object-contain h-[50%] sm:h-[60%] md:h-[70%] lg:h-[75%] xl:h-[80%] w-auto max-w-full"
         />
       </div>
