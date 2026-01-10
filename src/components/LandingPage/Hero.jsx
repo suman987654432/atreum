@@ -15,9 +15,7 @@ const Hero = () => {
         <>
             {/* Navbar Overlay */}
             <section ref={elementRef} className="relative w-full h-screen z-10">
-                <div className="sticky top-0 left-0 w-full z-20">
-                    <Navbar />
-                </div>
+
                 {/* Background Image (hide on mobile) */}
                 <img
                     src={hero}

@@ -11,12 +11,12 @@ const Footer = () => {
         style={{ clipPath: "inset(0 0 50% 0)" }}
       /> */}
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 xl:grid-cols-5 gap-12">
           
           {/* Left Section */}
-          <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col justify-between gap-8 xl:col-span-2">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img
@@ -42,11 +42,11 @@ const Footer = () => {
           </div>
 
           {/* Right Links Section */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <div className="xl:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
             
             {/* Clinical */}
             <div>
-              <h4 className="font-bold mb-4">Clinical Specialities</h4>
+              <h4 className="font-bold text-sm tracking-wide mb-4 whitespace-nowrap">Clinical Specialities</h4>
               <ul className="space-y-2 text-sm text-white/90">
                 {[
                   "Orthopaedics",
@@ -65,7 +65,7 @@ const Footer = () => {
 
             {/* Visit */}
             <div>
-              <h4 className="font-bold mb-4">Visit</h4>
+              <h4 className="font-bold text-sm uppercase tracking-wide mb-4">Visit</h4>
               <ul className="space-y-2 text-sm text-white/90">
                 {[
                   "Our Doctors",
@@ -84,9 +84,9 @@ const Footer = () => {
 
             {/* Follow */}
             <div>
-              <h4 className="font-bold mb-4">Follow</h4>
+              <h4 className="font-bold text-sm uppercase tracking-wide mb-4">Follow</h4>
               <ul className="space-y-2 text-sm text-white/90">
-                {["Instagram", "Twitter", "LinkedIn"].map((item) => (
+                {["instagram", "twitter", "linkedin"].map((item) => (
                   <li key={item} className="hover:text-white cursor-pointer">
                     {item}
                   </li>
@@ -96,7 +96,7 @@ const Footer = () => {
 
             {/* Legal */}
             <div>
-              <h4 className="font-bold mb-4">Legal</h4>
+              <h4 className="font-bold text-sm uppercase tracking-wide mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-white/90">
                 {["Terms", "Privacy"].map((item) => (
                   <li key={item} className="hover:text-white cursor-pointer">
@@ -109,9 +109,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-white/20 pt-6 text-center sm:text-left">
+        <div className="mt-12 pt-2 text-left">
           <p className="text-sm text-white/80">
-            © 2025 ATREUM. All rights reserved.
+            ©2025 , all right reserved
           </p>
         </div>
       </div>

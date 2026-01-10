@@ -14,7 +14,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-10 font-medium text-sm xl:text-base">
           <li>
-            <a href="#" className="relative text-gray-500 font-semibold hover:text-[#19628D] transition-colors group whitespace-nowrap">
+            <a href="/" className="relative text-gray-500 font-semibold hover:text-[#19628D] transition-colors group whitespace-nowrap">
               Home
               <span className="pointer-events-none absolute left-0 -bottom-1 w-full h-0.5 bg-[#19628D] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 rounded-full"></span>
             </a>
@@ -91,13 +91,13 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
+            <a href="/about" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               About Us
             </a>
           </li>
 
           <li>
-            <a href="#" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
+            <a href="/careers" className="text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap">
               Careers
             </a>
           </li>

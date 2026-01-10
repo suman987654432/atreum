@@ -4,7 +4,7 @@ import Journey from '../components/LandingPage/Journey'
 import Meet from '../components/LandingPage/Meet'
 import Facility from '../components/LandingPage/Facility'
 import Feedback from '../components/LandingPage/Feedback'
-import Footer from '../components/Footer'
+
 
 const LandingPage = () => {
   return (
@@ -15,7 +15,7 @@ const LandingPage = () => {
       <Meet/>
       <Facility/>
       <Feedback/>
-      <Footer/>
+   
     </div>
   )
 }

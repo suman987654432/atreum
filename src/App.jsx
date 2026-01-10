@@ -1,13 +1,28 @@
-import LandingPage from './pages/LandingPage'
-import Navbar from './components/LandingPage/Navbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import Navbar from './components/LandingPage/Navbar';
+import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
+import CareersPage from './pages/CareersPage';
 
 const App = () => {
   return (
     <>
-      <Navbar/>
-      <LandingPage/>
+      <Navbar />
+      <div className="flex flex-col min-h-screen">
+        <BrowserRouter>
+          <div className="flex-1">
+            <Routes>
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/careers' element={<CareersPage />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+        <Footer />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
