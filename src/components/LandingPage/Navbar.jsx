@@ -177,13 +177,13 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="#" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
+              <a href="/about" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
                 About Us
               </a>
             </li>
 
             <li>
-              <a href="#" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
+              <a href="/careers" className="block text-gray-700 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors py-2">
                 Careers
               </a>
             </li>
