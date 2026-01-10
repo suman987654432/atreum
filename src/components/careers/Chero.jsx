@@ -1,7 +1,7 @@
 import career from "../../images/career.png";
 import bg from "../../images/bg.png";
 
-const CareerHero = () => {
+const Chero = () => {
   return (
     <div
       className="relative h-[55vh] xs:h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] xl:h-[95vh] w-full flex flex-col sm:flex-row items-center overflow-hidden"
@@ -33,4 +33,4 @@ const CareerHero = () => {
   );
 };
 
-export default CareerHero;
+export default Chero;

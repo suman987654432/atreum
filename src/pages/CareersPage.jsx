@@ -1,10 +1,10 @@
-import CareerHero from "../components/careers/careerHero";
+import Chero from "../components/careers/Chero";
 import Opening from "../components/careers/Opening";
 const CareersPage = () => {
     return (
         <>
-            <CareerHero />
-            <Opening/>
+            <Chero />
+            <Opening />
         </>
     )
 }
