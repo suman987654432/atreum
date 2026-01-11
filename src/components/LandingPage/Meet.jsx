@@ -91,7 +91,7 @@ const Excellence = () => {
             {/* card slide  */}
             <div className="max-w-7xl mx-auto relative px-2 sm:px-4 md:px-8 lg:px-12">
                 {/* Slider Container */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden" style={{ paddingTop: '40px', marginTop: '-40px' }}>
                     <div
                         className={`flex gap-2 sm:gap-3 md:gap-4 ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
                         style={{ transform: `translateX(-${currentIndex * slideWidth}px)` }}

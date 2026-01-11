@@ -3,14 +3,14 @@ import doctor from "../../images/doctor.png";
 
 const DoctorCard = ({ doctorData }) => {
   return (
-      <div className="flex items-center min-h-[50vh] sm:min-h-[55vh] md:min-h-[70vh] bg-transparent px-1 sm:px-2">
+      <div className="flex items-center  px-1 sm:px-2 pt-8 sm:pt-12 md:pt-16">
                 <div
                     className="relative rounded-[20px] sm:rounded-[24px] bg-[#18628D] px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-10 flex flex-col sm:flex-row items-center sm:items-start w-full"
                     style={{
                         minWidth: 300,
                         maxWidth: 600,
-                        minHeight: 180,
-                        boxShadow: "0 8px 32px 0 rgba(33, 118, 174, 0.18)"
+                        minHeight: 280,
+                        
                     }}
                 >
                     {/* Doctor Image - absolute bottom left */}
@@ -23,8 +23,8 @@ const DoctorCard = ({ doctorData }) => {
     
                     {/* Card Content */}
                     <div className="sm:ml-56 md:ml-64 ml-0 w-full pt-2">
-                        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">{doctorData.name}</h2>
-                        <p className="text-[#e0eaf3] text-sm sm:text-base md:text-lg mb-3 sm:mb-4 font-medium">
+                        <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 whitespace-nowrap">{doctorData.name}</h2>
+                        <p className="text-[#e0eaf3] text-sm sm:text-base md:text-lg mb-3 sm:mb-4 font-medium whitespace-nowrap">
                             {doctorData.specialties.join(' | ')}
                         </p>
                         <div className="flex items-center text-[#e0eaf3] mb-4 sm:mb-6">

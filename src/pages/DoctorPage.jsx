@@ -7,7 +7,7 @@ const DoctorPage = () => {
    <>
      <div className="mb-[110px]">
        <DocHero/>
-       <br />
+      
        <ListDoctor />
      </div>
      <br />

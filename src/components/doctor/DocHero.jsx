@@ -6,7 +6,7 @@ const DocHero = () => {
   const [showAvailable, setShowAvailable] = useState(false);
 
   return (
-    <section className="relative w-full h-[450px]">
+    <section className="relative w-full h-[420px] sm:h-[460px] md:h-[520px]">
       {/* Background */}
       <img
         src={bg}
@@ -15,40 +15,40 @@ const DocHero = () => {
       />
 
       {/* Card (Half overlap) */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-110px] w-[85%]">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-90px] sm:bottom-[-110px] w-[92%] sm:w-[88%] lg:w-[85%] max-w-6xl">
         <div
-          className="bg-white rounded-2xl px-8 py-10"
+          className="bg-white rounded-2xl px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10"
           style={{ boxShadow: "0 10px 34px 0 #02908B" }}
         >
           {/* Title */}
-          <h2 className="text-2xl font-semibold text-[#0B5C8F] mb-6">
+          <h2 className="text-2xl font-semibold text-[#0B5C8F] mb-5 sm:mb-6">
             Find your Doctor
           </h2>
 
           {/* Inputs */}
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 items-stretch md:items-center">
             <input
               type="text"
               placeholder="Enter doctor name"
-              className="flex-1 border rounded-lg px-4 py-3 outline-none"
+              className="w-full border rounded-lg px-4 py-3 outline-none"
             />
 
-            <select className="flex-1 border rounded-lg px-4 py-3 text-gray-500">
+            <select className="w-full md:w-auto flex-1 border rounded-lg px-4 py-3 text-gray-500">
               <option>Hospital branch</option>
             </select>
 
-            <select className="flex-1 border rounded-lg px-4 py-3 text-gray-500">
+            <select className="w-full md:w-auto flex-1 border rounded-lg px-4 py-3 text-gray-500">
               <option>Department</option>
             </select>
 
-            <button className="bg-[#0B5C8F] text-white px-8 py-3 rounded-full font-semibold">
+            <button className="w-full md:w-auto bg-[#0B5C8F] text-white px-8 py-3 rounded-full font-semibold">
               FIND
             </button>
           </div>
 
           {/* Bottom Row */}
-          <div className="flex justify-between items-center mt-6 text-sm text-gray-600">
-            <div className="flex gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-5 sm:mt-6 gap-3 sm:gap-4 text-sm text-gray-600">
+            <div className="flex flex-wrap gap-4">
               <span className="cursor-pointer flex items-center gap-2">
                 Filter By <FaChevronDown />
               </span>
