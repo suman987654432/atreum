@@ -4,15 +4,15 @@ import doctorsData from '../../data/doctors.json'
 
 const ListDoctor = () => {
   // Group doctors by their first specialty
-  const orthopaedicsDoctors = doctorsData.filter(doctor => 
+  const orthopaedicsDoctors = doctorsData.filter(doctor =>
     doctor.specialties.some(specialty => specialty.toLowerCase().includes('orthopedics'))
   )
-  
-  const urologyDoctors = doctorsData.filter(doctor => 
+
+  const urologyDoctors = doctorsData.filter(doctor =>
     doctor.specialties.some(specialty => specialty.toLowerCase().includes('urology'))
   )
-  
-  const paediatricsDoctors = doctorsData.filter(doctor => 
+
+  const paediatricsDoctors = doctorsData.filter(doctor =>
     doctor.specialties.some(specialty => specialty.toLowerCase().includes('paediatrics'))
   )
 

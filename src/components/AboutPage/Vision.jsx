@@ -30,7 +30,7 @@ const Vision = () => {
                         </div>
                         <div className="p-3 sm:p-5">
                             <p className="text-gray-700 text-sm sm:text-base">
-                                fermentum posuere urna nec tincidunt praesent semper feugiat. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Venenatis a condimentum.
+                                To deliver world-class healthcare that is accessible, reliable, economical, and consistently responsive.
                             </p>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const Vision = () => {
                     {/* Mission Card */}
                     <div className="bg-white rounded-3xl  border border-gray-300 overflow-hidden p-3">
                         <div className="bg-[#18628D] p-6 sm:p-7 flex items-center gap-4 rounded-xl shadow-[0_10px_30px_rgba(13,177,171,0.3)]">
-                                                       <div className="w-12 h-12 sm:w-14 sm:h-14">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14">
                                 <img src={vision} alt="Vision" className="w-full h-full object-contain" />
                             </div>
                             <h3 className="text-white text-xl sm:text-2xl font-bold">
@@ -47,8 +47,7 @@ const Vision = () => {
                         </div>
                         <div className="p-5 sm:p-6">
                             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                fermentum posuere urna nec tincidunt praesent semper feugiat. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Venenatis a condimentum.
-                            </p>
+                                To enable healthier lives through absolute care and meaningful patient outcomes. We aim to build a healthcare brand of the highest calibre while continuously expanding our services and accessibility.                            </p>
                         </div>
                     </div>
 
@@ -63,8 +62,15 @@ const Vision = () => {
                         </div>
                         <div className="p-5 sm:p-6">
                             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                                fermentum posuere urna nec tincidunt praesent semper feugiat. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Venenatis a condimentum.
-                            </p>
+                                Patient First: Your well-being guides every decision.
+
+                                Compassion & Empathy: Care rooted in understanding and kindness.
+
+                                Dignity & Respect: Every individual treated with honour.
+
+                                Excellence in Experience: Delivering exceptional patient satisfaction. <br />
+
+                                Trusted Care: Dependable, remarkable healthcare you can rely on.                            </p>
                         </div>
                     </div>
 

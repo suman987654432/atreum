@@ -1,8 +1,12 @@
-import React from 'react'
+import Deparhero from '../components/departments/Deparhero'
+import Specialist from '../components/departments/Specialist'
 
 const DepartmentPage = () => {
   return (
-    <div>DepartmentPage</div>
+    <>
+      <Deparhero />
+     <Specialist/>
+    </>
   )
 }
 

@@ -94,15 +94,14 @@ const Feedback = () => {
     return (
         <section className="relative py-6 sm:py-12 md:py-16 bg-[#EDF8FF] px-1 sm:px-6 md:px-12 overflow-hidden">
             <div className="absolute -right-10 sm:-right-16 md:-right-20 top-[1%] w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-[#12B0A6] rounded-full z-0 transition-all duration-300"></div>
-            
+
             {/* Heading */}
             <div className="max-w-7xl mx-auto mb-4 sm:mb-10 md:mb-12 px-2">
                 <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-[#02908B] mb-2 sm:mb-4">
                     PATIENTS SPEAK
                 </h2>
                 <p className="text-gray-700 max-w-2xl text-xs sm:text-base md:text-lg">
-                    Comprehensive patient reflections on their care, recovery, and overall treatment outcomes.
-                </p>
+                    Stories of healing and care                </p>
             </div>
 
             {/* Slider */}

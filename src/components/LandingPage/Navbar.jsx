@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Departments Dropdown */}
           <li className="relative group">
             <a
-              href="#"
+              href="/department"
               className="flex items-center gap-0.5 lg:gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap"
             >
               Departments

@@ -59,9 +59,7 @@ const Excellence = () => {
           ATREUM CENTER OF EXCELLENCE
         </h2>
         <p className="text-gray-700 max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed">
-          At Atreum, we provide world-class clinical care supported by
-          comprehensive facilities and highly qualified doctors—ensuring safe,
-          comfortable and effective treatment for every patient.
+          At Atreum, we combine expert doctors with advanced medical facilities to deliver care that prioritises your safety, comfort, and recovery.
         </p>
       </div>
 

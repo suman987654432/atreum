@@ -21,16 +21,13 @@ const About2 = () => {
           </h2>
 
           <p className="text-gray-600 text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg mb-3 sm:mb-4 md:mb-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Curabitur gravida arcu ac tortor dignissim convallis aenean et
-            tortor. Nunc sed blandit libero volutpat sed cras ornare arcu dui.
+           Atreum is built on a simple purpose: to make quality healthcare affordable and accessible for every family. We combine modern medical technology with a compassionate, patient-first approach to deliver safe, specialised, and transparent care.
           </p>
 
           <p className="text-gray-600 text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg leading-relaxed">
-            Amet porttitor eget dolor morbi non arcu risus quis varius.
-            Aliquam etiam erat velit scelerisque in. Morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas.
+           With experienced doctors, dedicated staff, and a commitment to excellent healthcare, Atreum has become a trusted healthcare partner for the community. 
+Established in 2019, our journey continues with the same promise: quality care for all.
+
           </p>
         </div>
 

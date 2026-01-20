@@ -89,8 +89,7 @@ const Excellence = () => {
                     OUR FACILITY
                 </h2>
                 <p className="mt-2 sm:mt-3 md:mt-4 text-gray-700 max-w-4xl text-sm sm:text-base md:text-lg leading-relaxed">
-                    Atreum is dedicated to ensuring your speedy and pain-free recovery. Within well-trained and experienced professionals and well-equipped facilities, we are committed to restoring you to the fullness of health through efficient and comprehensive care. With Atreum, you are always in safe and efficient hands.
-                </p>
+At Atreum, your recovery comes first. Skilled professionals, advanced equipment, and modern facilities come together to ensure safe, comfortable, and effective care for all your needs.                </p>
             </div>
 
             {/* card slide  */}

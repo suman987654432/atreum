@@ -16,7 +16,7 @@ const Chero = () => {
       <div className="flex-1 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-0">
         <h1 className="uppercase font-semibold font-oswald text-[#19628D] leading-tight max-w-full sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-3xl">
           <span className="block text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
-            At <span className="text-[#0DB1AB]">Atreum</span> , we grow talent to build meaningful impact together.
+            At <span className="text-[#0DB1AB]">Join Us </span> in Delivering Care That Matters.
           </span>
         </h1>
       </div>

@@ -15,14 +15,12 @@ const AboutHead = () => {
           <h1 className="uppercase font-bold font-oswald text-[#19628D] leading-tight max-w-full sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl">
             <div className="flex flex-col space-y-1 xs:space-y-2 sm:space-y-2 md:space-y-3">
               <span className="block text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                <span className="text-[#0DB1AB]">Atreum</span> delivers
+                <span className="text-[#0DB1AB]">Your Health, Our Commitment</span> 
               </span>
               <span className="block text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                advanced, affordable
+                Expert Care Made Affordable
               </span>
-              <span className="block text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                healthcare for all.
-              </span>
+           
             </div>
           </h1>
         </div>
