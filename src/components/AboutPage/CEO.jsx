@@ -20,31 +20,27 @@ const CEO = () => {
                         </p>
 
                         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-                            fermentum posuere urna nec tincidunt praesent semper feugiat.
-                            Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
-                            Massa vitae tortor condimentum lacinia quis vel eros donec ac.
-                            Venenatis a condimentum. fermentum posuere urna nec tincidunt
-                            praesent semper feugiat.
+                            Healthcare is deeply personal. It is about trust placed in moments that matter most. At Atreum, we honour that trust by putting people at the centre of every decision we make.
                         </p>
 
                         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-                            Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
-                            Massa vitae tortor condimentum lacinia quis vel eros donec ac.
-                            Venenatis a condimentum.
+                            Our care is guided by clinical excellence, ethical responsibility, and genuine compassion. From the first consultation to recovery and beyond, we focus on clarity, consistency, and outcomes that truly improve quality of life.
                         </p>
 
                         <p className="text-gray-700 mb-6">
-                            fermentum posuere urna nec tincidunt praesent semper feugiat.
-                            Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+                           Atreum is built on a simple promise. To care responsibly, to act with integrity, and to restore confidence and wellbeing at every step of the journey.
                         </p>
 
                         <div>
-                            <p className="text-gray-700 mb-1">Sincerely,</p>
+                            <p className="text-gray-700 mb-1">Warm regards,</p>
                             <p className="text-[#19628D] font-semibold">
                                 Dr. Harish Kumar
                             </p>
                             <p className="text-gray-500 text-sm">
                                 Founder & Chairman
+                            </p>
+                            <p className="text-gray-700 text-sm font-bold">
+                                Atreum Hospitals
                             </p>
                         </div>
                     </div>
