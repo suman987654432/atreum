@@ -38,9 +38,8 @@ const Navbar = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
-                      index === 0 ? 'rounded-t-lg' : ''
-                    } ${index === 3 ? 'rounded-b-lg' : ''}`}
+                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${index === 0 ? 'rounded-t-lg' : ''
+                      } ${index === 3 ? 'rounded-b-lg' : ''}`}
                   >
                     {item}
                   </a>
@@ -73,9 +72,8 @@ const Navbar = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${
-                      index === 0 ? 'rounded-t-lg' : ''
-                    } ${index === 2 ? 'rounded-b-lg' : ''}`}
+                    className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${index === 0 ? 'rounded-t-lg' : ''
+                      } ${index === 2 ? 'rounded-b-lg' : ''}`}
                   >
                     {item}
                   </a>
@@ -108,8 +106,13 @@ const Navbar = () => {
           BOOK APPOINTMENT
         </button>
 
+        {/* Mobile Brand Name */}
+        <span className="lg:hidden font-extrabold text-[#0EA8A7] text-xl md:text-2xl tracking-widest uppercase">
+          ATREUM
+        </span>
+
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="lg:hidden text-[#19628D] p-2"
         >
@@ -127,7 +130,7 @@ const Navbar = () => {
                 <span className="pointer-events-none absolute left-0 -bottom-0.5 w-full h-0.5 bg-[#19628D] scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left duration-300 rounded-full"></span>
               </a>
             </li>
-            
+
             <li>
               <details className="group">
                 <summary className="flex items-center justify-between text-gray-700 font-semibold hover:text-[#19628D] transition-colors py-2 cursor-pointer">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import sideImage from "../../images/image.png";
 import DoctorCard from "./DoctorCard";
 import doctorsData from "../../data/doctors.json";
@@ -15,7 +15,8 @@ const Excellence = () => {
     useEffect(() => {
         const updateSlideWidth = () => {
             if (window.innerWidth < 640) {
-                setSlideWidth(340);
+                // Mobile: Show exactly one card (Full width minus container padding)
+                setSlideWidth(window.innerWidth - 32);
             } else if (window.innerWidth < 768) {
                 setSlideWidth(460);
             } else if (window.innerWidth < 1024) {
@@ -65,6 +66,33 @@ const Excellence = () => {
         setCurrentIndex(doctorsData.length + index);
     };
 
+    // Touch Swipe Logic
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+        if (isLeftSwipe) {
+            nextSlide();
+        }
+        if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
     return (
         <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 px-2 sm:px-4 md:px-8 lg:px-12 overflow-hidden">
 
@@ -91,7 +119,13 @@ const Excellence = () => {
             {/* card slide  */}
             <div className="max-w-7xl mx-auto relative px-2 sm:px-4 md:px-8 lg:px-12">
                 {/* Slider Container */}
-                <div className="relative overflow-hidden" style={{ paddingTop: '40px', marginTop: '-40px' }}>
+                <div
+                    className="relative overflow-hidden"
+                    style={{ paddingTop: '40px', marginTop: '-40px' }}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
                     <div
                         className={`flex gap-2 sm:gap-3 md:gap-4 ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
                         style={{ transform: `translateX(-${currentIndex * slideWidth}px)` }}
@@ -128,8 +162,8 @@ const Excellence = () => {
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`h-2 sm:h-2.5 md:h-3 rounded-full transition-all ${(currentIndex % doctorsData.length) === index
-                                    ? "bg-[#2176ae] w-5 sm:w-6 md:w-8"
-                                    : "bg-gray-300 hover:bg-gray-400 w-2 sm:w-2.5 md:w-3"
+                                ? "bg-[#2176ae] w-5 sm:w-6 md:w-8"
+                                : "bg-gray-300 hover:bg-gray-400 w-2 sm:w-2.5 md:w-3"
                                 }`}
                         />
                     ))}

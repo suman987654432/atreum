@@ -33,7 +33,7 @@ const Footer = () => {
               </div>
 
               <p className="text-sm text-white/90 leading-relaxed max-w-sm">
-                Who we are? Welcome to Atreum! We're North Bangalore's first and
+                Who we are? Welcome to Atreum! We're South Bangalore's first and
                 premier multi-specialty facility that offers comprehensive care.
               </p>
             </div>

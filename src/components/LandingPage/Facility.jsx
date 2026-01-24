@@ -61,13 +61,40 @@ const Excellence = () => {
         }
     }, [currentIndex]);
 
-    // const nextSlide = () => {
-    //     setCurrentIndex((prev) => prev + 1);
-    // };
+    const nextSlide = () => {
+        setCurrentIndex((prev) => prev + 1);
+    };
 
-    // const prevSlide = () => {
-    //     setCurrentIndex((prev) => prev - 1);
-    // };
+    const prevSlide = () => {
+        setCurrentIndex((prev) => prev - 1);
+    };
+
+    // Touch Swipe Logic
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+        if (isLeftSwipe) {
+            nextSlide();
+        }
+        if (isRightSwipe) {
+            prevSlide();
+        }
+    };
 
     const goToSlide = (index) => {
         setCurrentIndex(facilitiesData.length + index);
@@ -84,18 +111,23 @@ const Excellence = () => {
 
             {/* Heading */}
             <div className="max-w-7xl mx-auto mb-6 sm:mb-8 md:mb-10">
-                
+
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#02908B] mb-3 sm:mb-4">
                     OUR FACILITY
                 </h2>
                 <p className="mt-2 sm:mt-3 md:mt-4 text-gray-700 max-w-4xl text-sm sm:text-base md:text-lg leading-relaxed">
-At Atreum, your recovery comes first. Skilled professionals, advanced equipment, and modern facilities come together to ensure safe, comfortable, and effective care for all your needs.                </p>
+                    At Atreum, your recovery comes first. Skilled professionals, advanced equipment, and modern facilities come together to ensure safe, comfortable, and effective care for all your needs.                </p>
             </div>
 
             {/* card slide  */}
             <div className="max-w-7xl mx-auto  ">
                 {/* Slider Container */}
-                <div className="relative overflow-hidden">
+                <div
+                    className="relative overflow-hidden"
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
                     <div
                         className={`flex gap-2 sm:gap-3 md:gap-4 ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
                         style={{ transform: `translateX(-${currentIndex * slideWidth}px)` }}
@@ -137,11 +169,10 @@ At Atreum, your recovery comes first. Skilled professionals, advanced equipment,
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`h-2.5 sm:h-3 rounded-full transition-all ${
-                                (currentIndex % facilitiesData.length) === index
-                                    ? "bg-[#2176ae] w-6 sm:w-8"
-                                    : "bg-gray-300 hover:bg-gray-400 w-2.5 sm:w-3"
-                            }`}
+                            className={`h-2.5 sm:h-3 rounded-full transition-all ${(currentIndex % facilitiesData.length) === index
+                                ? "bg-[#2176ae] w-6 sm:w-8"
+                                : "bg-gray-300 hover:bg-gray-400 w-2.5 sm:w-3"
+                                }`}
                         />
                     ))}
                 </div>

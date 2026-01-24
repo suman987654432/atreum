@@ -3,7 +3,7 @@ import Hero from '../components/LandingPage/Hero'
 import Journey from '../components/LandingPage/Journey'
 import Meet from '../components/LandingPage/Meet'
 import Facility from '../components/LandingPage/Facility'
-import Feedback from '../components/LandingPage/Feedback'
+// import Feedback from '../components/LandingPage/Feedback'
 
 
 const LandingPage = () => {
@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Excellence/>
       <Meet/>
       <Facility/>
-      <Feedback/>
+      {/* <Feedback/> */}
    
     </div>
   )
