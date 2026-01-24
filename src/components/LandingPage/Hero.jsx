@@ -1,6 +1,7 @@
 import React from "react";
 import hero from "../../images/hero.png";
-import Navbar from "../LandingPage/Navbar";
+import heroimage from "../../images/heroimage.png";
+
 
 const Hero = () => {
 
@@ -9,12 +10,19 @@ const Hero = () => {
             {/* Navbar Overlay */}
             <section className="relative w-full h-screen z-10">
 
-                {/* Background Image (hide on mobile) */}
+                {/* Background Image */}
+                {/* Mobile: heroimage */}
+                <img
+                    src={heroimage}
+                    alt="Hero Mobile"
+                    className="block sm:hidden absolute inset-0 w-full h-full object-cover will-change-transform"
+                />
+
+                {/* Desktop: hero (existing) */}
                 <img
                     src={hero}
                     alt="Hero"
-                    className="absolute inset-0 w-full h-full object-cover will-change-transform"
-
+                    className="hidden sm:block absolute inset-0 w-full h-full object-cover will-change-transform"
                 />
 
 
