@@ -1,5 +1,4 @@
-import React from "react";
-import { useScrollBlur } from "../../hooks/useScrollBlur";
+
 import hospital from "../../images/hospital.png";
 import doctor from "../../images/streth.png";
 import delivery from "../../images/child.png";
@@ -14,21 +13,15 @@ const journeyData = [
 ];
 
 const Journey = () => {
-    const { scrollEffect, elementRef } = useScrollBlur({
-        startBlurAfter: 80,
-        maxBlur: 3,
-        blurSpeed: 2,
-        minOpacity: 0.6
-    });
+ 
 
     return (
         <>
-            <useScrollBlur>
-                <div ref={elementRef} className="relative bg-[#EDF8FF] py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
+         
+                <div  className="relative bg-[#EDF8FF] py-12 sm:py-16 md:py-20 px-4 overflow-hidden">
                     {/* Heading */}
                     <h2
                         className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-[#02908B] mb-8 sm:mb-12 md:mb-16 relative z-10 transition-all duration-300"
-                        style={{ filter: `blur(${scrollEffect.blur}px)`, opacity: scrollEffect.opacity }}
                     >
                         OUR JOURNEY SO FAR
                     </h2>
@@ -36,19 +29,16 @@ const Journey = () => {
                     {/* Yellow circle (LEFT) */}
                     <div
                         className="absolute left-4 sm:left-12 md:left-24 top-[30%] w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 bg-[#E2D66B] rounded-full z-0 transition-all duration-300"
-                        style={{ filter: `blur(${scrollEffect.blur}px)`, opacity: scrollEffect.opacity }}
                     ></div>
 
                     {/* Green circle (RIGHT) - half visible */}
                     <div
                         className="absolute -right-10 sm:-right-16 md:-right-20 top-[20%] w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-[#12B0A6] rounded-full z-0 transition-all duration-300"
-                        style={{ filter: `blur(${scrollEffect.blur}px)`, opacity: scrollEffect.opacity }}
                     ></div>
 
                     {/* Cards Wrapper */}
                     <div
                         className="relative flex justify-center gap-6 sm:gap-8 md:gap-10 flex-wrap z-10 transition-all duration-300"
-                        style={{ filter: `blur(${scrollEffect.blur}px)`, opacity: scrollEffect.opacity }}
                     >
                         {journeyData.map((item, index) => (
                             <div key={index} className="relative w-[160px] h-[240px] sm:w-[180px] sm:h-[260px] md:w-[200px] md:h-[290px] rounded-[40px]">
@@ -95,7 +85,7 @@ const Journey = () => {
                     </div>
                     
                 </div>
-            </useScrollBlur>
+          
         </>
     );
 };

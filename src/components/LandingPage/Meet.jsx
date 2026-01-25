@@ -15,12 +15,12 @@ const Excellence = () => {
     useEffect(() => {
         const updateSlideWidth = () => {
             if (window.innerWidth < 640) {
-                // Mobile: Show exactly one card (Full width minus container padding)
-                setSlideWidth(window.innerWidth - 32);
+                // Mobile: Compact width for data-only view
+                setSlideWidth(window.innerWidth - 40);
             } else if (window.innerWidth < 768) {
-                setSlideWidth(460);
+                setSlideWidth(window.innerWidth - 80);
             } else if (window.innerWidth < 1024) {
-                setSlideWidth(530);
+                setSlideWidth(540);
             } else {
                 setSlideWidth(620);
             }
@@ -128,14 +128,17 @@ const Excellence = () => {
                 >
                     <div
                         className={`flex gap-2 sm:gap-3 md:gap-4 ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
-                        style={{ transform: `translateX(-${currentIndex * slideWidth}px)` }}
+                        style={{ 
+                            transform: `translateX(-${currentIndex * (slideWidth + (window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 12 : 16))}px)` 
+                        }}
                     >
                         {infiniteDoctors.map((doctor, idx) => (
                             <div
                                 key={`${doctor.id}-${idx}`}
-                                className="flex-shrink-0 w-[340px] sm:w-[460px] md:w-[530px] lg:w-[620px]"
+                                className="flex-shrink-0"
+                                style={{ width: `${slideWidth}px` }}
                             >
-                                <DoctorCard doctorData={doctor} />
+                                <DoctorCard doctorData={doctor} hideImageOnMobile={true} />
                             </div>
                         ))}
                     </div>
