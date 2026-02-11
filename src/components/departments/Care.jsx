@@ -46,19 +46,19 @@ const careData = [
 
 const Care = () => {
     return (
-        <div className="relative -mt-4 z-20 bg-white rounded-t-[50px] shadow-[0_-25px_50px_rgba(100,100,100,0.3)] pt-16 pb-16">
-            <div className="px-4 w-full max-w-[1600px] mx-auto">
+        <div className="relative -mt-4 z-20 bg-white/75 backdrop-blur-xl rounded-t-[40px] border-t-4 border-[#19628D] shadow-[0_5px_30px_rgba(0,0,0,0.4),0_30px_-50px_rgba(0,0,0,0.25)] pt-16 pb-16">
+            <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-center items-start md:items-center mb-12 gap-6">
-                    <div className="md:w-1/2">
-                        <h2 className="text-3xl md:text-5xl font-serif text-[#19628D] leading-tight">
-                            Orthopaedic <span className=" font-bold italic">Care</span><br />at
-                            <span className="text-[#19628D] font-bold italic"> Atreum</span>
+                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px]">
+                        <h2 className="text-[#19628D]">
+                            <span className="font-canela font-normal text-[37px] leading-[37px] tracking-normal">Orthopaedic Care <br /> at </span>
+                            <span className="font-canela font-bold italic text-[37px] leading-[37px] tracking-normal">Atreum</span>
                         </h2>
                     </div>
-                    <div className="md:w-2/5">
-                        <p className="text-black text-sm md:text-base leading-tight font-semibold">
-                            Orthopaedics at Atreum Hospitals is a multi-disciplinary department
-                            dedicated to the diagnosis, treatment, and long-term management of
+                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px]">
+                        <p className="text-black font-sohne font-normal text-[20px] leading-[27px] tracking-normal">
+                            Orthopaedics at Atreum Hospitals is a multi-disciplinary department 
+                            dedicated to the diagnosis, treatment, and long-term management of 
                             conditions affecting bones, joints, muscles, and the spine.
                         </p>
                     </div>
@@ -82,18 +82,18 @@ const Care = () => {
 
                             {/* Content Container - Slides up from bottom */}
                             {/* Initially translated down so only the top part (title) is visible */}
-                            <div className=" rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] p-6 md:p-8 transform translate-y-[calc(100%-90px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
+                            <div className=" rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] group-hover:backdrop-blur-sm p-6 md:p-8 transform translate-y-[calc(100%-130px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
 
                                 {/* Title Section - This part is always visible */}
-                                <div className="h-[90px] flex items-end pb-2 md:-mt-12">
-                                    <h3 className="text-xl md:text-2xl font-bold text-white uppercase leading-tight drop-shadow-md font-sohne">
+                                <div className="h-auto pb-4">
+                                    <h3 className="font-sohne font-bold text-[33px] leading-[100%] text-white uppercase tracking-normal drop-shadow-md">
                                         {item.title}
                                     </h3>
                                 </div>
 
                                 {/* Description - Revealed on Hover */}
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                    <p className="text-white text-sm md:text-base leading-relaxed font-sohne">
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-2">
+                                    <p className="font-sohne font-normal text-[19px] leading-[22px] tracking-normal text-white">
                                         {item.description}
                                     </p>
                                 </div>

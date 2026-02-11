@@ -39,7 +39,7 @@ const Doctorspe = () => {
 
     return (
         <div className="w-full py-2 overflow-hidden">
-            <div className="px-4 w-full max-w-[1600px] mx-auto">
+            <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-6 md:px-12 md:py-8 lg:py-0">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
 
@@ -79,18 +79,19 @@ const Doctorspe = () => {
                             </div>
 
 
-                            <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-20">
-                                <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-bold py-2.5 px-6 rounded shadow-md uppercase text-xs tracking-wider transition-all font-sohne    ">
+                            <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-12">
+                                <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-semibold text-[20px] leading-[40px] tracking-normal py-0 px-3 rounded shadow-md uppercase transition-all">
                                     Book an Appointment
                                 </button>
                             </div>
 
 
                             <div className="mt-4 lg:mt-8 w-full">
-                                <h2 className="text-xl md:text-3xl font-serif text-[#19628D] mb-4">
-                                    Orthopaedic <span className="italic font-serif font-bold">Specialists</span>
+                                <h2 className="text-[#19628D] mb-4">
+                                    <span className="font-canela font-light text-[35px] leading-[100%] tracking-normal">Orthopaedic </span>
+                                    <span className="font-canela font-black text-[35px] leading-[100%] tracking-normal italic">Specialists</span>
                                 </h2>
-                                <p className="text-gray-700 leading-relaxed text-sm md:text-base max-w-xl mx-auto lg:mx-0">
+                                <p className="text-gray-700 font-sohne font-normal text-[20px] leading-[28px] tracking-normal max-w-xl mx-auto lg:mx-0">
                                     The Orthopaedic Specialists at Atreum Hospitals represent a multi-disciplinary team
                                     of experienced consultants, each focused on a specific area of musculoskeletal care.
                                     Working within a unified clinical framework, they combine specialised expertise with
