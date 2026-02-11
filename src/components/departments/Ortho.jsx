@@ -48,8 +48,8 @@ const Ortho = () => {
                         </div>
                     </div>
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] px-4 sm:px-0">
-                        <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl">
+                    <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] px-4 sm:px-0 ">
+                        <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[32px] leading-[28px] sm:leading-[30px] md:leading-[31px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins
                             </h3>
