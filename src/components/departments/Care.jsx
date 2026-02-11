@@ -46,7 +46,7 @@ const careData = [
 
 const Care = () => {
     return (
-        <div className="relative -mt-4 z-20 bg-white/75 backdrop-blur-xl rounded-t-[40px] border-t-4 border-[#19628D] shadow-[0_5px_30px_rgba(0,0,0,0.4),0_30px_-50px_rgba(0,0,0,0.25)] pt-16 pb-16">
+        <div className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-center items-start md:items-center mb-12 gap-6">
                     <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px]">
