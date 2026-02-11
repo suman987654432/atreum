@@ -43,9 +43,9 @@ const Form = () => {
     return (
         <div className="w-full max-w-2xl mx-auto mt-24 mb-24 bg-[#D9D9D933] p-8 md:p-10 rounded-2xl shadow-sm border font-sans">
             <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl text-[#19628D] font-serif leading-tight text-center">
-                    Share a few details below to help us<br />
-                    <span className="font-bold italic text-[#19628D]"> understand your concern.</span>
+                <h2 className="text-xl md:text-4xl text-[#19628D] font-serif leading-tight text-center">
+                    Share a few details below to help <br />us
+                    <span className="font-bold font-canela italic text-[#19628D]"> understand your concern.</span>
                 </h2>
             </div>
 
@@ -58,7 +58,7 @@ const Form = () => {
                         placeholder="Full Name"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black"
+                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
                     />
                 </div>
 
@@ -70,13 +70,13 @@ const Form = () => {
                         placeholder="Age"
                         value={formData.age}
                         onChange={handleInputChange}
-                        className="w-1/3 px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black"
+                        className="w-1/3 px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
                     />
                 </div>
 
                 {/* Gender */}
                 <div className="flex items-center border border-[#0FB1AB] rounded-lg bg-white overflow-hidden w-fit">
-                    <span className="px-4 py-2.5 text-black bg-transparent">Gender</span>
+                    <span className="px-4 py-2.5 text-black bg-transparent font-sohne">Gender</span>
                     <div className="flex border-l border-[#0FB1AB]">
                         <button
                             type="button"
@@ -110,7 +110,7 @@ const Form = () => {
                         placeholder="Mobile Number"
                         value={formData.mobileNumber}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black"
+                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black  font-sohne"
                     />
                 </div>
 
@@ -122,7 +122,7 @@ const Form = () => {
                         placeholder="Email ID"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black"
+                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
                     />
                 </div>
 
@@ -135,13 +135,13 @@ const Form = () => {
                         value={formData.concern}
                         onChange={handleInputChange}
                         rows="4"
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black italic text-sm"
+                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black italic text-sm font-sohne"
                     ></textarea>
                 </div>
 
                 {/* Affected Area */}
                 <div className="pt-2">
-                    <label className="block text-black text-base mb-2">Affected Area</label>
+                    <label className="block text-black text-base mb-2 font-sohne">Affected Area</label>
                     <div className="flex flex-wrap gap-2">
                         {[
                             'SHOULDER',
@@ -169,7 +169,7 @@ const Form = () => {
 
                 {/* Consultation Preference */}
                 <div className="pt-2">
-                    <label className="block text-black text-base mb-2">Consultation Preference</label>
+                    <label className="block text-black text-base mb-2 font-sohne">Consultation Preference</label>
                     <div className="flex flex-wrap gap-3">
                         {['IN-PERSON', 'TELE-CONSULTATION'].map(pref => (
                             <button

@@ -39,7 +39,7 @@ const Doctorspe = () => {
 
     return (
         <div className="w-full py-2 overflow-hidden">
-            <div className="container mx-auto px-4">
+            <div className="px-4 w-full max-w-[1600px] mx-auto">
                 <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-6 md:px-12 md:py-8 lg:py-0">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
 
@@ -57,7 +57,7 @@ const Doctorspe = () => {
                                 </button>
 
 
-                                <div className="text-center min-w-[200px] md:min-w-[250px]">
+                                <div className="min-w-[200px] md:min-w-[250px]">
                                     <h3 className="text-xl md:text-2xl font-serif font-bold text-[#19628D] mb-0.5">
                                         {currentDoctor.name}
                                     </h3>
@@ -80,14 +80,14 @@ const Doctorspe = () => {
 
 
                             <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-20">
-                                <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-bold py-2.5 px-6 rounded shadow-md uppercase text-xs tracking-wider transition-all">
+                                <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-bold py-2.5 px-6 rounded shadow-md uppercase text-xs tracking-wider transition-all font-sohne    ">
                                     Book an Appointment
                                 </button>
                             </div>
 
 
                             <div className="mt-4 lg:mt-8 w-full">
-                                <h2 className="text-2xl md:text-3xl font-serif text-[#19628D] mb-4">
+                                <h2 className="text-xl md:text-3xl font-serif text-[#19628D] mb-4">
                                     Orthopaedic <span className="italic font-serif font-bold">Specialists</span>
                                 </h2>
                                 <p className="text-gray-700 leading-relaxed text-sm md:text-base max-w-xl mx-auto lg:mx-0">
@@ -110,7 +110,7 @@ const Doctorspe = () => {
 
                     </div>
                 </div>
-                <div className="w-full h-[2px] bg-black mt-16"></div>
+                <div className="w-full h-[1px] bg-black mt-16"></div>
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ const careData = [
     {
         id: 4,
         title: "TRAUMA & FRACTURE CARE",
-        description: "Our trauma center is equipped to handle complex fractures and musculoskeletal injuries with a dedicated team of specialists available 24/7.",
+        description: "Orthopaedics at Atreum Hospitals is a multi-disciplinary department dedicated to the diagnosis, treatment, and long-term management of conditions affecting bones, joints, muscles, and the spine.",
         image: care2,
         width: "lg:col-span-2 col-span-1",
     },
@@ -47,21 +47,22 @@ const careData = [
 const Care = () => {
     return (
         <div className="relative -mt-4 z-20 bg-white rounded-t-[50px] shadow-[0_-25px_50px_rgba(100,100,100,0.3)] pt-16 pb-16">
-            <div className="px-4 md:px-8 lg:px-16 container mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+            <div className="px-4 w-full max-w-[1600px] mx-auto">
+                <div className="flex flex-col md:flex-row justify-center items-start md:items-center mb-12 gap-6">
                     <div className="md:w-1/2">
-                        <h2 className="text-3xl md:text-5xl font-serif text-[#0e4857] leading-tight">
-                            Orthopaedic <span className="italic font-light">Care</span><br />
-                            <span className="text-[#2a6b77] font-bold">at Atreum</span>
+                        <h2 className="text-3xl md:text-5xl font-serif text-[#19628D] leading-tight">
+                            Orthopaedic <span className=" font-bold italic">Care</span><br />at
+                            <span className="text-[#19628D] font-bold italic"> Atreum</span>
                         </h2>
                     </div>
-                    <div className="md:w-1/2">
-                        <p className="text-black-1500 text-sm font-semibold md:text-base leading-relaxed">
+                    <div className="md:w-2/5">
+                        <p className="text-black text-sm md:text-base leading-tight font-semibold">
                             Orthopaedics at Atreum Hospitals is a multi-disciplinary department
                             dedicated to the diagnosis, treatment, and long-term management of
                             conditions affecting bones, joints, muscles, and the spine.
                         </p>
                     </div>
+
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -72,7 +73,7 @@ const Care = () => {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="w-full h-full object-cover "
                                 />
                                 {/* Dark Overlay for better text readability */}
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-300"></div>
@@ -81,18 +82,18 @@ const Care = () => {
 
                             {/* Content Container - Slides up from bottom */}
                             {/* Initially translated down so only the top part (title) is visible */}
-                            <div className="absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] p-6 md:p-8 transform translate-y-[calc(100%-90px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
+                            <div className=" rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] p-6 md:p-8 transform translate-y-[calc(100%-90px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
 
                                 {/* Title Section - This part is always visible */}
-                                <div className="h-[90px] flex items-center -mt-6 md:-mt-8">
-                                    <h3 className="text-xl md:text-2xl font-bold text-white uppercase leading-tight drop-shadow-md">
+                                <div className="h-[90px] flex items-end pb-2 md:-mt-12">
+                                    <h3 className="text-xl md:text-2xl font-bold text-white uppercase leading-tight drop-shadow-md font-sohne">
                                         {item.title}
                                     </h3>
                                 </div>
 
                                 {/* Description - Revealed on Hover */}
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 pb-4">
-                                    <p className="text-white text-sm md:text-base leading-relaxed border-t border-white/20 pt-4">
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    <p className="text-white text-sm md:text-base leading-relaxed font-sohne">
                                         {item.description}
                                     </p>
                                 </div>
@@ -102,7 +103,7 @@ const Care = () => {
                 </div>
 
                 {/* Horizontal Black Line */}
-                <div className="w-full h-[2px] bg-black mt-16"></div>
+                <div className="w-full h-[1px] bg-black mt-16"></div>
             </div>
         </div>
     );

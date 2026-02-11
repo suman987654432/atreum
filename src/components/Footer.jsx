@@ -1,4 +1,5 @@
 import React from "react";
+import { Linkedin, Instagram, Twitter } from "lucide-react";
 import footer from "../images/footer.png";
 
 const Footer = () => {
@@ -64,26 +65,25 @@ const Footer = () => {
             </div>
 
             {/* Visit */}
-            <div>
+            <div className="lg:pl-8">
               <h4 className="font-bold text-sm uppercase tracking-wide mb-4 text-[#000000]">Visit</h4>
               <ul className="space-y-3 text-sm text-[#000000]">
                 {[
                   "Our Doctors",
                   "About Us",
-                  "Burns Unit",
+
                   "Jobs",
                   "TPA / Insurance",
                   "Blogs",
                 ].map((item) => (
-                  <li key={item} className="cursor-pointer transition-colors hover:text-[#0FB1AB]">
+                  <li key={item} className="cursor-pointer transition-colors hover:text-[#0FB1AB] whitespace-nowrap">
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Follow */}
-            <div>
+            {/* <div>
               <h4 className="font-bold text-sm uppercase tracking-wide mb-4 text-[#000000]">Follow</h4>
               <ul className="space-y-3 text-sm text-[#000000]">
                 {["instagram", "twitter", "linkedin"].map((item) => (
@@ -92,7 +92,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Legal */}
             <div>
@@ -118,6 +118,20 @@ const Footer = () => {
                 </li>
 
               </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-sm text-[#000000] mb-4">Follow</h4>
+              <div className="flex gap-4">
+                <a href="#" className="bg-black text-white p-2 rounded-lg  transition-colors">
+                  <Linkedin size={20} fill="white" strokeWidth={0} />
+                </a>
+                <a href="#" className="bg-black text-white p-2 rounded-lg  transition-colors">
+                  <Instagram size={20} strokeWidth={2.5} />
+                </a>
+                <a href="#" className="bg-black text-white p-2 rounded-lg  transition-colors">
+                  <Twitter size={20} fill="white" strokeWidth={0} />
+                </a>
+              </div>
             </div>
           </div>
         </div>

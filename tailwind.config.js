@@ -4,6 +4,8 @@ export default {
     extend: {
       fontFamily: {
         oswald: ['Oswald', 'sans-serif'],
+        sohne: ["Test Söhne", "sans-serif"],
+        canela: ["Canela Deck Trial", "sans-serif"],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',

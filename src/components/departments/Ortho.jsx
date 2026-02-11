@@ -22,14 +22,16 @@ const Ortho = () => {
 
                     {/* Left Side Content */}
                     <div className="hidden lg:flex w-full lg:w-1/2 text-white flex-col justify-center gap-8 pl-4 lg:pl-12 mt-10 lg:mt-0">
-                        <div>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-wide leading-tight font-serif">
+                        <div className="space-y-12">
+                            <h1 className="text-4xl md:text-6xl lg:text-6xl  tracking-wide leading-tight mt-4 font-serif">
                                 Open doors <br />
-                                <span className="italic">to health.</span>
+                                to
+                                <span className="font-canela lg:text-6xl font-bold italic text-[48px] leading-[54px] tracking-normal"> health.</span>
                             </h1>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide leading-tight mt-4 font-serif">
+                            <h1 className="text-4xl md:text-6xl lg:text-6xl  tracking-wide leading-tight mt-4 font-serif">
                                 Open doors <br />
-                                to Atreum
+                                to
+                                <span className="font-canela font-bold lg:text-6xl text-[48px] leading-[54px] tracking-normal"> Atreum</span>
                             </h1>
                         </div>
 
@@ -47,12 +49,12 @@ const Ortho = () => {
                     </div>
 
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[450px] lg:mr-12 mb-10 lg:mb-0 mt-10 lg:mt-0">
+                    <div className="w-full lg:w-[500px] lg:mr-12 mb-10 lg:mb-0 mt-10 lg:mt-0">
                         <div className="bg-[#1f4d55] p-8 md:p-8 rounded-xl shadow-2xl">
-                            <h3 className="text-white text-2xl md:text-3xl font-serif mb-2 text-center leading-tight">
-                                <span className="italic font-light">Unconditional care</span> begins
+                            <h3 className="text-white text-2xl md:text-3xl font-serif  text-center leading-tight">
+                                <span className="font-canela font-bold italic">Unconditional care</span> begins
                             </h3>
-                            <h3 className="text-white text-xl md:text-2xl font-serif mb-8 text-center">
+                            <h3 className="text-white text-2xl md:text-3xl font-serif  text-center leading-tight mb-8">
                                 with knowing you
                             </h3>
 
@@ -61,7 +63,7 @@ const Ortho = () => {
                                     <input
                                         type="text"
                                         placeholder="Name"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all"
+                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all font-sohne"
                                     />
                                 </div>
 
@@ -69,7 +71,7 @@ const Ortho = () => {
                                     <input
                                         type="tel"
                                         placeholder="Phone Number"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all"
+                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all font-sohne"
                                     />
                                 </div>
 
@@ -78,15 +80,15 @@ const Ortho = () => {
                                         className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all appearance-none cursor-pointer"
                                         defaultValue=""
                                     >
-                                        <option value="" disabled className="text-gray-400 bg-[#19628DE0]">State Your Concern</option>
-                                        <option value="knee" className="text-white bg-[#19628DE0]">Knee Replacement</option>
-                                        <option value="joint" className="text-white bg-[#19628DE0]">Joint Replacement</option>
-                                        <option value="trauma" className="text-white bg-[#19628DE0]">Trauma and Fracture Care</option>
-                                        <option value="sports" className="text-white bg-[#19628DE0]">Sports Medicine Surgery</option>
-                                        <option value="hand" className="text-white bg-[#19628DE0]">Hand and Wrist Surgery</option>
-                                        <option value="deformity" className="text-white bg-[#19628DE0]">Deformity Correction</option>
-                                        <option value="pediatric" className="text-white bg-[#19628DE0]">Pediatric Ortho</option>
-                                        <option value="shoulder" className="text-white bg-[#19628DE0]">Shoulder Surgery</option>
+                                        <option value="" disabled className="text-gray-400 bg-[#19628DE0] font-sohne">State Your Concern</option>
+                                        <option value="knee" className="text-white bg-[#19628DE0] font-sohne">Knee Replacement</option>
+                                        <option value="joint" className="text-white bg-[#19628DE0] font-sohne">Joint Replacement</option>
+                                        <option value="trauma" className="text-white bg-[#19628DE0] font-sohne">Trauma and Fracture Care</option>
+                                        <option value="sports" className="text-white bg-[#19628DE0] font-sohne">Sports Medicine Surgery</option>
+                                        <option value="hand" className="text-white bg-[#19628DE0] font-sohne">Hand and Wrist Surgery</option>
+                                        <option value="deformity" className="text-white bg-[#19628DE0] font-sohne">Deformity Correction</option>
+                                        <option value="pediatric" className="text-white bg-[#19628DE0] font-sohne">Pediatric Ortho</option>
+                                        <option value="shoulder" className="text-white bg-[#19628DE0] font-sohne">Shoulder Surgery</option>
                                     </select>
 
                                     <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none pr-4">
