@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Departments Dropdown */}
           <li className="relative group">
             <a
-              href="/department"
+              href="#"
               className="flex items-center gap-0.5 lg:gap-1 text-gray-500 font-semibold hover:text-[#19628D] hover:underline active:underline transition-colors whitespace-nowrap"
             >
               Departments
@@ -34,14 +34,19 @@ const Navbar = () => {
             </a>
 
             <ul className="absolute left-0 top-full mt-2 min-w-[180px] lg:min-w-[200px] bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30">
-              {["Cardiology", "Neurology", "Orthopedics", "Pediatrics"].map((item, index) => (
-                <li key={item}>
+              {[
+                { name: "Cardiology", path: "#" },
+                { name: "Neurology", path: "#" },
+                { name: "Orthopedics", path: "/orthopedics" },
+                { name: "Pediatrics", path: "#" }
+              ].map((item, index) => (
+                <li key={item.name}>
                   <a
-                    href="#"
+                    href={item.path}
                     className={`block px-4 lg:px-5 py-2 lg:py-3 text-sm lg:text-base text-gray-600 hover:bg-gray-50 hover:text-[#19628D] hover:underline active:underline transition-colors ${index === 0 ? 'rounded-t-lg' : ''
                       } ${index === 3 ? 'rounded-b-lg' : ''}`}
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -138,10 +143,15 @@ const Navbar = () => {
                   <ChevronDown size={18} className="transition-transform group-open:rotate-180" />
                 </summary>
                 <ul className="ml-4 mt-2 space-y-2">
-                  {["Cardiology", "Neurology", "Orthopedics", "Pediatrics"].map(item => (
-                    <li key={item}>
-                      <a href="#" className="block text-gray-600 hover:text-[#19628D] hover:underline active:underline py-1">
-                        {item}
+                  {[
+                    { name: "Cardiology", path: "#" },
+                    { name: "Neurology", path: "#" },
+                    { name: "Orthopedics", path: "/orthopedics" },
+                    { name: "Pediatrics", path: "#" }
+                  ].map(item => (
+                    <li key={item.name}>
+                      <a href={item.path} className="block text-gray-600 hover:text-[#19628D] hover:underline active:underline py-1">
+                        {item.name}
                       </a>
                     </li>
                   ))}

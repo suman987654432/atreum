@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import DoctorPage from './pages/DoctorPage';
-import DepartmentPage from './pages/DepartmentPage';
+// import DepartmentPage from './pages/DepartmentPage';
+import OrthoPage from './pages/OrthoPage';
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
               <Route path='/about' element={<AboutPage />} />
               <Route path='/careers' element={<CareersPage />} />
               <Route path='/doctor' element={<DoctorPage />} />
-              <Route path='/department' element={<DepartmentPage />} />
+              {/* <Route path='/department' element={<DepartmentPage />} /> */}
+              <Route path='/orthopedics' element={<OrthoPage />} />
             </Routes>
           </div>
         </BrowserRouter>

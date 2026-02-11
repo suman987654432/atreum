@@ -6,7 +6,7 @@ const Specialist = () => {
         <div className="w-full bg-[#EDF8FF]  py-8 md:py-12 px-4 md:px-8">
             <div className="container mx-auto">
                 {/* Main White Card */}
-                <div className="bg-[#FFFFFF] rounded-[30px] p-6 md:p-8  flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                <div className=" rounded-[30px] p-6 md:p-8  flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
 
                     {/* Left Side: Information */}
                     <div className="w-full lg:w-1/2">
