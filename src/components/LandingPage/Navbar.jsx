@@ -29,7 +29,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className="text-white hover:font-bold transition-all duration-200 text-[18px] leading-none tracking-normal font-light font-sohne"
+                className="text-white hover:font-semibold  text-[18px] leading-none tracking-normal font-light font-sohne"
               >
                 {item.name}
               </a>
