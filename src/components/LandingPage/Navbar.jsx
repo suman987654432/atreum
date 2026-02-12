@@ -29,7 +29,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className="text-white hover:text-[#0FB1AB] transition-colors text-[18px] leading-none tracking-normal font-light font-sohne"
+                className="text-white hover:font-bold transition-all duration-200 text-[18px] leading-none tracking-normal font-light font-sohne"
               >
                 {item.name}
               </a>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <li key={item.name}>
                 <a
                   href={item.path}
-                  className="block text-[#19628D] py-2 hover:bg-gray-50 rounded-lg transition-colors font-light text-[18px] leading-none tracking-normal"
+                  className="block text-[#19628D] py-2 hover:font-bold rounded-lg transition-all duration-200 font-light text-[18px] leading-none tracking-normal"
                 >
                   {item.name}
                 </a>
