@@ -17,7 +17,7 @@ const Navbar = () => {
         </a>
 
         {/* Main Interface Bar - Desktop */}
-        <div className="hidden lg:flex flex-1 items-center justify-between bg-[#016591] rounded-lg pl-8 pr-2 h-[60px] shadow-[0px_7px_15.6px_-6px_#00000040] border border-white/10">
+        <div className="hidden lg:flex flex-1 items-center justify-between bg-[#016591]/70 backdrop-blur-md rounded-lg pl-8 pr-2 h-[60px] shadow-[0px_7px_15.6px_-6px_#00000040]">
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center gap-16">
