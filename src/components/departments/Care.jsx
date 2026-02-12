@@ -51,12 +51,12 @@ const Care = () => {
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-center mb-12 gap-6">
                     <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px] text-center md:text-left">
                         <h2 className="text-[#19628D]">
-                            <span className="font-canela font-normal text-[37px] leading-[37px] tracking-normal">Orthopaedic Care <br /> at </span>
-                            <span className="font-canela font-bold italic text-[37px] leading-[37px] tracking-normal">Atreum</span>
+                            <span className="font-canela font-normal text-[32px] leading-[32px] tracking-normal">Orthopaedic Care <br /> at </span>
+                            <span className="font-canela font-bold italic text-[32px] leading-[32px] tracking-normal">Atreum</span>
                         </h2>
                     </div>
                     <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px] text-center md:text-left">
-                        <p className="text-black font-sohne font-normal text-[20px] leading-[27px] tracking-normal">
+                        <p className="text-black font-sohne font-normal text-[18px] leading-[22px] tracking-normal">
                             Orthopaedics at Atreum Hospitals is a multi-disciplinary department
                             dedicated to the diagnosis, treatment, and long-term management of
                             conditions affecting bones, joints, muscles, and the spine.
@@ -86,14 +86,14 @@ const Care = () => {
 
                                 {/* Title Section - This part is always visible */}
                                 <div className="h-auto pb-4">
-                                    <h3 className="font-sohne font-bold text-[28px] md:text-[33px] leading-[100%] text-white uppercase tracking-normal drop-shadow-md">
+                                    <h3 className="font-sohne font-bold text-[22px] md:text-[26px] leading-[100%] text-white uppercase tracking-normal drop-shadow-md">
                                         {item.title}
                                     </h3>
                                 </div>
 
                                 {/* Description - Revealed on Hover */}
                                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-2">
-                                    <p className="font-sohne font-normal text-[19px] leading-[22px] tracking-normal text-white">
+                                    <p className="font-sohne font-normal text-[16px] leading-[20px] tracking-normal text-white">
                                         {item.description}
                                     </p>
                                 </div>

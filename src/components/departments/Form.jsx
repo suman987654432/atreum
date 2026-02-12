@@ -171,7 +171,7 @@ const Form = () => {
                 <div className="pt-2">
                     <label className="block text-black text-base mb-2 font-sohne">Consultation Preference</label>
                     <div className="flex flex-wrap gap-3">
-                        {['IN-PERSON', 'TELE-CONSULTATION'].map(pref => (
+                        {['IN-PERSON'].map(pref => (
                             <button
                                 key={pref}
                                 type="button"

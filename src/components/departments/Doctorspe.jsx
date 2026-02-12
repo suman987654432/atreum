@@ -59,7 +59,7 @@ const Doctorspe = () => {
 
                                 <div className="min-w-[200px] md:min-w-[250px]">
                                     <h3 className="font-canela font-normal text-[37px] leading-[100%] tracking-normal text-[#19628D] mb-0.5">
-                                        {currentDoctor.name}
+                                        {currentDoctor.name.split(' ')[0]} <span className="font-canela font-bold text-[37px] leading-[100%] tracking-normal">{currentDoctor.name.split(' ').slice(1).join(' ')}</span>
                                     </h3>
                                     <p className="text-gray-900 text-sm md:text-base mb-1">
                                         {currentDoctor.specialty}
