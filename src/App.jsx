@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Navbar from './components/LandingPage/Navbar';
 import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import DoctorPage from './pages/DoctorPage';
@@ -13,6 +14,7 @@ const App = () => {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Navbar />
+        <FloatingButtons />
         <div className="flex-1">
           <Routes>
             <Route path='/' element={<LandingPage />} />

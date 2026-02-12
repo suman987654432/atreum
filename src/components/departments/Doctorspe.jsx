@@ -91,7 +91,7 @@ const Doctorspe = () => {
                                     <span className="font-canela font-light text-[35px] leading-[100%] tracking-normal">Orthopaedic </span>
                                     <span className="font-canela font-black text-[35px] leading-[100%] tracking-normal italic">Specialists</span>
                                 </h2>
-                                <p className="text-gray-700 font-sohne font-normal text-[20px] leading-[28px] tracking-normal max-w-xl mx-auto lg:mx-0">
+                                <p className="text-gray-700 font-sohne font-normal text-[18px] leading-[28px] tracking-normal max-w-xl mx-auto lg:mx-0">
                                     The Orthopaedic Specialists at Atreum Hospitals represent a multi-disciplinary team
                                     of experienced consultants, each focused on a specific area of musculoskeletal care.
                                     Working within a unified clinical framework, they combine specialised expertise with
