@@ -44,8 +44,8 @@ const Form = () => {
         <div className="w-full max-w-2xl mx-auto mt-14 bg-[#D9D9D933] p-8 md:p-10 rounded-2xl  ">
             <div className="mb-8">
                 <h2 className="text-[#19628D] text-center">
-                    <span className="font-canela font-light text-[37px] leading-[100%] tracking-normal">Share a few details below to help <br />us</span>
-                    <span className="font-canela font-bold italic text-[37px] leading-[100%] tracking-normal text-[#19628D]"> understand your concern.</span>
+                    <span className="font-canela font-light text-[32px] leading-[100%] tracking-normal">Share a few details below to help <br />us</span>
+                    <span className="font-canela font-bold italic text-[32px] leading-[100%] tracking-normal text-[#19628D]"> understand your concern.</span>
                 </h2>
             </div>
 

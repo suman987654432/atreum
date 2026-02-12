@@ -18,42 +18,32 @@ const Ortho = () => {
 
             {/* Content Container */}
             <div className="relative z-10 w-full h-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-12">
-                <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
+                <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
 
                     {/* Left Side Content */}
                     <div className="w-full lg:w-1/2 text-white flex flex-col items-center lg:items-start text-center lg:text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-0 xl:pl-8">
                         <div className="space-y-8 sm:space-y-10 lg:space-y-12">
-                            <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
+                            <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                 Open doors <br />
                                 to
                                 <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal"> health.</span>
                             </h1>
-                            <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
+                            <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                 Open doors <br />
                                 to
                                 <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal"> Atreum</span>
                             </h1>
                         </div>
 
-                        {/* Bottom Contact Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                            <button className="flex items-center justify-center gap-2 bg-transparent border border-white/70 hover:bg-white/10 text-white px-6 py-3 rounded-full backdrop-blur-sm transition-all group">
-                                <MessageCircle size={20} className="group-hover:scale-110 transition-transform" />
-                                <span className="uppercase tracking-widest text-sm font-semibold">WhatsApp</span>
-                            </button>
-                            <button className="flex items-center justify-center gap-2 bg-transparent border border-white/70 hover:bg-white/10 text-white px-6 py-3 rounded-full backdrop-blur-sm transition-all group">
-                                <Phone size={20} className="group-hover:scale-110 transition-transform" />
-                                <span className="uppercase tracking-widest text-sm font-semibold">Call Us</span>
-                            </button>
-                        </div>
+                       
                     </div>
                     {/* Right Side Form */}
                     <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] lg:ml-auto">
                         <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-6 sm:p-7 md:p-8 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
-                            <h3 className="text-white font-canela font-normal text-[26px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center">
+                            <h3 className="text-white font-canela font-normal text-[22px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins
                             </h3>
-                            <h3 className="text-white font-canela font-normal text-[26px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center mb-6 sm:mb-8">
+                            <h3 className="text-white font-canela font-normal text-[22px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center mb-6 sm:mb-8">
                                 with knowing you
                             </h3>
 

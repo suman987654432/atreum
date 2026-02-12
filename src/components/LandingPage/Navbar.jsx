@@ -6,14 +6,14 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-6 left-0 right-0 w-full flex justify-center px-4 md:px-12 z-50 font-sohne font-light">
+    <nav className="fixed top-2 sm:top-4 md:top-6 left-0 right-0 w-full flex justify-center px-4 md:px-12 z-50 font-sohne font-light">
       {/* Maximum width container to align with content */}
       <div className="flex items-center w-full max-w-[1700px]">
 
         {/* Logo Section - Separate Box */}
         {/* Logo Section - Separate Box */}
-        <a href="/" className="h-[60px] w-[60px] bg-white flex items-center justify-center rounded-lg shadow-[0px_7px_15.6px_-6px_#00000040] flex-shrink-0 mr-4 cursor-pointer hover:shadow-lg transition-shadow">
-          <img src={logo} alt="Logo" className="h-10 w-10 object-contain" />
+        <a href="/" className="h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] bg-white flex items-center justify-center rounded-lg shadow-[0px_7px_15.6px_-6px_#00000040] flex-shrink-0 mr-2 sm:mr-4 cursor-pointer hover:shadow-lg transition-shadow">
+          <img src={logo} alt="Logo" className="h-8 w-8 sm:h-10 sm:w-10 object-contain" />
         </a>
 
         {/* Main Interface Bar - Desktop */}
@@ -56,16 +56,16 @@ const Navbar = () => {
         <div className="lg:hidden ml-auto">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg text-[#19628D]"
+            className="bg-[#016591]/70 backdrop-blur-md p-3 rounded-lg shadow-[0px_7px_15.6px_-6px_#00000040] text-white border border-white/30 hover:bg-[#016591]/90 transition-all"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed top-28 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 z-40 animate-fade-in border border-white/20 font-sohne">
+        <div className="lg:hidden fixed top-20 sm:top-24 md:top-28 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 z-40 animate-fade-in border border-white/20 font-sohne">
           <ul className="flex flex-col gap-4 text-center">
             {[
               { name: "Our Services", path: "#" },
@@ -82,11 +82,11 @@ const Navbar = () => {
               </li>
             ))}
             <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-gray-100">
-              <button className="flex items-center justify-center gap-2 bg-[#0FB1AB33] text-white py-3 rounded-xl shadow-md font-light text-[18px]">
-                <Phone size={18} fill="currentColor" />
+              <a href="tel:+919606970542" className="flex items-center justify-center gap-2 bg-[#0FB1AB] hover:bg-[#0d9891] text-white py-3 px-6 rounded-lg shadow-md font-semibold text-[16px] transition-all">
+                <Phone size={18} strokeWidth={2} />
                 Call Now
-              </button>
-              <div className="text-[#19628D] py-1 font-light text-[18px] leading-none tracking-normal">
+              </a>
+              <div className="text-[#19628D] py-1 font-normal text-[16px] leading-none tracking-normal">
                 +91 - 9606970542
               </div>
             </div>

@@ -56,7 +56,7 @@ const Care = () => {
                         </h2>
                     </div>
                     <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px] text-center md:text-left">
-                        <p className="text-black font-sohne font-normal text-[18px] leading-[22px] tracking-normal">
+                        <p className="text-black font-sohne font-normal text-[16px] leading-[22px] tracking-normal">
                             Orthopaedics at Atreum Hospitals is a multi-disciplinary department
                             dedicated to the diagnosis, treatment, and long-term management of
                             conditions affecting bones, joints, muscles, and the spine.
