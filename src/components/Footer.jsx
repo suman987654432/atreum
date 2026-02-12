@@ -182,7 +182,7 @@ const Footer = () => {
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-700 whitespace-nowrap">
+                    <p className="text-sm text-gray-700">
                       <span className="font-semibold text-gray-900">Phone: </span>
                       <a
                         href="tel:+919606970542"

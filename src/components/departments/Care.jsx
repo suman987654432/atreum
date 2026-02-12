@@ -48,14 +48,14 @@ const Care = () => {
     return (
         <div className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="flex flex-col md:flex-row justify-center items-start md:items-center mb-12 gap-6">
-                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px]">
+                <div className="flex flex-col md:flex-row justify-center items-center md:items-center mb-12 gap-6">
+                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px] text-center md:text-left">
                         <h2 className="text-[#19628D]">
                             <span className="font-canela font-normal text-[37px] leading-[37px] tracking-normal">Orthopaedic Care <br /> at </span>
                             <span className="font-canela font-bold italic text-[37px] leading-[37px] tracking-normal">Atreum</span>
                         </h2>
                     </div>
-                    <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px]">
+                    <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px] text-center md:text-left">
                         <p className="text-black font-sohne font-normal text-[20px] leading-[27px] tracking-normal">
                             Orthopaedics at Atreum Hospitals is a multi-disciplinary department
                             dedicated to the diagnosis, treatment, and long-term management of
@@ -82,11 +82,11 @@ const Care = () => {
 
                             {/* Content Container - Slides up from bottom */}
                             {/* Initially translated down so only the top part (title) is visible */}
-                            <div className=" rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] group-hover:backdrop-blur-sm p-6 md:p-8 transform translate-y-[calc(100%-130px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
+                            <div className=" rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] group-hover:backdrop-blur-sm p-4 md:p-6 lg:p-8 transform translate-y-[calc(100%-130px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
 
                                 {/* Title Section - This part is always visible */}
                                 <div className="h-auto pb-4">
-                                    <h3 className="font-sohne font-bold text-[33px] leading-[100%] text-white uppercase tracking-normal drop-shadow-md">
+                                    <h3 className="font-sohne font-bold text-[28px] md:text-[33px] leading-[100%] text-white uppercase tracking-normal drop-shadow-md">
                                         {item.title}
                                     </h3>
                                 </div>
