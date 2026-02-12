@@ -24,7 +24,7 @@ const FloatingButtons = () => {
             {/* Call Button - Left Side */}
             <a
                 href="tel:+919606970542"
-                className="fixed left-16 bottom-6 z-50 bg-gray-200 hover:bg-[#F0F0F0] text-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
+                className="fixed left-16 bottom-6 z-50 bg-gray-200 hover:bg-[#F0F0F0] text-[#016591] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
                 aria-label="Call"
             >
                 <Phone size={28} strokeWidth={2} fill="currentColor" />

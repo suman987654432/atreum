@@ -38,60 +38,50 @@ const Doctorspe = () => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div className="w-full -mt-8 py-2 overflow-hidden relative z-30">
+        <div className="w-full -mt-8 py-1 overflow-hidden relative z-30">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-6 md:px-12 md:py-8 lg:py-0 ">
+                <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-4 md:px-12 md:py-6 lg:py-0 ">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
 
                         {/* Left Content Section */}
-                        <div className="w-full lg:w-[45%] space-y-6 pl-0 lg:pl-12 py-4 lg:py-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <div className="w-full lg:w-[45%] space-y-12 pl-0 lg:pl-4 py-2 lg:py-4 flex flex-col items-center lg:items-start text-center lg:text-left">
 
-                            {/* 1. Doctor Carousel */}
-                            <div className="flex items-center justify-center gap-4 w-full lg:w-max">
-                                {/* Left Arrow */}
-                                <button
-                                    onClick={handlePrev}
-                                    className="text-[#2a6b77] hover:text-[#0e4857] transition-colors p-1"
-                                >
-                                    <ChevronLeft size={24} strokeWidth={2.5} />
-                                </button>
+                            <div className="space-y-4 w-full flex flex-col items-center lg:items-start">
+                                {/* 1. Doctor Carousel */}
+                                <div className="flex items-center justify-center gap-4 w-full lg:w-max">
+                                    {/* Left Arrow */}
+                                    <button
+                                        onClick={handlePrev}
+                                        className="text-[#2a6b77] hover:text-[#0e4857] transition-colors p-1"
+                                    >
+                                        <ChevronLeft size={24} strokeWidth={2.5} />
+                                    </button>
 
 
-                                <div className="min-w-[200px] md:min-w-[250px]">
-                                    <h3 className="font-canela font-normal text-[31px] leading-[100%] tracking-normal text-[#19628D] mb-0.5">
-                                        {currentDoctor.name.split(' ')[0]} <span className="font-canela font-bold text-[31px] leading-[100%] tracking-normal">{currentDoctor.name.split(' ').slice(1).join(' ')}</span>
-                                    </h3>
-                                    <p className="text-gray-900 text-sm md:text-base mb-1">
-                                        {currentDoctor.specialty}
-                                    </p>
-                                    <p className="text-black font-semibold text-sm md:text-xl tracking-wide">
-                                        {currentDoctor.timing}
-                                    </p>
+                                    <div className="min-w-[200px] md:min-w-[250px]">
+                                        <h3 className="font-canela font-normal text-[31px] leading-[100%] tracking-normal text-[#19628D] mb-0.5">
+                                            {currentDoctor.name.split(' ')[0]} <span className="font-canela font-bold text-[31px] leading-[100%] tracking-normal">{currentDoctor.name.split(' ').slice(1).join(' ')}</span> </h3>
+                                        <p className="text-gray-900 text-[23px] text-sm md:text-base "> {currentDoctor.specialty} </p>
+                                        <p className="text-black font-semibold text-sm md:text-xl tracking-wide"> {currentDoctor.timing} </p>
+                                    </div>
+
+
+                                    <button
+                                        onClick={handleNext}
+                                        className="text-[#2a6b77] hover:text-[#0e4857] transition-colors p-1"
+                                    >
+                                        <ChevronRight size={24} strokeWidth={2.5} />
+                                    </button>
                                 </div>
-
-
-                                <button
-                                    onClick={handleNext}
-                                    className="text-[#2a6b77] hover:text-[#0e4857] transition-colors p-1"
-                                >
-                                    <ChevronRight size={24} strokeWidth={2.5} />
-                                </button>
+                                <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-12"> <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-semibold text-[16px] leading-[40px] tracking-normal py-0 px-3 rounded shadow-md uppercase transition-all"> Book an Appointment </button> </div>
                             </div>
 
-
-                            <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-12">
-                                <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-semibold text-[16px] leading-[40px] tracking-normal py-0 px-3 rounded shadow-md uppercase transition-all">
-                                    Book an Appointment
-                                </button>
-                            </div>
-
-
-                            <div className="mt-4 lg:mt-8 w-full">
+                            <div className="w-full">
                                 <h2 className="text-[#19628D] mb-4">
                                     <span className="font-canela font-light text-[31px] leading-[100%] tracking-normal">Orthopaedic </span>
                                     <span className="font-canela font-black text-[31px] leading-[100%] tracking-normal italic">Specialists</span>
                                 </h2>
-                                <p className="text-gray-700 font-sohne font-normal text-[16px] leading-[28px] tracking-normal max-w-xl mx-auto lg:mx-0">
+                                <p className="text-gray-700 font-sohne font-normal text-[16px] leading-[20px] tracking-normal max-w-md mx-auto lg:mx-0">
                                     The Orthopaedic Specialists at Atreum Hospitals represent a multi-disciplinary team
                                     of experienced consultants, each focused on a specific area of musculoskeletal care.
                                     Working within a unified clinical framework, they combine specialised expertise with
@@ -105,13 +95,13 @@ const Doctorspe = () => {
                             <img
                                 src={doctors1}
                                 alt="Doctor's Desk"
-                                className="w-full h-auto object-contain drop-shadow-2xl lg:scale-125 lg:origin-right lg:translate-x-8 lg:-mt-32"
+                                className="w-full h-auto object-contain  lg:scale-125 lg:origin-right lg:translate-x-16 lg:-mt-40"
                             />
                         </div>
 
                     </div>
                 </div>
-                <div className="w-full h-[1px] bg-black mt-6"></div>
+
             </div>
         </div>
     );

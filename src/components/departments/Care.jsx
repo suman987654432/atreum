@@ -46,7 +46,7 @@ const careData = [
 
 const Care = () => {
     return (
-        <div className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16">
+        <div className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16 mx-2 md:mx-3 lg:mx-4">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-center mb-12 gap-6">
                     <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px] text-center md:text-left">
@@ -102,8 +102,7 @@ const Care = () => {
                     ))}
                 </div>
 
-                {/* Horizontal Black Line */}
-                <div className="w-full h-[1px] bg-black mt-8"></div>
+
             </div>
         </div>
     );

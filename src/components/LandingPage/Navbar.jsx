@@ -29,9 +29,14 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className="text-white hover:font-semibold  text-[18px] leading-none tracking-normal font-light font-sohne"
+                className="relative inline-block text-center"
               >
-                {item.name}
+                <span className="invisible font-medium text-[18px] leading-none tracking-normal font-sohne block h-0">
+                  {item.name}
+                </span>
+                <span className="text-white hover:font-medium text-[18px] leading-none tracking-normal font-light font-sohne transition-all">
+                  {item.name}
+                </span>
               </a>
             ))}
           </div>

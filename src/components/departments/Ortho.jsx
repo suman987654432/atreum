@@ -21,8 +21,8 @@ const Ortho = () => {
                 <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
 
                     {/* Left Side Content */}
-                    <div className="w-full lg:w-1/2 text-white flex flex-col items-center lg:items-start text-center lg:text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-0 xl:pl-8">
-                        <div className="space-y-8 sm:space-y-10 lg:space-y-12">
+                    <div className="w-full lg:w-1/2 text-white flex flex-col items-center lg:items-start text-center lg:text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-[88px] lg:-mt-12">
+                        <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                             <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                 Open doors <br />
                                 to
