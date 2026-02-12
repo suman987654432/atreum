@@ -55,10 +55,10 @@ const Care = () => {
                             <span className="font-canela font-bold italic text-[37px] leading-[37px] tracking-normal">Atreum</span>
                         </h2>
                     </div>
-                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px]">
+                    <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px]">
                         <p className="text-black font-sohne font-normal text-[20px] leading-[27px] tracking-normal">
-                            Orthopaedics at Atreum Hospitals is a multi-disciplinary department 
-                            dedicated to the diagnosis, treatment, and long-term management of 
+                            Orthopaedics at Atreum Hospitals is a multi-disciplinary department
+                            dedicated to the diagnosis, treatment, and long-term management of
                             conditions affecting bones, joints, muscles, and the spine.
                         </p>
                     </div>
@@ -103,7 +103,7 @@ const Care = () => {
                 </div>
 
                 {/* Horizontal Black Line */}
-                <div className="w-full h-[1px] bg-black mt-16"></div>
+                <div className="w-full h-[1px] bg-black mt-8"></div>
             </div>
         </div>
     );

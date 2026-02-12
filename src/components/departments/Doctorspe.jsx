@@ -38,9 +38,9 @@ const Doctorspe = () => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div className="w-full py-2 overflow-hidden">
+        <div className="w-full -mt-8 py-2 overflow-hidden relative z-30">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-6 md:px-12 md:py-8 lg:py-0">
+                <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-6 md:px-12 md:py-8 lg:py-0 ">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
 
                         {/* Left Content Section */}
@@ -58,7 +58,7 @@ const Doctorspe = () => {
 
 
                                 <div className="min-w-[200px] md:min-w-[250px]">
-                                    <h3 className="text-xl md:text-2xl font-serif font-bold text-[#19628D] mb-0.5">
+                                    <h3 className="font-canela font-normal text-[37px] leading-[100%] tracking-normal text-[#19628D] mb-0.5">
                                         {currentDoctor.name}
                                     </h3>
                                     <p className="text-gray-900 text-sm md:text-base mb-1">
@@ -111,7 +111,7 @@ const Doctorspe = () => {
 
                     </div>
                 </div>
-                <div className="w-full h-[1px] bg-black mt-16"></div>
+                <div className="w-full h-[1px] bg-black mt-6"></div>
             </div>
         </div>
     );

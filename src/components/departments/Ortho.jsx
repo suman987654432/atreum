@@ -17,11 +17,12 @@ const Ortho = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-                <div className="flex flex-col lg:flex-row items-center justify-between w-full h-full pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 lg:pb-0">
+            {/* Content Container */}
+            <div className="relative z-10 w-full h-full flex flex-col justify-center px-4 md:px-12">
+                <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 lg:pb-0">
 
                     {/* Left Side Content */}
-                    <div className="w-full lg:w-1/2 text-white flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 lg:pl-12 xl:pl-56 mb-8 lg:mb-0">
+                    <div className="w-full lg:w-1/2 text-white flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 lg:pl-0 xl:pl-8 mb-8 lg:mb-0">
                         <div className="space-y-6 sm:space-y-8 lg:space-y-12">
                             <h1 className="font-canela font-normal text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] leading-[32px] sm:leading-[42px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                 Open doors <br />
@@ -48,7 +49,7 @@ const Ortho = () => {
                         </div>
                     </div>
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] px-4 sm:px-0 ">
+                    <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] px-4 sm:px-0 lg:ml-auto">
                         <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[32px] leading-[28px] sm:leading-[30px] md:leading-[31px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins

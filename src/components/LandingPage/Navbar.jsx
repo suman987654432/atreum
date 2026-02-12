@@ -17,7 +17,7 @@ const Navbar = () => {
         </a>
 
         {/* Main Interface Bar - Desktop */}
-        <div className="hidden lg:flex flex-1 items-center justify-between bg-[#0FB1AB]/40 backdrop-blur-md rounded-lg px-8 h-[60px] shadow-[0px_7px_15.6px_-6px_#00000040] border border-white/10">
+        <div className="hidden lg:flex flex-1 items-center justify-between bg-[#016591] rounded-lg pl-8 pr-2 h-[60px] shadow-[0px_7px_15.6px_-6px_#00000040] border border-white/10">
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center gap-16">
@@ -39,12 +39,12 @@ const Navbar = () => {
           {/* Contact Section - Right Side */}
           <div className="flex items-center gap-3">
             {/* Phone Icon Button */}
-            <div className="bg-[#0FB1AB33] h-[40px] w-[40px] rounded-[6px] flex items-center justify-center cursor-pointer hover:bg-[#4ea8a5] transition-colors shadow-sm">
+            <div className="bg-[#0FB1AB33] h-[40px] w-[40px] rounded-[6px] flex items-center justify-center cursor-pointer hover:bg-[#4ea8a5] border border-white/30 shadow-md">
               <Phone size={20} className="text-white fill-white" />
             </div>
 
             {/* Phone Number Button */}
-            <div className="bg-[#0FB1AB33] h-[40px] px-5 rounded-[6px] flex items-center justify-center cursor-pointer hover:bg-[#4ea8a5] transition-colors shadow-sm">
+            <div className="bg-[#0FB1AB33] h-[40px] px-5 rounded-[6px] flex items-center justify-center cursor-pointer hover:bg-[#4ea8a5] border border-white/30 shadow-md">
               <span className="text-white font-sohne font-light text-[18px] leading-none tracking-normal">
                 +91 - 9606970542
               </span>
