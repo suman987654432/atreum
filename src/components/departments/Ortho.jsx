@@ -38,21 +38,21 @@ const Ortho = () => {
                        
                     </div>
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[600px] max-w-full lg:max-w-[600px] lg:ml-auto">
-                        <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-6 sm:p-7 md:p-8 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
+                    <div className="w-full lg:w-[500px] max-w-full lg:max-w-[500px] lg:ml-auto">
+                        <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-5 sm:p-6 md:p-7 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[22px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins
                             </h3>
-                            <h3 className="text-white font-canela font-normal text-[22px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center mb-6 sm:mb-8">
+                            <h3 className="text-white font-canela font-normal text-[22px] sm:text-[28px] md:text-[32px] leading-[30px] sm:leading-[32px] md:leading-[36px] tracking-normal text-center mb-5 sm:mb-6">
                                 with knowing you
                             </h3>
 
-                            <form className="space-y-4">
+                            <form className="space-y-3">
                                 <div className="relative">
                                     <input
                                         type="text"
                                         placeholder="Name"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all font-sohne"
+                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  font-sohne"
                                     />
                                 </div>
 
@@ -60,13 +60,13 @@ const Ortho = () => {
                                     <input
                                         type="tel"
                                         placeholder="Phone Number"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all font-sohne"
+                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  font-sohne"
                                     />
                                 </div>
 
                                 <div className="relative">
                                     <select
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] transition-all appearance-none cursor-pointer"
+                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-4 py-3 text-base focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  appearance-none cursor-pointer"
                                         defaultValue=""
                                     >
                                         <option value="" disabled className="text-gray-400 bg-[#19628DE0] font-sohne font-normal text-[16px] leading-[31px] tracking-normal">State Your Concern</option>
@@ -87,7 +87,7 @@ const Ortho = () => {
                                     </div>
                                 </div>
 
-                                <div className="pt-6 text-center">
+                                <div className="pt-4 text-center">
                                     <button
                                         type="submit"
                                         className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-3 px-8 rounded shadow-lg uppercase tracking-wide text-sm transition-all duration-300"
