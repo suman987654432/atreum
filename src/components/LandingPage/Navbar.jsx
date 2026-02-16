@@ -17,6 +17,38 @@ const Navbar = () => {
     { name: "Shoulder Surgery", path: "/orthopedics" }
   ];
 
+  const handleScroll = (e, path) => {
+    if (path.startsWith('#') && path.length > 1) {
+      e.preventDefault();
+      const element = document.querySelector(path);
+      if (element) {
+        const offset = 100;
+        const targetPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        const duration = 1000;
+        let start = null;
+
+        function animation(currentTime) {
+          if (start === null) start = currentTime;
+          const timeElapsed = currentTime - start;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          window.scrollTo(0, startPosition + distance * ease);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+        requestAnimationFrame(animation);
+      }
+    }
+  };
+
   return (
     <nav className="fixed top-2 sm:top-4 md:top-6 left-0 right-0 w-full flex justify-center px-4 md:px-12 z-50 font-sohne font-light">
       {/* Maximum width container to align with content */}
@@ -34,7 +66,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center gap-16">
             {/* Our Services with Dropdown */}
-            <div 
+            <div
               className="relative group"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
@@ -48,7 +80,7 @@ const Navbar = () => {
                 </span>
                 <span className="text-white hover:font-medium text-[18px] leading-none tracking-normal font-light font-sohne transition-all flex items-center gap-1">
                   Our Services
-                  
+
                 </span>
               </a>
 
@@ -56,7 +88,7 @@ const Navbar = () => {
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[280px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                 {/* Arrow Pointer */}
                 {/* <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#19628DE0] rotate-45 border-l border-t border-white/20"></div> */}
-                
+
                 {/* Dropdown Content */}
                 <div className="relative bg-[#19628DE0] backdrop-blur-md rounded-xl py-1.5 border border-white/20 overflow-hidden">
                   {services.map((service, index) => (
@@ -84,7 +116,8 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.path}
-                className="relative inline-block text-center"
+                onClick={(e) => handleScroll(e, item.path)}
+                className="relative inline-block text-center cursor-pointer"
               >
                 <span className="invisible font-medium text-[18px] leading-none tracking-normal font-sohne block h-0">
                   {item.name}
@@ -136,7 +169,7 @@ const Navbar = () => {
                 Our Services
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {/* Mobile Dropdown with Animation */}
               <div className={`overflow-hidden transition-all duration-300 ${isServicesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                 <div className="bg-[#19628DE0] rounded-xl py-1.5 px-2 shadow-lg border border-white/20">
@@ -165,7 +198,11 @@ const Navbar = () => {
               <li key={item.name}>
                 <a
                   href={item.path}
-                  className="block text-[#19628D] py-2 hover:font-bold rounded-lg transition-all duration-200 font-light text-[18px] leading-none tracking-normal"
+                  onClick={(e) => {
+                    handleScroll(e, item.path);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="block text-[#19628D] py-2 hover:font-bold rounded-lg transition-all duration-200 font-light text-[18px] leading-none tracking-normal cursor-pointer"
                 >
                   {item.name}
                 </a>
