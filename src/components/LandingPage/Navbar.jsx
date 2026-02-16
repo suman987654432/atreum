@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import logo from "../../images/logo1.png";
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const services = [
+    { name: "Knee Replacement", path: "/orthopedics" },
+    { name: "Joint Replacement", path: "/orthopedics" },
+    { name: "Trauma and Fracture Care", path: "/orthopedics" },
+    { name: "Sports Medicine Surgery", path: "/orthopedics" },
+    { name: "Hand and Wrist Surgery", path: "/orthopedics" },
+    { name: "Deformity Correction", path: "/orthopedics" },
+    { name: "Pediatric Ortho", path: "/orthopedics" },
+    { name: "Shoulder Surgery", path: "/orthopedics" }
+  ];
 
   return (
     <nav className="fixed top-2 sm:top-4 md:top-6 left-0 right-0 w-full flex justify-center px-4 md:px-12 z-50 font-sohne font-light">
@@ -21,9 +33,52 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="flex-1 flex justify-center gap-16">
+            {/* Our Services with Dropdown */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <a
+                href="/orthopedics"
+                className="relative inline-block text-center cursor-pointer"
+              >
+                <span className="invisible font-medium text-[18px] leading-none tracking-normal font-sohne block h-0">
+                  Our Services
+                </span>
+                <span className="text-white hover:font-medium text-[18px] leading-none tracking-normal font-light font-sohne transition-all flex items-center gap-1">
+                  Our Services
+                  
+                </span>
+              </a>
+
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[280px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                {/* Arrow Pointer */}
+                {/* <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#19628DE0] rotate-45 border-l border-t border-white/20"></div> */}
+                
+                {/* Dropdown Content */}
+                <div className="relative bg-[#19628DE0] backdrop-blur-md rounded-xl py-1.5 border border-white/20 overflow-hidden">
+                  {services.map((service, index) => (
+                    <React.Fragment key={index}>
+                      <a
+                        href={service.path}
+                        className="block px-4 py-2 text-white font-sohne font-normal text-[14px] leading-[16px] tracking-normal cursor-pointer hover:bg-white/10 transition-all"
+                      >
+                        {service.name}
+                      </a>
+                      {index < services.length - 1 && (
+                        <div className=""></div>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Other Navigation Links */}
             {[
-              { name: "Our Services", path: "/orthopedics" },
-              { name: "Doctors", path: "/doctor" },
+              { name: "Doctors", path: "#doctor-specialists" },
               { name: "Packages", path: "#" }
             ].map((item) => (
               <a
@@ -72,9 +127,39 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed top-20 sm:top-24 md:top-28 left-4 right-4 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-6 z-40 animate-fade-in border border-white/20 font-sohne">
           <ul className="flex flex-col gap-4 text-center">
+            {/* Our Services with Dropdown in Mobile */}
+            <li>
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="w-full flex items-center justify-center gap-2 text-[#19628D] py-2 hover:font-bold rounded-lg transition-all duration-200 font-light text-[18px] leading-none tracking-normal"
+              >
+                Our Services
+                <ChevronDown size={16} className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {/* Mobile Dropdown with Animation */}
+              <div className={`overflow-hidden transition-all duration-300 ${isServicesOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                <div className="bg-[#19628DE0] rounded-xl py-1.5 px-2 shadow-lg border border-white/20">
+                  {services.map((service, index) => (
+                    <React.Fragment key={index}>
+                      <a
+                        href={service.path}
+                        className="block py-2 px-3 text-white hover:bg-white/15 rounded-lg font-sohne font-normal text-[13px] leading-[16px] tracking-normal transition-all duration-200 cursor-pointer"
+                      >
+                        {service.name}
+                      </a>
+                      {index < services.length - 1 && (
+                        <div className="mx-2 my-0.5 border-t border-white/10"></div>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+            </li>
+
+            {/* Other Menu Items */}
             {[
-              { name: "Our Services", path: "#" },
-              { name: "Doctors", path: "/doctor" },
+              { name: "Doctors", path: "#doctor-specialists" },
               { name: "Packages", path: "#" }
             ].map((item) => (
               <li key={item.name}>

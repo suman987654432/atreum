@@ -1,8 +1,133 @@
-import React from 'react';
+import React, { useState } from 'react';
 import heroortho from "../../images/heroortho.png";
 import { Phone, MessageCircle } from 'lucide-react';
 
 const Ortho = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        concern: ''
+    });
+
+    const [errors, setErrors] = useState({
+        name: '',
+        phone: '',
+        concern: ''
+    });
+
+    const [touched, setTouched] = useState({
+        name: false,
+        phone: false,
+        concern: false
+    });
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const validateName = (name) => {
+        if (!name.trim()) {
+            return 'Name is required';
+        }
+        if (name.trim().length < 2) {
+            return 'Name must be at least 2 characters';
+        }
+        return '';
+    };
+
+    const validatePhone = (phone) => {
+        if (!phone.trim()) {
+            return 'Phone number is required';
+        }
+        const phoneRegex = /^[6-9]\d{9}$/;
+        if (!phoneRegex.test(phone.replace(/[\s-]/g, ''))) {
+            return 'Enter a valid 10-digit phone number';
+        }
+        return '';
+    };
+
+    const validateConcern = (concern) => {
+        if (!concern) {
+            return 'Please select your concern';
+        }
+        return '';
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+
+        // Validate on change if field was touched
+        if (touched[name]) {
+            let error = '';
+            if (name === 'name') error = validateName(value);
+            if (name === 'phone') error = validatePhone(value);
+            if (name === 'concern') error = validateConcern(value);
+            
+            setErrors(prev => ({
+                ...prev,
+                [name]: error
+            }));
+        }
+    };
+
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+        setTouched(prev => ({
+            ...prev,
+            [name]: true
+        }));
+
+        let error = '';
+        if (name === 'name') error = validateName(value);
+        if (name === 'phone') error = validatePhone(value);
+        if (name === 'concern') error = validateConcern(value);
+        
+        setErrors(prev => ({
+            ...prev,
+            [name]: error
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Mark all fields as touched
+        setTouched({
+            name: true,
+            phone: true,
+            concern: true
+        });
+
+        // Validate all fields
+        const nameError = validateName(formData.name);
+        const phoneError = validatePhone(formData.phone);
+        const concernError = validateConcern(formData.concern);
+
+        setErrors({
+            name: nameError,
+            phone: phoneError,
+            concern: concernError
+        });
+
+        // If no errors, submit the form
+        if (!nameError && !phoneError && !concernError) {
+            console.log('Form submitted:', formData);
+            // Add your form submission logic here
+            
+            // Reset form data
+            setFormData({
+                name: '',
+                phone: '',
+                concern: ''
+            });
+            
+            // Set submitted state to show thank you message
+            setIsSubmitted(true);
+        }
+    };
+
     return (
         <div className="relative w-full min-h-screen h-auto lg:h-screen font-sans overflow-hidden">
             {/* Background Image */}
@@ -47,27 +172,47 @@ const Ortho = () => {
                                 with knowing you
                             </h3>
 
-                            <form className="space-y-2.5">
+                            <form onSubmit={handleSubmit} className="space-y-2.5" noValidate>
                                 <div className="relative">
                                     <input
                                         type="text"
+                                        name="name"
                                         placeholder="Name"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  font-sohne"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        disabled={isSubmitted}
+                                        className={`w-full bg-[#ffffff1a] border ${errors.name && touched.name ? 'border-red-500' : 'border-transparent'} rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] font-sohne ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
                                     />
+                                    {errors.name && touched.name && (
+                                        <p className="text-red-700 text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.name}</p>
+                                    )}
                                 </div>
 
                                 <div className="relative">
                                     <input
                                         type="tel"
+                                        name="phone"
                                         placeholder="Phone Number"
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  font-sohne"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        disabled={isSubmitted}
+                                        className={`w-full bg-[#ffffff1a] border ${errors.phone && touched.phone ? 'border-red-500' : 'border-transparent'} rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] font-sohne ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
                                     />
+                                    {errors.phone && touched.phone && (
+                                        <p className="text-red-700 text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.phone}</p>
+                                    )}
                                 </div>
 
                                 <div className="relative">
                                     <select
-                                        className="w-full bg-[#ffffff1a] border border-transparent rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25]  appearance-none cursor-pointer"
-                                        defaultValue=""
+                                        name="concern"
+                                        value={formData.concern}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        disabled={isSubmitted}
+                                        className={`w-full bg-[#ffffff1a] border ${errors.concern && touched.concern ? 'border-red-500' : 'border-transparent'} rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] appearance-none cursor-pointer ${formData.concern === '' ? 'text-white/70' : 'text-white'} ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
                                     >
                                         <option value="" disabled className="text-gray-400 bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">State Your Concern</option>
                                         <option value="knee" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Knee Replacement</option>
@@ -85,15 +230,29 @@ const Ortho = () => {
                                             <path d="M1 1.5L6 6.5L11 1.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
+                                    {errors.concern && touched.concern && (
+                                        <p className="text-red-700 text-xs mt-1 font-sohne font-medium  px-2 py-0.5 ">{errors.concern}</p>
+                                    )}
                                 </div>
 
                                 <div className="pt-3 text-center">
-                                    <button
-                                        type="submit"
-                                        className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2.5 px-7 rounded shadow-lg uppercase tracking-wide text-xs transition-all duration-300"
-                                    >
-                                        GET COST ESTIMATE
-                                    </button>
+                                    {!isSubmitted ? (
+                                        <button
+                                            type="submit"
+                                            className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2.5 px-7 rounded shadow-lg uppercase tracking-wide text-xs transition-all duration-300"
+                                        >
+                                            GET COST ESTIMATE
+                                        </button>
+                                    ) : (
+                                        <div className="py-4">
+                                            <h2 className="text-white font-canela font-bold text-[28px] leading-[34px] tracking-normal mb-2">
+                                                Thank You
+                                            </h2>
+                                            <p className="text-white font-sohne font-normal text-[15px] leading-[22px] tracking-normal">
+                                                Our Team will get back to you shortly.
+                                            </p>
+                                        </div>
+                                    )}
                                 </div>
                             </form>
                         </div>

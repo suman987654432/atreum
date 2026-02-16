@@ -30,9 +30,7 @@ const Form = () => {
         });
     };
 
-    const handlePreferenceSelect = (preference) => {
-        setFormData(prev => ({ ...prev, consultationPreference: preference }));
-    };
+ 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -168,24 +166,7 @@ const Form = () => {
                 </div>
 
                 {/* Consultation Preference */}
-                <div className="pt-2">
-                    <label className="block text-black text-base mb-2 font-sohne">Consultation Preference</label>
-                    <div className="flex flex-wrap gap-3">
-                        {['IN-PERSON'].map(pref => (
-                            <button
-                                key={pref}
-                                type="button"
-                                onClick={() => handlePreferenceSelect(pref)}
-                                className={`px-4 py-2 border rounded-lg text-xs font-bold uppercase transition-all duration-200 ${formData.consultationPreference === pref
-                                    ? 'bg-[#0FB1AB]/10 border-[#0FB1AB] text-[#0FB1AB]'
-                                    : 'bg-white border-[#0FB1AB] text-gray-600 hover:border-[#0FB1AB] hover:text-[#0FB1AB]'
-                                    }`}
-                            >
-                                {pref}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+           
 
                 {/* Submit Button */}
                 <div className="pt-6 flex justify-center">

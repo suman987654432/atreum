@@ -38,7 +38,7 @@ const Doctorspe = () => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div className="w-full -mt-8 py-1 overflow-hidden relative z-30">
+        <div id="doctor-specialists" className="w-full -mt-8 py-1 overflow-hidden relative z-30">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-4 md:px-12 md:py-6 lg:py-0 ">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
