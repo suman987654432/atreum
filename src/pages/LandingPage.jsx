@@ -1,6 +1,6 @@
 import Hero from '../components/HeroPage/Hero'
 import Excellence from '../components/HeroPage/Excellence'
-import Care from '../components/departments/Care'
+// import Care from '../components/departments/Care'
 
 
 const LandingPage = () => {
@@ -8,7 +8,7 @@ const LandingPage = () => {
     <div className="">
       <Hero />
       <Excellence />
-      <Care />
+      {/* <Care /> */}
 
     </div>
   )
