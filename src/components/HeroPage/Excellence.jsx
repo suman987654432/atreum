@@ -1,4 +1,9 @@
 import ortho1 from "../../images/ortho1.png"
+import uro from "../../images/uro.png"
+import plastics from "../../images/plastics.png"
+import gyna from "../../images/gyna.png"
+import pedia from "../../images/pedia.png"
+import critical from "../../images/critical.png"
 
 
 const careData = [
@@ -13,35 +18,35 @@ const careData = [
         id: 2,
         title: "Urology",
         description: "The Urology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area.",
-        image: ortho1,
+        image: uro,
         width: "col-span-1",
     },
     {
         id: 3,
         title: "Plastic Surgery",
         description: "The Plastic Surgery Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area.",
-        image: ortho1,
+        image: plastics,
         width: "col-span-1",
     },
     {
         id: 4,
         title: "Gynaecology",
         description: "The Gynaecology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area.",
-        image: ortho1,
+        image: gyna,
         width: "col-span-1",
     },
     {
         id: 5,
         title: "Pediatrics",
         description: "The Pediatrics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area.",
-        image: ortho1,
+        image: pedia,
         width: "col-span-1",
     },
     {
         id: 6,
         title: "Critical Care",
         description: "The Critical Care Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area.",
-        image: ortho1,
+        image: critical,
         width: "col-span-1",
     }
 ];
