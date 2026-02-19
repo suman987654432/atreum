@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import Navbar from './components/LandingPage/Navbar';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
-import DoctorPage from './pages/DoctorPage';
+// import DoctorPage from './pages/DoctorPage';
 // import DepartmentPage from './pages/DepartmentPage';
 import OrthoPage from './pages/OrthoPage';
 
@@ -20,7 +20,7 @@ const App = () => {
             <Route path='/' element={<LandingPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/careers' element={<CareersPage />} />
-            <Route path='/doctor' element={<DoctorPage />} />
+            {/* <Route path='/doctor' element={<DoctorPage />} /> */}
             {/* <Route path='/department' element={<DepartmentPage />} /> */}
             <Route path='/orthopedics' element={<OrthoPage />} />
           </Routes>

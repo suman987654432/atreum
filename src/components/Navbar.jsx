@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../../images/logo1.png";
+import logo from "../images/logo1.png";
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
@@ -7,14 +7,14 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: "Knee Replacement", path: "/orthopedics" },
-    { name: "Joint Replacement", path: "/orthopedics" },
-    { name: "Trauma and Fracture Care", path: "/orthopedics" },
-    { name: "Sports Medicine Surgery", path: "/orthopedics" },
-    { name: "Hand and Wrist Surgery", path: "/orthopedics" },
-    { name: "Deformity Correction", path: "/orthopedics" },
-    { name: "Pediatric Ortho", path: "/orthopedics" },
-    { name: "Shoulder Surgery", path: "/orthopedics" }
+    { name: "Knee Replacement", path: "#care-section" },
+    { name: "Joint Replacement", path: "#care-section" },
+    { name: "Trauma and Fracture Care", path: "#care-section" },
+    { name: "Sports Medicine Surgery", path: "#care-section" },
+    { name: "Hand and Wrist Surgery", path: "#care-section" },
+    { name: "Deformity Correction", path: "#care-section" },
+    { name: "Pediatric Ortho", path: "#care-section" },
+    { name: "Shoulder Surgery", path: "#care-section" }
   ];
 
   const handleScroll = (e, path) => {
@@ -85,7 +85,7 @@ const Navbar = () => {
               </a>
 
               {/* Dropdown Menu */}
-              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[280px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+              <div className={`absolute top-full left-1/2 -translate-x-[20%] mt-4 w-[280px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                 {/* Arrow Pointer */}
                 {/* <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#19628DE0] rotate-45 border-l border-t border-white/20"></div> */}
 
@@ -95,6 +95,10 @@ const Navbar = () => {
                     <React.Fragment key={index}>
                       <a
                         href={service.path}
+                        onClick={(e) => {
+                          handleScroll(e, service.path);
+                          setIsServicesOpen(false);
+                        }}
                         className="block px-4 py-2 text-white font-sohne font-normal text-[14px] leading-[16px] tracking-normal cursor-pointer hover:bg-white/10 transition-all"
                       >
                         {service.name}
@@ -177,6 +181,10 @@ const Navbar = () => {
                     <React.Fragment key={index}>
                       <a
                         href={service.path}
+                        onClick={(e) => {
+                          handleScroll(e, service.path);
+                          setIsMobileMenuOpen(false);
+                        }}
                         className="block py-2 px-3 text-white hover:bg-white/15 rounded-lg font-sohne font-normal text-[13px] leading-[16px] tracking-normal transition-all duration-200 cursor-pointer"
                       >
                         {service.name}

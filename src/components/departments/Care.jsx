@@ -45,8 +45,37 @@ const careData = [
 ];
 
 const Care = () => {
+    const handleCardClick = () => {
+        const element = document.getElementById('form-section');
+        if (element) {
+            const offset = 100;
+            const targetPosition = element.getBoundingClientRect().top + window.scrollY - offset;
+            const startPosition = window.scrollY;
+            const distance = targetPosition - startPosition;
+            const duration = 1000;
+            let start = null;
+
+            function animation(currentTime) {
+                if (start === null) start = currentTime;
+                const timeElapsed = currentTime - start;
+                const progress = Math.min(timeElapsed / duration, 1);
+
+                const ease = progress < 0.5
+                    ? 4 * progress * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            requestAnimationFrame(animation);
+        }
+    };
+
     return (
-        <div className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16 mx-2 md:mx-3 lg:mx-4">
+        <div id="care-section" className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16 mx-2 md:mx-3 lg:mx-4">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-center items-center md:items-center mb-12 gap-6">
                     <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px] text-center md:text-left">
@@ -67,7 +96,11 @@ const Care = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {careData.map((item) => (
-                        <div key={item.id} className={`relative group overflow-hidden rounded-2xl h-[400px] cursor-pointer shadow-xl ${item.width}`}>
+                        <div
+                            key={item.id}
+                            onClick={handleCardClick}
+                            className={`relative group overflow-hidden rounded-2xl h-[400px] cursor-pointer shadow-xl ${item.width}`}
+                        >
                             {/* Background Image */}
                             <div className="absolute inset-0 w-full h-full">
                                 <img
