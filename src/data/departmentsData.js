@@ -81,13 +81,11 @@ export const departmentsData = {
             formTitle: "Expert neuro care",
             formSubtitle: "dedicated to your recovery",
             concerns: [
-                "Stroke Management",
-                "Epilepsy Treatment",
-                "Movement Disorders",
-                "Neuro-rehabilitation",
+                "Stroke (Brain attack)",
+                "Epilepsy / Seizure disorders",
                 "Headache & Migraine",
-                "Sleep Disorders",
-                "Memory Disorders"
+                "Parkinson’s disease",
+                "Neuropathy (Nerve weakness)"
             ]
         },
         care: {
@@ -96,14 +94,32 @@ export const departmentsData = {
             items: [
                 {
                     id: 1,
-                    title: "STROKE CARE",
-                    description: "Rapid response and advanced treatment for acute stroke patients to ensure best possible outcomes.",
+                    title: "STROKE (BRAIN ATTACK)",
+                    description: "Rapid diagnosis and emergency neuro care for stroke patients to reduce long-term complications and improve recovery outcomes.",
                     image: care4,
                 },
                 {
                     id: 2,
-                    title: "EPILEPSY TREATMENT",
-                    description: "Specialized care for patients with seizure disorders using the latest diagnostic and therapeutic approaches.",
+                    title: "EPILEPSY / SEIZURE DISORDERS",
+                    description: "Specialized evaluation and treatment plans for seizure control with modern diagnostics, medication planning, and follow-up.",
+                    image: care5,
+                },
+                {
+                    id: 3,
+                    title: "HEADACHE & MIGRAINE",
+                    description: "Comprehensive migraine and chronic headache management using trigger analysis, preventive therapies, and personalized care.",
+                    image: care3,
+                },
+                {
+                    id: 4,
+                    title: "PARKINSON'S DISEASE",
+                    description: "Multi-disciplinary Parkinson’s care focused on symptom control, mobility support, and long-term quality of life.",
+                    image: care2,
+                },
+                {
+                    id: 5,
+                    title: "NEUROPATHY (NERVE WEAKNESS)",
+                    description: "Accurate diagnosis and treatment of nerve weakness, numbness, and pain through medical and rehabilitative neuro care.",
                     image: care5,
                 }
             ]
