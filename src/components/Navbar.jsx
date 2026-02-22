@@ -7,14 +7,20 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: "Knee Replacement", path: "#care-section" },
-    { name: "Joint Replacement", path: "#care-section" },
-    { name: "Trauma and Fracture Care", path: "#care-section" },
-    { name: "Sports Medicine Surgery", path: "#care-section" },
-    { name: "Hand and Wrist Surgery", path: "#care-section" },
-    { name: "Deformity Correction", path: "#care-section" },
-    { name: "Pediatric Ortho", path: "#care-section" },
-    { name: "Shoulder Surgery", path: "#care-section" }
+    { name: "Neurology", path: "/department/neurology" },
+    { name: "Nephrology", path: "/department/nephrology" },
+    { name: "Gastroenterology", path: "/department/gastroenterology" },
+    { name: "Dermatology", path: "/department/dermatology" },
+    { name: "Endocrinology", path: "/department/endocrinology" },
+    { name: "Pediatrics", path: "/department/pediatrics" },
+    { name: "Obstetrics & Gynecology", path: "/department/obstetrics-gynecology" },
+    { name: "Urology", path: "/department/urology" },
+    { name: "Orthopedics", path: "/department/orthopedics" },
+    { name: "Plastics", path: "/department/plastics" },
+    { name: "General Surgery", path: "/department/general-surgery" },
+    { name: "Oncology", path: "/department/oncology" },
+    { name: "Vascular Surgery", path: "/department/vascular-surgery" },
+    { name: "ENT", path: "/department/ent" }
   ];
 
   const handleScroll = (e, path) => {
@@ -64,7 +70,7 @@ const Navbar = () => {
         <div className="hidden lg:flex flex-1 items-center justify-between bg-[#016591]/70 backdrop-blur-md rounded-lg pl-8 pr-2 h-[60px] shadow-[0px_7px_15.6px_-6px_#00000040]">
 
           {/* Navigation Links */}
-          <div className="flex-1 flex justify-center gap-16">
+          <div className="flex-1 flex justify-center gap-12">
             {/* Our Services with Dropdown */}
             <div
               className="relative group"
@@ -72,7 +78,7 @@ const Navbar = () => {
               onMouseLeave={() => setIsServicesOpen(false)}
             >
               <a
-                href="/orthopedics"
+                href=""
                 className="relative inline-block text-center cursor-pointer"
               >
                 <span className="invisible font-medium text-[18px] leading-none tracking-normal font-sohne block h-0">
@@ -85,29 +91,24 @@ const Navbar = () => {
               </a>
 
               {/* Dropdown Menu */}
-              <div className={`absolute top-full left-1/2 -translate-x-[20%] mt-4 w-[280px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
-                {/* Arrow Pointer */}
-                {/* <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#19628DE0] rotate-45 border-l border-t border-white/20"></div> */}
-
+              <div className={`absolute top-full left-1/2 -translate-x-[40%] mt-4 w-[700px] transition-all duration-300 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                 {/* Dropdown Content */}
-                <div className="relative bg-[#19628DE0] backdrop-blur-md rounded-xl py-1.5 border border-white/20 overflow-hidden">
-                  {services.map((service, index) => (
-                    <React.Fragment key={index}>
+                <div className="relative bg-[#19628DE0] backdrop-blur-md rounded-xl p-3.5 border border-white/20 overflow-hidden shadow-2xl">
+                  <div className="grid grid-cols-3 gap-x-3 gap-y-0.5">
+                    {services.map((service, index) => (
                       <a
+                        key={index}
                         href={service.path}
                         onClick={(e) => {
                           handleScroll(e, service.path);
                           setIsServicesOpen(false);
                         }}
-                        className="block px-4 py-2 text-white font-sohne font-normal text-[14px] leading-[16px] tracking-normal cursor-pointer hover:bg-white/10 transition-all"
+                        className="group flex items-center px-4 py-1.5 text-white/90 font-sohne font-normal text-[14px] leading-tight tracking-normal cursor-pointer hover:bg-white/10 hover:text-white rounded-lg transition-all"
                       >
                         {service.name}
                       </a>
-                      {index < services.length - 1 && (
-                        <div className=""></div>
-                      )}
-                    </React.Fragment>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

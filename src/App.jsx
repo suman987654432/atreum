@@ -7,7 +7,7 @@ import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 // import DoctorPage from './pages/DoctorPage';
 // import DepartmentPage from './pages/DepartmentPage';
-import OrthoPage from './pages/OrthoPage';
+import SpecialtyPage from './pages/SpecialtyPage';
 
 const App = () => {
   return (
@@ -20,9 +20,8 @@ const App = () => {
             <Route path='/' element={<LandingPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/careers' element={<CareersPage />} />
-            {/* <Route path='/doctor' element={<DoctorPage />} /> */}
-            {/* <Route path='/department' element={<DepartmentPage />} /> */}
-            <Route path='/orthopedics' element={<OrthoPage />} />
+            <Route path='/department/:slug' element={<SpecialtyPage />} />
+            <Route path='/orthopedics' element={<SpecialtyPage />} /> {/* Legacy support */}
           </Routes>
         </div>
         <Footer />

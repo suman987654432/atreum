@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import heroortho from "../../images/heroortho.png";
-import { Phone, MessageCircle } from 'lucide-react';
 
-const Ortho = () => {
+const DepartmentHero = ({ data }) => {
+    const { image, title1, title2, title3, title4, formTitle, formSubtitle, concerns } = data;
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
         concern: ''
     });
-
-    const [status, setStatus] = useState({ type: '', message: '' });
 
     const [errors, setErrors] = useState({
         name: '',
@@ -24,96 +22,57 @@ const Ortho = () => {
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
 
     const validateName = (name) => {
-        if (!name.trim()) {
-            return 'Name is required';
-        }
-        if (name.trim().length < 2) {
-            return 'Name must be at least 2 characters';
-        }
+        if (!name.trim()) return 'Name is required';
+        if (name.trim().length < 2) return 'Name must be at least 2 characters';
         return '';
     };
 
     const validatePhone = (phone) => {
-        if (!phone.trim()) {
-            return 'Phone number is required';
-        }
+        if (!phone.trim()) return 'Phone number is required';
         const phoneRegex = /^[6-9]\d{9}$/;
-        if (!phoneRegex.test(phone.replace(/[\s-]/g, ''))) {
-            return 'Enter a valid 10-digit phone number';
-        }
+        if (!phoneRegex.test(phone.replace(/[\s-]/g, ''))) return 'Enter a valid 10-digit phone number';
         return '';
     };
 
     const validateConcern = (concern) => {
-        if (!concern) {
-            return 'Please select your concern';
-        }
+        if (!concern) return 'Please select your concern';
         return '';
     };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
+        setFormData(prev => ({ ...prev, [name]: value }));
 
-        // Validate on change if field was touched
         if (touched[name]) {
             let error = '';
             if (name === 'name') error = validateName(value);
             if (name === 'phone') error = validatePhone(value);
             if (name === 'concern') error = validateConcern(value);
-            
-            setErrors(prev => ({
-                ...prev,
-                [name]: error
-            }));
+            setErrors(prev => ({ ...prev, [name]: error }));
         }
     };
 
     const handleBlur = (e) => {
         const { name, value } = e.target;
-        setTouched(prev => ({
-            ...prev,
-            [name]: true
-        }));
-
+        setTouched(prev => ({ ...prev, [name]: true }));
         let error = '';
         if (name === 'name') error = validateName(value);
         if (name === 'phone') error = validatePhone(value);
         if (name === 'concern') error = validateConcern(value);
-        
-        setErrors(prev => ({
-            ...prev,
-            [name]: error
-        }));
+        setErrors(prev => ({ ...prev, [name]: error }));
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Mark all fields as touched
-        setTouched({
-            name: true,
-            phone: true,
-            concern: true
-        });
-
-        // Validate all fields
+        setTouched({ name: true, phone: true, concern: true });
         const nameError = validateName(formData.name);
         const phoneError = validatePhone(formData.phone);
         const concernError = validateConcern(formData.concern);
+        setErrors({ name: nameError, phone: phoneError, concern: concernError });
 
-        setErrors({
-            name: nameError,
-            phone: phoneError,
-            concern: concernError
-        });
-
-        // If no errors, submit the form
         if (!nameError && !phoneError && !concernError) {
             setStatus({ type: 'loading', message: 'Sending your inquiry...' });
 
@@ -140,11 +99,7 @@ const Ortho = () => {
 
                 if (response.ok) {
                     setStatus({ type: 'success', message: 'Thank you! Our Team will get back to you shortly.' });
-                    setFormData({
-                        name: '',
-                        phone: '',
-                        concern: ''
-                    });
+                    setFormData({ name: '', phone: '', concern: '' });
                     setIsSubmitted(true);
                 } else {
                     setStatus({ type: 'error', message: data.error || data.details || 'Failed to send inquiry. Please try again.' });
@@ -158,46 +113,32 @@ const Ortho = () => {
 
     return (
         <div className="relative w-full min-h-screen h-auto lg:h-screen font-sans overflow-hidden">
-            {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={heroortho}
-                    alt="Orthopedics Background"
-                    className="w-full h-full object-cover object-center sm:object-top"
-                />
-                {/* Overlay - Darker teal overlay to match the reference */}
+                <img src={image} alt="Background" className="w-full h-full object-cover object-center sm:object-top" />
                 <div className="absolute inset-0 bg-[#0e4857]/60"></div>
             </div>
 
-            {/* Content Container */}
             <div className="relative z-10 w-full h-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-12">
                 <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
 
-                    {/* Left Side Content */}
                     <div className="w-full lg:w-1/2 text-white flex flex-col items-center lg:items-start text-center lg:text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-[88px] lg:-mt-12">
                         <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                             <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
-                                Open doors <br />
-                                to
-                                <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal"> health.</span>
+                                {title1} <br /> to <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title2}</span>
                             </h1>
                             <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
-                                Open doors <br />
-                                to
-                                <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal"> Atreum</span>
+                                {title3} <br /> to <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title4}</span>
                             </h1>
                         </div>
-
-                       
                     </div>
-                    {/* Right Side Form */}
+
                     <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto">
                         <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-5 md:p-6 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[30px] md:leading-[34px] tracking-normal text-center">
-                                <span className="font-bold italic">Unconditional care</span> begins
+                                <span className="font-bold italic">{formTitle}</span> {formSubtitle.split(' ')[0]}
                             </h3>
                             <h3 className="text-white font-canela font-normal text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[30px] md:leading-[34px] tracking-normal text-center mb-4 sm:mb-5">
-                                with knowing you
+                                {formSubtitle.split(' ').slice(1).join(' ')}
                             </h3>
 
                             <form onSubmit={handleSubmit} className="space-y-2.5" noValidate>
@@ -242,24 +183,18 @@ const Ortho = () => {
                                         disabled={isSubmitted || status.type === 'loading'}
                                         className={`w-full bg-[#ffffff1a] border ${errors.concern && touched.concern ? 'border-red-500' : 'border-transparent'} rounded-lg text-white placeholder-white/70 px-3 py-2.5 text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] appearance-none cursor-pointer ${formData.concern === '' ? 'text-white/70' : 'text-white'} ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
                                     >
-                                        <option value="" disabled className="text-gray-400 bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">State Your Concern</option>
-                                        <option value="knee" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Knee Replacement</option>
-                                        <option value="joint" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Joint Replacement</option>
-                                        <option value="trauma" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Trauma and Fracture Care</option>
-                                        <option value="sports" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Sports Medicine Surgery</option>
-                                        <option value="hand" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Hand and Wrist Surgery</option>
-                                        <option value="deformity" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Deformity Correction</option>
-                                        <option value="pediatric" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Pediatric Ortho</option>
-                                        <option value="shoulder" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Shoulder Surgery</option>
+                                        <option value="" disabled className="text-gray-400 bg-[#19628DE0]">State Your Concern</option>
+                                        {concerns.map((con, idx) => (
+                                            <option key={idx} value={con} className="text-white bg-[#19628DE0]">{con}</option>
+                                        ))}
                                     </select>
-
                                     <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none pr-4">
                                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1.5L6 6.5L11 1.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
                                     {errors.concern && touched.concern && (
-                                        <p className="text-red-700 text-xs mt-1 font-sohne font-medium  px-2 py-0.5 ">{errors.concern}</p>
+                                        <p className="text-red-700 text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.concern}</p>
                                     )}
                                 </div>
 
@@ -270,32 +205,23 @@ const Ortho = () => {
                                         </p>
                                     )}
                                     {!isSubmitted ? (
-                                        <button
-                                            type="submit"
-                                            disabled={status.type === 'loading'}
-                                            className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2.5 px-7 rounded shadow-lg uppercase tracking-wide text-xs transition-all duration-300"
-                                        >
+                                        <button type="submit" disabled={status.type === 'loading'} className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2.5 px-7 rounded shadow-lg uppercase tracking-wide text-xs transition-all duration-300">
                                             {status.type === 'loading' ? 'SENDING...' : 'GET COST ESTIMATE'}
                                         </button>
                                     ) : (
                                         <div className="py-4">
-                                            <h2 className="text-white font-canela font-bold text-[28px] leading-[34px] tracking-normal mb-2">
-                                                Thank You
-                                            </h2>
-                                            <p className="text-white font-sohne font-normal text-[15px] leading-[22px] tracking-normal">
-                                                Our Team will get back to you shortly.
-                                            </p>
+                                            <h2 className="text-white font-canela font-bold text-[28px] leading-[34px] mb-2">Thank You</h2>
+                                            <p className="text-white font-sohne font-normal text-[15px]">Our Team will get back to you shortly.</p>
                                         </div>
                                     )}
                                 </div>
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default Ortho;
+export default DepartmentHero;

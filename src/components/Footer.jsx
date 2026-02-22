@@ -15,7 +15,7 @@ const Footer = () => {
                   <img src={image} alt="logo" className='w-12 h-12' />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-teal-700 tracking-wide">
+                  <h3 className="text-xl font-bold text-teal-700 tracking-wide text-[#006492]">
                     ATREUM
                   </h3>
                   <p className="text-xs font-medium text-[#006492] uppercase tracking-wide">

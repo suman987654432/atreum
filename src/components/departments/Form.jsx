@@ -32,10 +32,43 @@ const Form = () => {
 
 
 
-    const handleSubmit = (e) => {
+    const [status, setStatus] = useState({ type: '', message: '' });
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form Submitted:', formData);
-        // Add submission logic here
+        setStatus({ type: 'loading', message: 'Sending your inquiry...' });
+
+        try {
+            const response = await fetch('http://localhost:4000/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setStatus({ type: 'success', message: 'Thank you! Our Team will get back to you shortly.' });
+                // Reset form
+                setFormData({
+                    fullName: '',
+                    age: '',
+                    gender: '',
+                    mobileNumber: '',
+                    email: '',
+                    concern: '',
+                    affectedArea: [],
+                    consultationPreference: ''
+                });
+            } else {
+                setStatus({ type: 'error', message: data.error?.message || 'Failed to send inquiry. Please try again.' });
+            }
+        } catch (error) {
+            console.error('Submission Error:', error);
+            setStatus({ type: 'error', message: 'An error occurred. Please check your connection and try again.' });
+        }
     };
 
     return (
@@ -168,13 +201,30 @@ const Form = () => {
                 {/* Consultation Preference */}
 
 
+                {/* Status Messages */}
+                {status.message && (
+                    <div className={`text-center p-4 rounded-xl text-sm font-bold tracking-wide transition-all duration-300 ${status.type === 'success'
+                        ? 'bg-[#0FB1AB]/10 text-[#19628D] border border-[#0FB1AB]/20'
+                        : status.type === 'error'
+                            ? 'bg-red-50 text-red-600 border border-red-100'
+                            : 'bg-[#19628D]/5 text-[#19628D]'
+                        }`}>
+                        {status.type === 'success' && <span className="mr-2">✓</span>}
+                        {status.message}
+                    </div>
+                )}
+
                 {/* Submit Button */}
                 <div className="pt-6 flex justify-center">
                     <button
                         type="submit"
-                        className="px-16 py-3 border border-[#0FB1AB] text-[#0FB1AB] text-sm font-extrabold uppercase rounded-lg hover:bg-[#0FB1AB] hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FB1AB] focus:ring-offset-2 tracking-wider"
+                        disabled={status.type === 'loading'}
+                        className={`px-16 py-3 border border-[#0FB1AB] text-[#0FB1AB] text-sm font-extrabold uppercase rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FB1AB] focus:ring-offset-2 tracking-wider ${status.type === 'loading'
+                            ? 'opacity-50 cursor-not-allowed'
+                            : 'hover:bg-[#0FB1AB] hover:text-white'
+                            }`}
                     >
-                        SUBMIT
+                        {status.type === 'loading' ? 'SENDING...' : 'SUBMIT'}
                     </button>
                 </div>
             </form>
