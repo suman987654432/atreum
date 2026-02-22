@@ -20,7 +20,7 @@ export const departmentsData = {
                 "Knee Replacement",
                 "Joint Replacement",
                 "Trauma and Fracture Care",
-                "Sports Medicine Surgery",
+                "Sports Medicine & Arthroscopy",
                 "Hand and Wrist Surgery",
                 "Deformity Correction",
                 "Pediatric Ortho",
@@ -39,7 +39,7 @@ export const departmentsData = {
                 },
                 {
                     id: 2,
-                    title: "SPORTS MEDICINE",
+                    title: "Sports Medicine & Arthroscopy",
                     description: "Our sports medicine team provides comprehensive care for athletes of all levels, focusing on injury prevention and rehabilitation.",
                     image: care5,
                 },
@@ -51,13 +51,13 @@ export const departmentsData = {
                 },
                 {
                     id: 4,
-                    title: "TRAUMA CARE",
-                    description: "Dedicated to the diagnosis, treatment, and long-term management of complex fractures and trauma cases.",
+                    title: "Trauma & Fracture Care",
+                    description: "Orthopaedics at Atreum Hospitals is a multi-disciplinary department dedicated to the diagnosis, treatment, and long-term management of conditions affecting bones, joints, muscles, and the spine.",
                     image: care2,
                 },
                 {
                     id: 5,
-                    title: "PHYSIOTHERAPY",
+                    title: "Rehabilitation & Physiotherapy",
                     description: "Our rehabilitation team provides personalized therapy plans to help you recover strength and mobility after surgery.",
                     image: care5,
                 }

@@ -128,7 +128,7 @@ const Ortho = () => {
                     affectedArea: []
                 };
 
-                const response = await fetch('http://localhost:4000/api/send-email', {
+                const response = await fetch('https://atreum.onrender.com/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

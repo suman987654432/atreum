@@ -55,12 +55,12 @@ const DepartmentCare = ({ data }) => {
                             </div>
 
                             <div className="rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] group-hover:backdrop-blur-sm p-4 md:p-6 lg:p-8 transform translate-y-[calc(100%-130px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
-                                <div className="h-auto pb-4">
-                                    <h3 className="font-sohne font-bold text-[22px] md:text-[26px] text-white uppercase drop-shadow-md">
+                                <div className="h-auto pb-2">
+                                    <h3 className="font-sohne font-bold text-[22px] md:text-[26px] leading-[1] tracking-tight text-white uppercase drop-shadow-md">
                                         {item.title}
                                     </h3>
                                 </div>
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-2">
+                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-1">
                                     <p className="font-sohne font-normal text-[16px] leading-[20px] text-white">
                                         {item.description}
                                     </p>
