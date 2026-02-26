@@ -199,18 +199,18 @@ const DepartmentHero = ({ data }) => {
     );
 
     return (
-        <div className="relative w-full min-h-screen h-auto lg:h-screen font-sans overflow-hidden">
+        <div className="relative w-full min-h-screen h-auto lg:h-screen font-sans overflow-x-hidden">
             <div className="absolute inset-0 z-0">
                 <img src={image} alt="Background" className="w-full h-full object-cover object-center" />
                 <div className="absolute inset-0 bg-[#0e4857]/60"></div>
             </div>
 
-            <div className={`relative z-10 w-full h-full flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-24 lg:pt-72' : 'justify-center'}`}>
+            <div className={`relative z-10 w-full h-full flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-32 sm:pt-40 lg:pt-72' : 'justify-center'}`}>
                 {centerContent ? (
                     <>
                         {/* Centered Title Section */}
-                        <div className="w-full flex justify-center mb-12 sm:mb-16 lg:mb-20">
-                            <h1 className="text-white font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[40px] sm:leading-[48px] md:leading-[52px] lg:leading-[54px] tracking-normal text-center whitespace-nowrap">
+                        <div className="w-full flex justify-center mb-8 sm:mb-16 lg:mb-20">
+                            <h1 className="text-white font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[48px] md:leading-[52px] lg:leading-[54px] tracking-normal text-center px-2">
                                 {title}
                             </h1>
                         </div>
@@ -227,16 +227,16 @@ const DepartmentHero = ({ data }) => {
                         <div className={`w-full lg:w-1/2 text-white flex flex-col justify-center gap-6 sm:gap-6 lg:gap-8 items-center lg:items-start text-center lg:text-left lg:pl-[88px] lg:-mt-20`}>
                             <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                                 {title ? (
-                                    <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
+                                    <h1 className="font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                         {title}
                                     </h1>
                                 ) : (
                                     <>
-                                        <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
-                                            {title1} <br /> to <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title2}</span>
+                                        <h1 className="font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
+                                            {title1} <br /> to <span className="font-canela font-bold italic text-[28px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title2}</span>
                                         </h1>
-                                        <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
-                                            {title3} <br /> to <span className="font-canela font-bold italic text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title4}</span>
+                                        <h1 className="font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
+                                            {title3} <br /> to <span className="font-canela font-bold italic text-[28px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">{title4}</span>
                                         </h1>
                                     </>
                                 )}
