@@ -7,15 +7,18 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: "Neurology", path: "/department/neurology" },
+     { name: "Orthopedics", path: "/department/orthopedics" },
+      { name: "Obstetrics & Gynecology", path: "/department/obstetrics-gynecology" },
+        { name: "Urology", path: "/department/urology" },
+    { name: "Neurology", path: "#" },
     { name: "Nephrology", path: "/department/nephrology" },
     { name: "Gastroenterology", path: "/department/gastroenterology" },
     { name: "Dermatology", path: "/department/dermatology" },
     { name: "Endocrinology", path: "/department/endocrinology" },
     { name: "Pediatrics", path: "/department/pediatrics" },
-    { name: "Obstetrics & Gynecology", path: "/department/obstetrics-gynecology" },
-    { name: "Urology", path: "/department/urology" },
-    { name: "Orthopedics", path: "/department/orthopedics" },
+   
+  
+   
     { name: "Plastics", path: "/department/plastics" },
     { name: "General Surgery", path: "/department/general-surgery" },
     { name: "Oncology", path: "/department/oncology" },

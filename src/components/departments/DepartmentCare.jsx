@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DepartmentCare = ({ data }) => {
-    const { title, description, items } = data;
+    const { title, description, items, icon } = data;
 
     const handleCardClick = () => {
         const element = document.getElementById('form-section');
@@ -26,49 +26,52 @@ const DepartmentCare = ({ data }) => {
     };
 
     return (
-        <div id="care-section" className="relative -mt-4 z-20 bg-white/20 backdrop-blur-md border-b border-white/30 rounded-3xl pt-16 pb-16 mx-2 md:mx-3 lg:mx-4">
-            <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="flex flex-col md:flex-row justify-center items-center mb-12 gap-6">
-                    <div className="md:w-2/5 md:ml-8 lg:ml-12 max-w-[600px] text-center md:text-left">
-                        <h2 className="text-[#19628D]">
-                            <span className="font-canela font-normal text-[32px] leading-[32px]">{title.split(' ')[0]} {title.split(' ')[1]} <br /> at </span>
-                            <span className="font-canela font-bold italic text-[32px] leading-[32px]">Atreum</span>
+        <div id="care-section" className="relative -mt-5 z-20 w-full px-4">
+            <div className="bg-[#D9D9D933] backdrop-blur-md border border-white/30 rounded-[12px] sm:rounded-[16px] md:rounded-[22px] px-6 pt-4 pb-8 md:px-12 md:pt-6 md:pb-12 flex flex-col gap-6 w-full max-w-[1800px] mx-auto shadow-sm">
+                {/* Header Section: Icon + Title and Description */}
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-16">
+                    {/* Left side: Icon + Title */}
+                    <div className="flex items-center gap-4 sm:gap-8 w-full lg:w-1/2">
+                        {icon && (
+                            <div className="w-[70px] h-[70px] sm:w-[90px] sm:h-[120px] md:w-[110px] md:h-[140px] flex-shrink-0">
+                                <img src={icon} alt="Icon" className="w-full h-full object-contain" />
+                            </div>
+                        )}
+                        <h2 className="text-[#19628D] font-canela font-normal text-[18px] sm:text-[28px] md:text-[32px] lg:text-[38px] xl:text-[42px] leading-[1.0] flex flex-col">
+                            <span>
+                                {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()}{' '}
+                                <span className="font-bold italic">Care</span>
+                            </span>
+                            <span>
+                                at <span className="font-bold italic">Atreum</span>
+                            </span>
                         </h2>
                     </div>
-                    <div className="md:w-2/5 md:ml-2 lg:ml-4 max-w-[600px] text-center md:text-left">
-                        <p className="text-black font-sohne font-normal text-[16px] leading-[22px]">
+
+                    {/* Right side: Description */}
+                    <div className="w-full lg:w-1/2">
+                        <p className="text-[#000000] font-sohne font-normal text-[13px] sm:text-[14px] md:text-[15px] lg:text-[17px] leading-tight">
                             {description}
                         </p>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((item, index) => (
-                        <div
-                            key={item.id}
+                {/* Bottom Section: Dynamic Tags / Buttons */}
+                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mt-2">
+                    {items && items.map((tag, index) => (
+                        <button
+                            key={index}
                             onClick={handleCardClick}
-                            className={`relative group overflow-hidden rounded-2xl h-[400px] cursor-pointer shadow-xl ${index === 3 ? "lg:col-span-2 col-span-1" : "col-span-1"}`}
+                            className="bg-[#19628DBD] text-white font-sohne font-bold text-[12px] sm:text-[15px] md:text-[18px] lg:text-[20px] px-3 sm:px-6 h-[42px] sm:h-[56px] rounded-[12px] sm:rounded-[14px] hover:bg-[#19628D] transition-all duration-300 uppercase tracking-tight shadow-md flex items-center justify-center whitespace-nowrap"
                         >
-                            <div className="absolute inset-0 w-full h-full">
-                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-300"></div>
-                            </div>
-
-                            <div className="rounded-t-3xl absolute bottom-0 left-0 w-full bg-transparent group-hover:bg-[#19628DBD] group-hover:backdrop-blur-sm p-4 md:p-6 lg:p-8 transform translate-y-[calc(100%-130px)] group-hover:translate-y-0 transition-all duration-500 ease-in-out flex flex-col justify-start">
-                                <div className="h-auto pb-2">
-                                    <h3 className="font-sohne font-bold text-[22px] md:text-[26px] leading-[1] tracking-tight text-white uppercase drop-shadow-md">
-                                        {item.title}
-                                    </h3>
-                                </div>
-                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-1">
-                                    <p className="font-sohne font-normal text-[16px] leading-[20px] text-white">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            {tag}
+                        </button>
                     ))}
                 </div>
+            </div>
+            {/* Horizontal Line */}
+            <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
+                <div className="h-[1px] bg-black w-full"></div>
             </div>
         </div>
     );

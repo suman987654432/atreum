@@ -2,43 +2,71 @@
   {
     "id": 1,
     "name": "Dr. Avantika S",
-    "specialties": ["Paediatrics", "Neonatal Care"],
+    "specialties": [
+      "Paediatrics",
+      "Neonatal Care"
+    ],
     "image": "doctor",
     "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
   },
   {
     "id": 2,
     "name": "Dr. Mohith Shenoy",
-    "specialties": ["Urology", "Trauma Surgery"],
+    "specialties": [
+      "Urology",
+      "Trauma Surgery"
+    ],
     "image": "doctor",
     "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
   },
   {
     "id": 3,
     "name": "Dr. Rajesh Kumar",
-    "specialties": ["Orthopedics", "Sports Medicine"],
+    "specialties": [
+      "Orthopedics",
+      "Sports Medicine"
+    ],
     "image": "doctor",
     "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
   },
   {
     "id": 4,
     "name": "Dr. Priya Sharma",
-    "specialties": ["Paediatrics", "Neonatal Care"],
+    "specialties": [
+      "Paediatrics",
+      "Neonatal Care"
+    ],
     "image": "doctor",
     "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
   },
   {
     "id": 5,
     "name": "Dr. Amit Patel",
-    "specialties": ["Urology", "Kidney Transplant"],
+    "specialties": [
+      "Urology",
+      "Kidney Transplant"
+    ],
     "image": "doctor",
     "schedule": "Tue-Sat : 9:00 AM - 4:00 PM"
   },
   {
     "id": 6,
     "name": "Dr. Sunita Verma",
-    "specialties": ["Orthopedics", "Joint Replacement"],
+    "specialties": [
+      "Orthopedics",
+      "Joint Replacement"
+    ],
     "image": "doctor",
     "schedule": "Mon-Fri : 8:00 AM - 3:00 PM"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Meera Reddy",
+    "specialties": [
+      "Obstetrics",
+      "Gynecology"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 10:00 AM - 4:00 PM"
   }
 ]

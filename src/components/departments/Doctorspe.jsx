@@ -38,9 +38,9 @@ const Doctorspe = () => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div id="doctor-specialists" className="w-full -mt-8 py-1 overflow-hidden relative z-30">
+        <div id="doctor-specialists" className="w-full  pt-0 pb-10 overflow-hidden relative z-30">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-4 md:px-12 md:py-6 lg:py-0 ">
+                <div className="bg-[#D9D9D933] rounded-[12px] sm:rounded-[16px] md:rounded-[22px] px-6 py-4 md:px-12 md:py-6 lg:py-0 ">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
 
                         {/* Left Content Section */}
@@ -73,7 +73,11 @@ const Doctorspe = () => {
                                         <ChevronRight size={24} strokeWidth={2.5} />
                                     </button>
                                 </div>
-                                <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-12"> <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-semibold text-[16px] leading-[40px] tracking-normal py-0 px-3 rounded shadow-md uppercase transition-all"> Book an Appointment </button> </div>
+                                <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:ml-12">
+                                    <a href="tel:9606970542" className="bg-[#1EBAB3] hover:bg-[#189d97] !text-white font-sohne font-semibold text-[16px] leading-[40px] tracking-normal py-0 px-3 rounded shadow-md uppercase transition-all inline-block text-center">
+                                        Book an Appointment
+                                    </a>
+                                </div>
                             </div>
 
                             <div className="w-full">
@@ -102,6 +106,9 @@ const Doctorspe = () => {
                     </div>
                 </div>
 
+            </div>
+            <div className="w-full max-w-[1800px] mx-auto px-4 mt-5  ">
+                <div className="h-[1px] bg-black w-full"></div>
             </div>
         </div>
     );

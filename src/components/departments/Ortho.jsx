@@ -66,7 +66,7 @@ const Ortho = () => {
             if (name === 'name') error = validateName(value);
             if (name === 'phone') error = validatePhone(value);
             if (name === 'concern') error = validateConcern(value);
-            
+
             setErrors(prev => ({
                 ...prev,
                 [name]: error
@@ -85,7 +85,7 @@ const Ortho = () => {
         if (name === 'name') error = validateName(value);
         if (name === 'phone') error = validatePhone(value);
         if (name === 'concern') error = validateConcern(value);
-        
+
         setErrors(prev => ({
             ...prev,
             [name]: error
@@ -188,10 +188,10 @@ const Ortho = () => {
                             </h1>
                         </div>
 
-                       
+
                     </div>
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto">
+                    <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:mt-64">
                         <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-5 md:p-6 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[30px] md:leading-[34px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins

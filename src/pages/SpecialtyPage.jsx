@@ -24,7 +24,10 @@ const SpecialtyPage = () => {
 
     // Filter doctors for this department
     const filteredDoctors = doctorsData.filter(doc =>
-        doc.specialties.some(s => s.toLowerCase().includes(department.name.toLowerCase()))
+        doc.specialties.some(s =>
+            s.toLowerCase().includes(department.name.toLowerCase()) ||
+            department.name.toLowerCase().includes(s.toLowerCase())
+        )
     );
 
     return (

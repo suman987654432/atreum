@@ -41,15 +41,9 @@ const Special = () => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div id="doctor-specialists" className="w-full -mt-8 py-1 overflow-hidden relative z-30">
+        <div id="doctor-specialists" className="w-full py-6 overflow-hidden relative z-30">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
-                <div className="flex w-full gap-2 pt-6 pb-8 overflow-x-auto relative z-50">
-                    {["Specialization", "Specialization", "Specialization", "Specialization", "Specialization", "Specialization"].map((text, index) => (
-                        <button key={index} className="flex-1 min-w-fit bg-[#F6F6F6] text-[#19628D] px-4 py-3 rounded-md text-sm font-medium transition-colors shadow-sm whitespace-nowrap cursor-pointer">
-                            {text}
-                        </button>
-                    ))}
-                </div>
+
                 <div className="bg-[#D9D9D933] rounded-[40px] px-6 py-4 md:px-12 md:py-6 lg:py-0 relative z-20">
 
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
@@ -106,9 +100,9 @@ const Special = () => {
 
                                 {/* Button */}
                                 <div>
-                                    <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[15px] py-2 px-6 rounded-md shadow-sm uppercase tracking-wide transition-all">
+                                    <a href="tel:9606970542" className="bg-[#1EBAB3] hover:bg-[#189d97] !text-white font-sohne font-bold text-[15px] py-2 px-6 rounded-md shadow-sm uppercase tracking-wide transition-all inline-block text-center">
                                         Book an Appointment
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
