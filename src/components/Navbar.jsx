@@ -85,10 +85,10 @@ const Navbar = () => {
                 className="relative inline-block text-center cursor-pointer"
               >
                 <span className="invisible font-medium text-[18px] leading-none tracking-normal font-sohne block h-0">
-                  Our Services
+                  Our Departments
                 </span>
                 <span className="text-white hover:font-medium text-[18px] leading-none tracking-normal font-light font-sohne transition-all flex items-center gap-1">
-                  Our Services
+                  Our Departments
 
                 </span>
               </a>
