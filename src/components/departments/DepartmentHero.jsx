@@ -209,7 +209,7 @@ const DepartmentHero = ({ data }) => {
                 {centerContent ? (
                     <>
                         {/* Title Section (Left Aligned with micro offset) */}
-                        <div className="w-full max-w-[1700px] mx-auto flex justify-start mb-8 sm:mb-16 lg:mb-20 lg:pl-[72px]">
+                        <div className="w-full max-w-[1700px] mx-auto flex justify-start   lg:pl-[72px] mt-20  ">
                             <h1 className="text-white font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[48px] md:leading-[52px] lg:leading-[54px] tracking-normal text-left">
                                 {title}
                             </h1>
@@ -217,14 +217,14 @@ const DepartmentHero = ({ data }) => {
 
                         {/* Form Section (Aligned Right) */}
                         <div className="w-full max-w-[1700px] mx-auto flex justify-end pb-10 sm:pb-12 lg:pb-0">
-                            <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:-mt-32">
+                            <div className="w-full sm:w-[400px] md:w-[420px] lg:w-[450px] lg:-mt-44">
                                 {renderForm()}
                             </div>
                         </div>
                     </>
                 ) : (
-                    <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
-                        <div className={`w-full lg:w-1/2 text-white flex flex-col justify-center gap-6 sm:gap-6 lg:gap-8 items-start text-left lg:pl-[72px] lg:-mt-20`}>
+                    <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-center h-full pt-8 sm:pt-12 lg:pt-20 pb-8 sm:pb-10 lg:pb-0 gap-6 lg:gap-12 px-2 sm:px-4 lg:px-0">
+                        <div className={`w-full lg:w-1/2 text-white flex flex-col justify-center gap-6 sm:gap-6 lg:gap-8 items-center lg:items-start text-center lg:text-left lg:pl-0 mt-16 sm:mt-20 lg:mt-32`}>
                             <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                                 {title ? (
                                     <h1 className="font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
@@ -243,7 +243,7 @@ const DepartmentHero = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:-mt-24">
+                        <div className="w-full lg:w-[450px] sm:w-[400px] md:w-[420px] mx-auto lg:mx-0">
                             {renderForm()}
                         </div>
                     </div>
