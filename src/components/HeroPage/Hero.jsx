@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import heroortho from "../../images/heroortho.png";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -25,9 +25,9 @@ const Hero = () => {
             <span className="font-bold italic"> health</span> starts with <span className="font-bold italic">Atreum</span>
           </h1>
 
-          <button className="w-[257px] h-[44px] bg-[#19628D5E] text-white font-sohne font-semibold text-[20px] rounded-[40.5px] border border-white hover:bg-[#19628D]/50 transition-colors mt-4 flex items-center justify-center">
-            BOOK APPOINTMENT
-          </button>
+          <a href="tel:9606970542" className="w-[220px] h-[44px] bg-[#19628D5E] text-white font-sohne font-semibold text-[20px] rounded-[40.5px] border border-white hover:bg-[#19628D]/50 transition-colors mt-4 flex items-center justify-center">
+            CONTACT US
+          </a>
         </div>
 
         {/* Scroll to Explore */}
