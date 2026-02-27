@@ -217,7 +217,7 @@ const DepartmentHero = ({ data }) => {
 
                         {/* Form Section (Aligned Right) */}
                         <div className="w-full max-w-[1700px] mx-auto flex justify-end pb-10 sm:pb-12 lg:pb-0">
-                            <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:-mt-24">
+                            <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:-mt-32">
                                 {renderForm()}
                             </div>
                         </div>
@@ -243,7 +243,7 @@ const DepartmentHero = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:-mt-16">
+                        <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:-mt-24">
                             {renderForm()}
                         </div>
                     </div>
