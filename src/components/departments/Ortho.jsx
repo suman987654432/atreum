@@ -170,11 +170,11 @@ const Ortho = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full h-full flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-12">
+            <div className="relative z-10 w-full h-full flex flex-col justify-center px-4 md:px-12">
                 <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
 
                     {/* Left Side Content */}
-                    <div className="w-full lg:w-1/2 text-white flex flex-col items-center lg:items-start text-center lg:text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-[88px] lg:-mt-12">
+                    <div className="w-full lg:w-1/2 text-white flex flex-col items-start text-left justify-center gap-6 sm:gap-6 lg:gap-8 lg:pl-[72px] lg:-mt-12">
                         <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                             <h1 className="font-canela font-normal text-[32px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
                                 Open doors <br />
@@ -191,7 +191,7 @@ const Ortho = () => {
 
                     </div>
                     {/* Right Side Form */}
-                    <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:mt-64">
+                    <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:-mt-20">
                         <div className="bg-[#2C747C80] border-[1px] border-[#FFFFFF61] p-4 sm:p-5 md:p-6 rounded-xl shadow-2xl bg-blur-lg backdrop-blur-md">
                             <h3 className="text-white font-canela font-normal text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[30px] md:leading-[34px] tracking-normal text-center">
                                 <span className="font-bold italic">Unconditional care</span> begins

@@ -205,26 +205,26 @@ const DepartmentHero = ({ data }) => {
                 <div className="absolute inset-0 bg-[#0e4857]/60"></div>
             </div>
 
-            <div className={`relative z-10 w-full h-full flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-32 sm:pt-40 lg:pt-72' : 'justify-center'}`}>
+            <div className={`relative z-10 w-full h-full flex flex-col px-4 md:px-12 ${centerContent ? 'justify-start pt-32 sm:pt-40 lg:pt-72' : 'justify-center'}`}>
                 {centerContent ? (
                     <>
-                        {/* Centered Title Section */}
-                        <div className="w-full flex justify-center mb-8 sm:mb-16 lg:mb-20">
-                            <h1 className="text-white font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[48px] md:leading-[52px] lg:leading-[54px] tracking-normal text-center px-2">
+                        {/* Title Section (Left Aligned with micro offset) */}
+                        <div className="w-full max-w-[1700px] mx-auto flex justify-start mb-8 sm:mb-16 lg:mb-20 lg:pl-[72px]">
+                            <h1 className="text-white font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[48px] md:leading-[52px] lg:leading-[54px] tracking-normal text-left">
                                 {title}
                             </h1>
                         </div>
 
                         {/* Form Section (Aligned Right) */}
                         <div className="w-full max-w-[1700px] mx-auto flex justify-end pb-10 sm:pb-12 lg:pb-0">
-                            <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:-mt-4">
+                            <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:-mt-24">
                                 {renderForm()}
                             </div>
                         </div>
                     </>
                 ) : (
                     <div className="w-full max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-between h-full pt-12 sm:pt-16 lg:pt-20 pb-10 sm:pb-12 lg:pb-0 gap-8 lg:gap-0">
-                        <div className={`w-full lg:w-1/2 text-white flex flex-col justify-center gap-6 sm:gap-6 lg:gap-8 items-center lg:items-start text-center lg:text-left lg:pl-[88px] lg:-mt-20`}>
+                        <div className={`w-full lg:w-1/2 text-white flex flex-col justify-center gap-6 sm:gap-6 lg:gap-8 items-start text-left lg:pl-[72px] lg:-mt-20`}>
                             <div className="space-y-8 sm:space-y-10 lg:space-y-6">
                                 {title ? (
                                     <h1 className="font-canela font-normal text-[28px] sm:text-[38px] md:text-[42px] lg:text-[43px] leading-[36px] sm:leading-[44px] md:leading-[48px] lg:leading-[54px] tracking-normal">
@@ -243,7 +243,7 @@ const DepartmentHero = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:mt-8">
+                        <div className="w-full lg:w-[450px] max-w-full lg:max-w-[450px] lg:ml-auto lg:-mt-16">
                             {renderForm()}
                         </div>
                     </div>
