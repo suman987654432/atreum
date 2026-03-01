@@ -37,13 +37,26 @@ const DepartmentCare = ({ data }) => {
                                 <img src={icon} alt="Icon" className="w-full h-full object-contain" />
                             </div>
                         )}
-                        <h2 className="text-[#19628D] font-canela font-normal text-[17px] sm:text-[28px] md:text-[32px] lg:text-[38px] xl:text-[42px] leading-[1.0] flex flex-col">
-                            <span>
-                                {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()} <span className="font-bold italic">Care</span>
-                            </span>
-                            <span className="whitespace-nowrap">
-                                at <span className="font-bold italic">Atreum</span>
-                            </span>
+                        <h2 className="text-[#19628D] font-canela font-normal text-[17px] sm:text-[28px] md:text-[32px] lg:text-[38px] xl:text-[42px] leading-[0.85] flex flex-col">
+                            {title.toLowerCase().includes('obstetrics') ? (
+                                <>
+                                    <span>
+                                        {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()}
+                                    </span>
+                                    <span className="whitespace-nowrap">
+                                        <span className="font-bold italic">Care</span> at <span className="font-bold italic">Atreum</span>
+                                    </span>
+                                </>
+                            ) : (
+                                <>
+                                    <span>
+                                        {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()} <span className="font-bold italic">Care</span>
+                                    </span>
+                                    <span className="whitespace-nowrap">
+                                        at <span className="font-bold italic">Atreum</span>
+                                    </span>
+                                </>
+                            )}
                         </h2>
                     </div>
 
