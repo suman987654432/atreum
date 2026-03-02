@@ -10,7 +10,7 @@ import neuro from "../images/critical.png";
 export const departmentsData = {
     orthopedics: {
         id: "orthopedics",
-        name: "Orthopedics",
+        name: "Orthopaedics",
         hero: {
             image: heroortho,
             centerContent: true,
@@ -28,7 +28,7 @@ export const departmentsData = {
                 "Sports Medicine & Arthroscopy",
                 "Hand and Wrist Surgery",
                 "Deformity Correction",
-                "Pediatric Ortho",
+                "Paediatric Ortho",
                 "Shoulder Surgery"
             ]
         },
@@ -44,7 +44,7 @@ export const departmentsData = {
                 "SPORTS INJURIES",
                 "LIGAMENT TEARS",
                 "OSTEOPOROSIS",
-                "PEDIATRIC ORTHOPAEDIC ISSUES"
+                "PAEDIATRIC ORTHOPAEDIC ISSUES"
             ]
         },
         doctors: {
@@ -98,7 +98,7 @@ export const departmentsData = {
         doctors: {
             title: "Obstetrics &",
             subtitle: " Specialists",
-            description: "The Orthopaedic Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area of musculoskeletal care. Working within a unified clinical framework, they combine specialised expertise with collaborative decision-making to deliver precise, patient-centred treatment."
+            description: "The Obstetrics & Gynaecology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on comprehensive women's healthcare. Working within a unified clinical framework, they combine specialised expertise with collaborative decision-making to deliver precise, patient-centred treatment."
         }
     },
     urology: {
@@ -121,7 +121,7 @@ export const departmentsData = {
                 "Bladder Problems",
                 "Urological Cancers",
                 "Infertility and Sexual Health",
-                "Pediatric Urology",
+                "Paediatric Urology",
                 "Reconstructive Urology"
             ]
         },

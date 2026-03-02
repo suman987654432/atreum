@@ -23,7 +23,7 @@
     "id": 3,
     "name": "Dr. Rajesh Kumar",
     "specialties": [
-      "Orthopedics",
+      "Orthopaedics",
       "Sports Medicine"
     ],
     "image": "doctor",
@@ -53,7 +53,7 @@
     "id": 6,
     "name": "Dr. Sunita Verma",
     "specialties": [
-      "Orthopedics",
+      "Orthopaedics",
       "Joint Replacement"
     ],
     "image": "doctor",

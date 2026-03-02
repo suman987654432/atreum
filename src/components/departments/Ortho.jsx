@@ -162,7 +162,7 @@ const Ortho = () => {
             <div className="absolute inset-0 z-0">
                 <img
                     src={heroortho}
-                    alt="Orthopedics Background"
+                    alt="Orthopaedics Background"
                     className="w-full h-full object-cover object-center sm:object-top"
                 />
                 {/* Overlay - Darker teal overlay to match the reference */}
@@ -249,7 +249,7 @@ const Ortho = () => {
                                         <option value="sports" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Sports Medicine Surgery</option>
                                         <option value="hand" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Hand and Wrist Surgery</option>
                                         <option value="deformity" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Deformity Correction</option>
-                                        <option value="pediatric" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Pediatric Ortho</option>
+                                        <option value="pediatric" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Paediatric Ortho</option>
                                         <option value="shoulder" className="text-white bg-[#19628DE0] font-sohne font-normal text-[14px] leading-[26px] tracking-normal">Shoulder Surgery</option>
                                     </select>
 
