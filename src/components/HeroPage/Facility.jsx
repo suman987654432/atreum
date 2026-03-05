@@ -15,7 +15,7 @@ const careData = [
     },
     {
         id: 2,
-        title: "MRI SCANNING",
+        title: "CT SCANNING",
         image: mri,
         width: "md:col-span-1",
     },

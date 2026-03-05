@@ -30,29 +30,12 @@ const careData = [
         description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
     {
-        id: 3,
-        title: "Plastic Surgery",
-        image: plastics,
-        description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
-    {
         id: 4,
         title: "Gynaecology",
         image: gyna,
         description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
-    {
-        id: 5,
-        title: "Pediatrics",
-        image: pedia,
-        description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
-    {
-        id: 6,
-        title: "Critical Care",
-        image: critical,
-        description: "The Critical Care Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
+
     {
         id: 7,
         title: "Neurology",
@@ -71,6 +54,22 @@ const careData = [
         image: gastro, // Placeholder
         description: "The Gastroenterology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
+
+
+
+    {
+        id: 5,
+        title: "Pediatrics",
+        image: pedia,
+        description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+    {
+        id: 6,
+        title: "Critical Care",
+        image: critical,
+        description: "The Critical Care Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+
     {
         id: 10,
         title: "Dermatology",
@@ -83,12 +82,7 @@ const careData = [
         image: endrio, // Placeholder
         description: "The Endocrinology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
-    {
-        id: 12,
-        title: "General Surgery",
-        image: general, // Placeholder
-        description: "The General Surgery Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
+
     {
         id: 13,
         title: "Oncology",
@@ -96,17 +90,31 @@ const careData = [
         description: "The Oncology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
     {
+        id: 15,
+        title: "ENT",
+        image: ent, // Placeholder
+        description: "The ENT Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+
+    {
+        id: 3,
+        title: "Plastic Surgery",
+        image: plastics,
+        description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+
+    {
+        id: 12,
+        title: "General Surgery",
+        image: general, // Placeholder
+        description: "The General Surgery Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+    {
         id: 14,
         title: "Vascular Surgery",
         image: vas, // Placeholder
         description: "The Vascular Surgery Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
-    {
-        id: 15,
-        title: "ENT",
-        image: ent, // Placeholder
-        description: "The ENT Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    }
 ];
 
 const Excellence = () => {
