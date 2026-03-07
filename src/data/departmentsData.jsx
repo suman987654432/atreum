@@ -17,7 +17,7 @@ import neurohero from "../images/neurohero.png";
 import neuroIcon from "../images/neuro.png";
 import nephrohero from "../images/nephrohero.png";
 import nephroIcon from "../images/nephro.png";
-import plasticshero from "../images/plasticshero.png";
+import plasticshero1 from "../images/plasticshero1.png";
 import plastics from "../images/plastics.png";
 import generalhero from "../images/generalhero.png";
 import general from "../images/general.png";
@@ -482,7 +482,7 @@ export const departmentsData = {
         id: "plastics",
         name: "Plastics Surgery",
         hero: {
-            image: plasticshero,
+            image: plasticshero1,
             centerContent: true,
             title: (
                 <>
