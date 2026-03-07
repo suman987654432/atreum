@@ -18,7 +18,7 @@ import neuroIcon from "../images/neuro.png";
 import nephrohero from "../images/nephrohero.png";
 import nephroIcon from "../images/nephro.png";
 import plasticshero from "../images/plasticshero.png";
-import plastic from "../images/plastics.png";
+import plastics from "../images/plastics.png";
 import generalhero from "../images/generalhero.png";
 import general from "../images/general.png";
 import oncohero from "../images/oncohero.png";
@@ -504,7 +504,7 @@ export const departmentsData = {
             ]
         },
         care: {
-            icon: plastic,
+            icon: plastics,
             title: "Plastics Care",
             description: "Atreum’s Plastic Surgery Department is dedicated to restoring form, function, and confidence. From reconstructive procedures to address injuries and medical conditions to aesthetic enhancements, our specialists combine surgical expertise with a personalised approach to deliver safe, precise, and compassionate care.",
             items: [
