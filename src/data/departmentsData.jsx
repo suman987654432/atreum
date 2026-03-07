@@ -1,12 +1,10 @@
 import React from 'react';
 import heroortho from "../images/heroortho.png";
-import hero from "../images/hero.png";
 import herogyna from "../images/herogyna.png";
 import herouro from "../images/Urology 1.png";
 import ortho1 from "../images/ortho1.png";
 import gynaIcon from "../images/gyna.png";
 import uroIcon from "../images/uro.png";
-import neuro from "../images/critical.png";
 import gastroIcon from "../images/gastro.png";
 import gastrohero from "../images/gastrohero.png";
 import dermahero from "../images/dermahero.png";
