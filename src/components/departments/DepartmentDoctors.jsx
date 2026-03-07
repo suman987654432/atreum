@@ -68,10 +68,7 @@ const DepartmentDoctors = ({ doctors, title, subtitle, description }) => {
                     </div>
                 </div>
             </div>
-            {/* Horizontal Line */}
-            {/* <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
-                <div className="h-[1px] bg-black w-full"></div>
-            </div> */}
+         
         </div>
     );
 };
