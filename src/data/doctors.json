@@ -4,6 +4,7 @@
     "name": "Dr. Avantika S",
     "specialties": [
       "Paediatrics",
+      "Pediatrics",
       "Neonatal Care"
     ],
     "image": "doctor",
@@ -68,5 +69,94 @@
     ],
     "image": "doctor",
     "schedule": "Mon-Sat : 10:00 AM - 4:00 PM"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Ramesh Hegde",
+    "specialties": [
+      "Gastroenterology",
+      "Digestive Care"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Sarah Johnson",
+    "specialties": [
+      "Dermatology"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Mahesh Kumar",
+    "specialties": [
+      "Endocrinology",
+      "Diabetology"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 11:00 AM - 6:00 PM"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Naveen Prasad",
+    "specialties": [
+      "Nephrology",
+      "Renal Care"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 10:00 AM - 5:00 PM"
+  },
+  {
+    "id": 12,
+    "name": "Dr. Sameer Khan",
+    "specialties": [
+      "Plastics Surgery",
+      "Reconstructive Surgery"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 9:00 AM - 4:00 PM"
+  },
+  {
+    "id": 13,
+    "name": "Dr. Vinay Hegde",
+    "specialties": [
+      "General Surgery",
+      "Laparoscopic Surgery"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+  },
+  {
+    "id": 14,
+    "name": "Dr. Sandeep Reddy",
+    "specialties": [
+      "Oncology",
+      "Cancer Care"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Fri : 10:00 AM - 4:00 PM"
+  },
+  {
+    "id": 15,
+    "name": "Dr. Pradeep Shenoy",
+    "specialties": [
+      "Vascular Surgery",
+      "Phlebology"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 11:00 AM - 5:00 PM"
+  },
+  {
+    "id": 16,
+    "name": "Dr. Karthik M",
+    "specialties": [
+      "ENT",
+      "Otolaryngology"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM"
   }
 ]

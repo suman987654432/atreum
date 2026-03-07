@@ -33,36 +33,23 @@ const DepartmentCare = ({ data }) => {
                     {/* Left side: Icon + Title */}
                     <div className="flex items-center gap-4 sm:gap-8 w-full lg:w-1/2">
                         {icon && (
-                            <div className="w-[70px] h-[70px] sm:w-[90px] sm:h-[120px] md:w-[110px] md:h-[140px] flex-shrink-0">
+                            <div className="w-[100px] h-[100px] sm:w-[130px] sm:h-[160px] md:w-[160px] md:h-[190px] flex-shrink-0">
                                 <img src={icon} alt="Icon" className="w-full h-full object-contain" />
                             </div>
                         )}
                         <h2 className="text-[#19628D] font-canela font-normal text-[17px] sm:text-[28px] md:text-[32px] lg:text-[38px] xl:text-[42px] leading-[0.85] flex flex-col">
-                            {title.toLowerCase().includes('obstetrics') ? (
-                                <>
-                                    <span>
-                                        {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()}
-                                    </span>
-                                    <span className="whitespace-nowrap">
-                                        <span className="font-bold italic">Care</span> at <span className="font-bold italic">Atreum</span>
-                                    </span>
-                                </>
-                            ) : (
-                                <>
-                                    <span>
-                                        {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()} <span className="font-bold italic">Care</span>
-                                    </span>
-                                    <span className="whitespace-nowrap">
-                                        at <span className="font-bold italic">Atreum</span>
-                                    </span>
-                                </>
-                            )}
+                            <span className="whitespace-nowrap">
+                                {title.replace(/Care/i, '').replace(/at Atreum/i, '').trim()} <span className="font-bold italic">Care</span>
+                            </span>
+                            <span className="whitespace-nowrap">
+                                at <span className="font-bold italic">Atreum</span>
+                            </span>
                         </h2>
                     </div>
 
                     {/* Right side: Description */}
-                    <div className="w-full lg:w-1/2">
-                        <p className="text-[#000000] font-sohne font-normal text-[13px] sm:text-[14px] md:text-[15px] lg:text-[17px] leading-tight">
+                    <div className="w-full lg:w-[40%]">
+                        <p className="text-[#000000] font-sohne font-normal text-[13px] sm:text-[14px] md:text-[15px] lg:text-[17px] leading-tight max-w-[500px]">
                             {description}
                         </p>
                     </div>
@@ -80,11 +67,33 @@ const DepartmentCare = ({ data }) => {
                         </button>
                     ))}
                 </div>
+
+                {/* Additional Sections (e.g., for Gastro) */}
+                {data.sections && (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-2">
+                        {data.sections.map((section, idx) => (
+                            <div key={idx} className="space-y-2">
+                                <h4 className="text-[#19628D] font-sohne font-bold text-[22px] leading-[26px] tracking-normal uppercase">
+                                    {section.title}
+                                </h4>
+                                <ul className="space-y-0.5">
+                                    {section.items.map((item, i) => (
+                                        <li key={i} className="text-[#000000] font-sohne font-normal text-[18px] leading-[22px] tracking-normal">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
+
+
             {/* Horizontal Line */}
-            <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
+            {/* <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
                 <div className="h-[1px] bg-black w-full"></div>
-            </div>
+            </div> */}
         </div>
     );
 };

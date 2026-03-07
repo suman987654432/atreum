@@ -199,10 +199,10 @@ const DepartmentHero = ({ data }) => {
     );
 
     return (
-        <div className="relative w-full min-h-screen h-auto lg:h-screen font-sans overflow-x-hidden">
+        <div className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-screen h-auto lg:h-screen font-sans overflow-x-hidden">
             <div className="absolute inset-0 z-0">
-                <img src={image} alt="Background" className="w-full h-full object-cover object-center" />
-                <div className="absolute inset-0 bg-[#0e4857]/60"></div>
+                <img src={image} alt="Background" className="w-full h-full object-cover object-top lg:object-center" />
+                <div className="absolute inset-0 bg-[#0e4857]/55"></div>
             </div>
 
             <div className={`relative z-10 w-full h-full flex flex-col px-3 sm:px-4 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-24 sm:pt-32 md:pt-40 lg:pt-72' : 'justify-center'}`}>
@@ -210,7 +210,7 @@ const DepartmentHero = ({ data }) => {
                     <>
                         {/* Title Section (Left Aligned with micro offset) */}
                         <div className="w-full max-w-[1700px] mx-auto flex justify-start lg:pl-[72px] mt-12 sm:mt-16 md:mt-20">
-                            <h1 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[30px] sm:leading-[36px] md:leading-[48px] lg:leading-[54px] tracking-normal text-left">
+                            <h1 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[26px] sm:leading-[30px] md:leading-[40px] lg:leading-[46px] tracking-tight text-left">
                                 {title}
                             </h1>
                         </div>
@@ -227,7 +227,7 @@ const DepartmentHero = ({ data }) => {
                         <div className="w-full lg:w-auto lg:flex-1 lg:max-w-[600px] xl:max-w-[700px] text-white flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 items-center lg:items-start text-center lg:text-left mt-12 sm:mt-16 md:mt-20 lg:mt-32">
                             <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-6 w-full">
                                 {title ? (
-                                    <h1 className="font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[30px] sm:leading-[36px] md:leading-[44px] lg:leading-[54px] tracking-normal break-words">
+                                    <h1 className="font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[26px] sm:leading-[30px] md:leading-[40px] lg:leading-[46px] tracking-tight break-words">
                                         {title}
                                     </h1>
                                 ) : (

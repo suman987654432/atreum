@@ -18,7 +18,7 @@ const DepartmentDoctors = ({ doctors, title, subtitle, description }) => {
     const currentDoctor = doctors[currentIndex];
 
     return (
-        <div id="doctor-specialists" className="w-full pt-0 pb-10 overflow-hidden relative z-30">
+        <div id="doctor-specialists" className="w-full pt-0 pb-10 overflow-hidden relative z-30 mt-10">
             <div className="px-4 w-full max-w-[1800px] mx-auto">
                 <div className="bg-[#D9D9D933] rounded-[12px] sm:rounded-[16px] md:rounded-[22px] px-6 py-4 md:px-12 md:py-6 lg:py-0 ">
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
@@ -69,9 +69,9 @@ const DepartmentDoctors = ({ doctors, title, subtitle, description }) => {
                 </div>
             </div>
             {/* Horizontal Line */}
-            <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
+            {/* <div className="w-full max-w-[1800px] mx-auto px-4 mt-5 mb-10 md:mb-3">
                 <div className="h-[1px] bg-black w-full"></div>
-            </div>
+            </div> */}
         </div>
     );
 };
