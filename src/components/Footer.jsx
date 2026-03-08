@@ -9,10 +9,10 @@ const Footer = () => {
         <div className=" border bg-[#F1F1F1] border-teal-500 rounded-xl px-6 py-6 md:px-10 md:py-8 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-10 lg:gap-16">
             {/* Brand Section */}
-            <div className="md:w-1/3 lg:w-1/4 space-y-4">
+            <div className="md:w-1/3 lg:w-1/4 space-y-4 pt-8">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center">
-                  <img src={image} alt="logo" className='w-12 h-12' />
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center">
+                  <img src={image} alt="logo" className='w-14 h-14' />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-teal-700 tracking-wide text-[#006492]">
@@ -23,11 +23,11 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-sm text-[#006492] leading-relaxed max-w-xs">
+              <p className="text-[17px] font-sohne font-normal text-[#006492] leading-tight mt-10">
                 Welcome to Atreum! We're South Bangalore&apos;s first and premier
                 multi-specialty facility that offers comprehensive care.
               </p>
-              <p className="text-lg font-bold text-[#006492]">Be Bold.</p>
+              {/* <p className="text-lg font-bold text-[#006492]">Be Bold.</p> */}
             </div>
 
             {/* Vertical divider to mimic design */}
