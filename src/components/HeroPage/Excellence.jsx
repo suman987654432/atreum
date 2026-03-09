@@ -64,6 +64,18 @@ const careData = [
         description: "The Orthopaedics Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
     {
+        id: 11,
+        title: "Endocrinology",
+        image: endrio, // Placeholder
+        description: "The Endocrinology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+      {
+        id: 13,
+        title: "Oncology",
+        image: onco, // Placeholder
+        description: "The Oncology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
+    },
+    {
         id: 6,
         title: "Critical Care",
         image: critical,
@@ -73,22 +85,12 @@ const careData = [
     {
         id: 10,
         title: "Dermatology",
-        image: derma, // Placeholder
+        image: derma, // Placeholder    
         description: "The Dermatology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
     },
-    {
-        id: 11,
-        title: "Endocrinology",
-        image: endrio, // Placeholder
-        description: "The Endocrinology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
+    
 
-    {
-        id: 13,
-        title: "Oncology",
-        image: onco, // Placeholder
-        description: "The Oncology Specialists at Atreum Hospitals represent a multidisciplinary team of experienced consultants, each focused on a specific area."
-    },
+  
     {
         id: 15,
         title: "ENT",
