@@ -6,18 +6,21 @@ const DepartmentHero = ({ data }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
+        email: '',
         concern: ''
     });
 
     const [errors, setErrors] = useState({
         name: '',
         phone: '',
+        email: '',
         concern: ''
     });
 
     const [touched, setTouched] = useState({
         name: false,
         phone: false,
+        email: false,
         concern: false
     });
 
@@ -37,8 +40,14 @@ const DepartmentHero = ({ data }) => {
         return '';
     };
 
+    const validateEmail = (email) => {
+        if (!email.trim()) return 'Email is required';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) return 'Enter a valid email address';
+        return '';
+    };
+
     const validateConcern = (concern) => {
-        if (!concern) return 'Please select your concern';
         return '';
     };
 
@@ -50,6 +59,7 @@ const DepartmentHero = ({ data }) => {
             let error = '';
             if (name === 'name') error = validateName(value);
             if (name === 'phone') error = validatePhone(value);
+            if (name === 'email') error = validateEmail(value);
             if (name === 'concern') error = validateConcern(value);
             setErrors(prev => ({ ...prev, [name]: error }));
         }
@@ -61,19 +71,21 @@ const DepartmentHero = ({ data }) => {
         let error = '';
         if (name === 'name') error = validateName(value);
         if (name === 'phone') error = validatePhone(value);
+        if (name === 'email') error = validateEmail(value);
         if (name === 'concern') error = validateConcern(value);
         setErrors(prev => ({ ...prev, [name]: error }));
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setTouched({ name: true, phone: true, concern: true });
+        setTouched({ name: true, phone: true, email: true, concern: true });
         const nameError = validateName(formData.name);
         const phoneError = validatePhone(formData.phone);
+        const emailError = validateEmail(formData.email);
         const concernError = validateConcern(formData.concern);
-        setErrors({ name: nameError, phone: phoneError, concern: concernError });
+        setErrors({ name: nameError, phone: phoneError, email: emailError, concern: concernError });
 
-        if (!nameError && !phoneError && !concernError) {
+        if (!nameError && !phoneError && !emailError) {
             setStatus({ type: 'loading', message: 'Sending your inquiry...' });
 
             try {
@@ -82,7 +94,7 @@ const DepartmentHero = ({ data }) => {
                     age: 'N/A',
                     gender: 'N/A',
                     mobileNumber: formData.phone,
-                    email: '',
+                    email: formData.email,
                     concern: formData.concern,
                     affectedArea: []
                 };
@@ -99,7 +111,7 @@ const DepartmentHero = ({ data }) => {
 
                 if (response.ok) {
                     setStatus({ type: 'success', message: 'Thank you! Our Team will get back to you shortly.' });
-                    setFormData({ name: '', phone: '', concern: '' });
+                    setFormData({ name: '', phone: '', email: '', concern: '' });
                     setIsSubmitted(true);
                 } else {
                     setStatus({ type: 'error', message: data.error || data.details || 'Failed to send inquiry. Please try again.' });
@@ -154,6 +166,22 @@ const DepartmentHero = ({ data }) => {
                 </div>
 
                 <div className="relative">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email ID"
+                        value={formData.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        disabled={isSubmitted || status.type === 'loading'}
+                        className={`w-full bg-[#ffffff1a] border ${errors.email && touched.email ? 'border-red-500' : 'border-transparent'} rounded-lg text-white placeholder-white/70 px-3 py-2 sm:py-2.5 text-[13px] sm:text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] font-sohne ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    />
+                    {errors.email && touched.email && (
+                        <p className="text-red-700 text-[11px] sm:text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.email}</p>
+                    )}
+                </div>
+
+                {/* <div className="relative">
                     <select
                         name="concern"
                         value={formData.concern}
@@ -175,7 +203,7 @@ const DepartmentHero = ({ data }) => {
                     {errors.concern && touched.concern && (
                         <p className="text-red-700 text-[11px] sm:text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.concern}</p>
                     )}
-                </div>
+                </div> */}
 
                 <div className="pt-2 sm:pt-3 text-center">
                     {status.message && status.type !== 'success' && (
@@ -188,9 +216,9 @@ const DepartmentHero = ({ data }) => {
                             {status.type === 'loading' ? 'SENDING...' : 'GET COST ESTIMATE'}
                         </button>
                     ) : (
-                        <div className="py-3 sm:py-4">
-                            <h2 className="text-white font-canela font-bold text-[22px] sm:text-[28px] leading-[28px] sm:leading-[34px] mb-2">Thank You</h2>
-                            <p className="text-white font-sohne font-normal text-[13px] sm:text-[15px]">Our Team will get back to you shortly.</p>
+                        <div className="py-1">
+                            <h2 className="text-white font-canela font-bold text-[20px] sm:text-[24px] leading-tight mb-1">Thank You</h2>
+                            <p className="text-white font-sohne font-normal text-[12px] sm:text-[14px]">Our Team will get back to you shortly.</p>
                         </div>
                     )}
                 </div>
@@ -243,9 +271,9 @@ const DepartmentHero = ({ data }) => {
                             </div>
                         </div>
 
-                        <div className="w-full sm:w-[360px] md:w-[420px] lg:w-[450px] flex-shrink-0 mx-auto lg:mx-0 lg:ml-auto">
+                        {/* <div className="w-full sm:w-[360px] md:w-[420px] lg:w-[450px] flex-shrink-0 mx-auto lg:mx-0 lg:ml-auto">
                             {renderForm()}
-                        </div>
+                        </div> */}
                     </div>
                 )}
             </div>

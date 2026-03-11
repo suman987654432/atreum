@@ -2,67 +2,73 @@
   {
     "id": 1,
     "name": "Dr. Avantika S",
+    "department": "pediatrics",
     "specialties": [
-      "Pediatrics",
       "Pediatrics",
       "Neonatal Care"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+    "schedule": "Mon-Sat : 10:00 AM - 1:00 PM"
   },
   {
     "id": 2,
     "name": "Dr. Mohith Shenoy",
+    "department": "urology",
     "specialties": [
       "Urology",
       "Trauma Surgery"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+    "schedule": "Mon-Fri : 4:00 PM - 7:00 PM"
   },
   {
     "id": 3,
     "name": "Dr. Rajesh Kumar",
+    "department": "orthopedics",
     "specialties": [
       "Orthopaedics",
       "Sports Medicine"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+    "schedule": "Mon-Sat : 9:00 AM - 12:00 PM"
   },
   {
     "id": 4,
     "name": "Dr. Priya Sharma",
+    "department": "pediatrics",
     "specialties": [
       "Pediatrics",
-      "Neonatal Care"
+      "Developmental Pediatrics"
     ],
     "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM"
   },
   {
     "id": 5,
     "name": "Dr. Amit Patel",
+    "department": "urology",
     "specialties": [
       "Urology",
       "Kidney Transplant"
     ],
     "image": "doctor",
-    "schedule": "Tue-Sat : 9:00 AM - 4:00 PM"
+    "schedule": "Tue, Thu, Sat : 10:00 AM - 2:00 PM"
   },
   {
     "id": 6,
     "name": "Dr. Sunita Verma",
+    "department": "orthopedics",
     "specialties": [
       "Orthopaedics",
       "Joint Replacement"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 8:00 AM - 3:00 PM"
+    "schedule": "Mon-Fri : 2:00 PM - 5:00 PM"
   },
   {
     "id": 7,
     "name": "Dr. Meera Reddy",
+    "department": "obstetrics-gynecology",
     "specialties": [
       "Obstetrics",
       "Gynecology"
@@ -73,18 +79,21 @@
   {
     "id": 8,
     "name": "Dr. Ramesh Hegde",
+    "department": "gastroenterology",
     "specialties": [
       "Gastroenterology",
       "Digestive Care"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 9:00 AM - 5:00 PM"
+    "schedule": "Mon, Wed, Fri : 9:00 AM - 1:00 PM"
   },
   {
     "id": 9,
     "name": "Dr. Sarah Johnson",
+    "department": "dermatology",
     "specialties": [
-      "Dermatology"
+      "Dermatology",
+      "Cosmetology"
     ],
     "image": "doctor",
     "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
@@ -92,16 +101,18 @@
   {
     "id": 10,
     "name": "Dr. Mahesh Kumar",
+    "department": "endocrinology",
     "specialties": [
       "Endocrinology",
       "Diabetology"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 11:00 AM - 6:00 PM"
+    "schedule": "Mon-Fri : 11:00 AM - 2:00 PM"
   },
   {
     "id": 11,
     "name": "Dr. Naveen Prasad",
+    "department": "nephrology",
     "specialties": [
       "Nephrology",
       "Renal Care"
@@ -112,16 +123,29 @@
   {
     "id": 12,
     "name": "Dr. Sameer Khan",
+    "department": "plastics",
     "specialties": [
       "Plastics Surgery",
       "Reconstructive Surgery"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 9:00 AM - 4:00 PM"
+    "schedule": "Mon, Wed, Fri : 3:00 PM - 6:00 PM"
   },
   {
     "id": 13,
-    "name": "Dr. Vinay Hegde",
+    "name": "Dr. Vinod",
+    "department": "general-surgery",
+    "specialties": [
+      "General Surgery",
+      "Gastrointestinal Surgery"
+    ],
+    "image": "doctor",
+    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM"
+  },
+  {
+    "id": 17,
+    "name": "Dr Anil Kumar H",
+    "department": "general-surgery",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery"
@@ -132,16 +156,18 @@
   {
     "id": 14,
     "name": "Dr. Sandeep Reddy",
+    "department": "oncology",
     "specialties": [
       "Oncology",
       "Cancer Care"
     ],
     "image": "doctor",
-    "schedule": "Mon-Fri : 10:00 AM - 4:00 PM"
+    "schedule": "Tue, Thu, Sat : 11:00 AM - 3:00 PM"
   },
   {
     "id": 15,
     "name": "Dr. Pradeep Shenoy",
+    "department": "vascular-surgery",
     "specialties": [
       "Vascular Surgery",
       "Phlebology"
@@ -152,6 +178,7 @@
   {
     "id": 16,
     "name": "Dr. Karthik M",
+    "department": "ent",
     "specialties": [
       "ENT",
       "Otolaryngology"

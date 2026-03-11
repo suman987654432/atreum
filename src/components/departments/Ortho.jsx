@@ -233,7 +233,7 @@ const Ortho = () => {
                                     )}
                                 </div>
 
-                                <div className="relative">
+                                {/* <div className="relative">
                                     <select
                                         name="concern"
                                         value={formData.concern}
@@ -261,7 +261,7 @@ const Ortho = () => {
                                     {errors.concern && touched.concern && (
                                         <p className="text-red-700 text-xs mt-1 font-sohne font-medium  px-2 py-0.5 ">{errors.concern}</p>
                                     )}
-                                </div>
+                                </div> */}
 
                                 <div className="pt-3 text-center">
                                     {status.message && status.type !== 'success' && (
@@ -275,7 +275,7 @@ const Ortho = () => {
                                             disabled={status.type === 'loading'}
                                             className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2.5 px-7 rounded shadow-lg uppercase tracking-wide text-xs transition-all duration-300"
                                         >
-                                            {status.type === 'loading' ? 'SENDING...' : 'GET COST ESTIMATE'}
+                                            {status.type === 'loading' ? 'SENDING...' : 'GET COST ESTIMATnbE'}
                                         </button>
                                     ) : (
                                         <div className="py-4">
