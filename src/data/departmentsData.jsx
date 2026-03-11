@@ -59,7 +59,7 @@ export const departmentsData = {
         care: {
             icon: ortho1,
             title: "Orthopaedic Care",
-            description: "Atreum’s Orthopaedics Department is dedicated to helping you move better, live pain-free, and regain your independence. From chronic joint pain and sports injuries to complex joint replacements, our specialists combine advanced technology with personalised care to deliver precise, effective, and compassionate treatment.",
+            description: "Atreum’s Orthopedics  Department is dedicated to helping you move better, live pain-free, and regain your independence. From chronic joint pain and sports injuries to complex joint replacements, our specialists combine advanced technology with personalised care to deliver precise, effective, and compassionate treatment.",
             items: [
                 "JOINT PAIN",
                 "FRACTURES & TRAUMA",

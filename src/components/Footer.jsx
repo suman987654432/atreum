@@ -62,7 +62,7 @@ const Footer = () => {
                       to="/paediatrics"
                       className="text-sm text-[#000000]"
                     >
-                      Paediatrics
+                      Pediatrics
                     </Link>
                   </li>
                   <li>
