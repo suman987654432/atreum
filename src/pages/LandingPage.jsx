@@ -3,7 +3,7 @@ import Excellence from '../components/HeroPage/Excellence'
 // import Excellence from '../components/HeroPage/Excellence'
 // import Special from '../components/HeroPage/Special'
 import Facility from '../components/HeroPage/Facility'
-import Doctor from '../components/HeroPage/Doctor'
+import DoctorHero from '../components/HeroPage/DoctorHero'
 // import Care from '../components/departments/Care'
 
 
@@ -12,7 +12,7 @@ const LandingPage = () => {
     <div className="">
       <Hero />
       <Excellence />
-      <Doctor />
+      <DoctorHero />
       {/* <Special /> */}
       <Facility />
       {/* <Care /> */}
