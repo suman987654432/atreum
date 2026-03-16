@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const DepartmentHero = ({ data }) => {
-    const { image, title, title1, title2, title3, title4, formTitle, formSubtitle, concerns, centerContent } = data;
+    const { image, title, title1, title2, title3, title4, formTitle, formSubtitle, centerContent } = data;
 
     const [formData, setFormData] = useState({
         name: '',
@@ -47,9 +47,7 @@ const DepartmentHero = ({ data }) => {
         return '';
     };
 
-    const validateConcern = (concern) => {
-        return '';
-    };
+  
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -60,7 +58,7 @@ const DepartmentHero = ({ data }) => {
             if (name === 'name') error = validateName(value);
             if (name === 'phone') error = validatePhone(value);
             if (name === 'email') error = validateEmail(value);
-            if (name === 'concern') error = validateConcern(value);
+            // if (name === 'concern') error = validateConcern(value);
             setErrors(prev => ({ ...prev, [name]: error }));
         }
     };
@@ -72,7 +70,7 @@ const DepartmentHero = ({ data }) => {
         if (name === 'name') error = validateName(value);
         if (name === 'phone') error = validatePhone(value);
         if (name === 'email') error = validateEmail(value);
-        if (name === 'concern') error = validateConcern(value);
+        // if (name === 'concern') error = validateConcern(value);
         setErrors(prev => ({ ...prev, [name]: error }));
     };
 
@@ -82,8 +80,8 @@ const DepartmentHero = ({ data }) => {
         const nameError = validateName(formData.name);
         const phoneError = validatePhone(formData.phone);
         const emailError = validateEmail(formData.email);
-        const concernError = validateConcern(formData.concern);
-        setErrors({ name: nameError, phone: phoneError, email: emailError, concern: concernError });
+        // const concernError = validateConcern(formData.concern);
+        // setErrors({ name: nameError, phone: phoneError, email: emailError, concern: concernError });
 
         if (!nameError && !phoneError && !emailError) {
             setStatus({ type: 'loading', message: 'Sending your inquiry...' });
@@ -233,19 +231,19 @@ const DepartmentHero = ({ data }) => {
                 <div className="absolute inset-0 bg-[#0e4857]/55"></div>
             </div>
 
-            <div className={`relative z-10 w-full h-full flex flex-col px-3 sm:px-4 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-24 sm:pt-32 md:pt-40 lg:pt-72' : 'justify-center'}`}>
+            <div className={`relative z-10 w-full h-full flex flex-col px-3 sm:px-4 md:px-8 lg:px-12 ${centerContent ? 'justify-start pt-16 sm:pt-20 md:pt-24 lg:pt-72' : 'justify-center'}`}>
                 {centerContent ? (
                     <>
                         {/* Title Section (Left Aligned with micro offset) */}
-                        <div className="w-full max-w-[1700px] mx-auto flex justify-start lg:pl-[72px] mt-12 sm:mt-16 md:mt-20">
-                            <h1 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[26px] sm:leading-[30px] md:leading-[40px] lg:leading-[46px] tracking-tight text-left">
+                        <div className="w-full max-w-[1700px] mx-auto flex justify-center lg:justify-start lg:pl-[72px] mt-4 sm:mt-6 md:mt-8 lg:mt-20">
+                            <h1 className="text-white font-canela font-normal text-[24px] sm:text-[28px] md:text-[38px] lg:text-[43px] leading-[26px] sm:leading-[30px] md:leading-[40px] lg:leading-[46px] tracking-tight text-center lg:text-left max-w-[95%] sm:max-w-[90%] lg:max-w-none">
                                 {title}
                             </h1>
                         </div>
 
                         {/* Form Section (Aligned Right) */}
-                        <div className="w-full max-w-[1700px] mx-auto flex justify-end pb-8 sm:pb-10 md:pb-12 lg:pb-0">
-                            <div className="w-full sm:w-[360px] md:w-[420px] lg:w-[450px] lg:-mt-44">
+                        <div className="w-full max-w-[1700px] mx-auto flex justify-center lg:justify-end pt-3 sm:pt-4 md:pt-5 lg:pt-0 pb-8 sm:pb-10 md:pb-12 lg:pb-0">
+                            <div className="w-full max-w-[450px] sm:w-[360px] md:w-[420px] lg:w-[450px] lg:-mt-44">
                                 {renderForm()}
                             </div>
                         </div>

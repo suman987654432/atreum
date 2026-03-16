@@ -21,14 +21,14 @@ const Form = () => {
         setFormData(prev => ({ ...prev, gender }));
     };
 
-    const handleAreaSelect = (area) => {
-        setFormData(prev => {
-            const areas = prev.affectedArea.includes(area)
-                ? prev.affectedArea.filter(a => a !== area)
-                : [...prev.affectedArea, area];
-            return { ...prev, affectedArea: areas };
-        });
-    };
+    // const handleAreaSelect = (area) => {
+    //     setFormData(prev => {
+    //         const areas = prev.affectedArea.includes(area)
+    //             ? prev.affectedArea.filter(a => a !== area)
+    //             : [...prev.affectedArea, area];
+    //         return { ...prev, affectedArea: areas };
+    //     });
+    // };
 
 
 
@@ -72,11 +72,11 @@ const Form = () => {
     };
 
     return (
-        <div id="form-section" className="w-full max-w-2xl mx-auto  bg-[#D9D9D933] p-8 md:p-10 rounded-2xl  ">
-            <div className="mb-8">
+        <div id="form-section" className="w-full max-w-2xl mx-auto bg-[#D9D9D933] p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl">
+            <div className="mb-6 sm:mb-8">
                 <h2 className="text-[#19628D] text-center">
-                    <span className="font-canela font-light text-[32px] leading-[100%] tracking-normal">Share a few details below to help <br />us</span>
-                    <span className="font-canela font-bold italic text-[32px] leading-[100%] tracking-normal text-[#19628D]"> understand your concern.</span>
+                    <span className="font-canela font-light text-[1.6rem] sm:text-[1.9rem] md:text-[2rem] leading-[1.05] tracking-normal">Share a few details below to help <br />us</span>
+                    <span className="font-canela font-bold italic text-[1.6rem] sm:text-[1.9rem] md:text-[2rem] leading-[1.05] tracking-normal text-[#19628D]"> understand your concern.</span>
                 </h2>
             </div>
 
@@ -101,18 +101,18 @@ const Form = () => {
                         placeholder="Age"
                         value={formData.age}
                         onChange={handleInputChange}
-                        className="w-1/3 px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
+                        className="w-full sm:w-1/3 px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
                     />
                 </div>
 
                 {/* Gender */}
-                <div className="flex items-center border border-[#0FB1AB] rounded-lg bg-white overflow-hidden w-fit">
-                    <span className="px-4 py-2.5 text-black bg-transparent font-sohne">Gender</span>
-                    <div className="flex border-l border-[#0FB1AB]">
+                <div className="flex items-center border border-[#0FB1AB] rounded-lg bg-white overflow-hidden w-full sm:w-fit">
+                    <span className="px-3 sm:px-4 py-2.5 text-black bg-transparent font-sohne text-sm sm:text-base whitespace-nowrap">Gender</span>
+                    <div className="flex border-l border-[#0FB1AB] flex-1 sm:flex-initial">
                         <button
                             type="button"
                             onClick={() => handleGenderSelect('MALE')}
-                            className={`px-4 py-2.5 text-sm font-bold transition-colors ${formData.gender === 'MALE'
+                            className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'MALE'
                                 ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
                                 : 'text-black hover:text-[#0FB1AB]'
                                 }`}
@@ -123,7 +123,7 @@ const Form = () => {
                         <button
                             type="button"
                             onClick={() => handleGenderSelect('FEMALE')}
-                            className={`px-4 py-2.5 text-sm font-bold transition-colors ${formData.gender === 'FEMALE'
+                            className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'FEMALE'
                                 ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
                                 : 'text-black hover:text-[#0FB1AB]'
                                 }`}
@@ -171,7 +171,7 @@ const Form = () => {
                 </div>
 
                 {/* Affected Area */}
-                <div className="pt-2">
+                {/* <div className="pt-2">
                     <label className="block text-black text-base mb-2 font-sohne">Affected Area</label>
                     <div className="flex flex-wrap gap-2">
                         {[
@@ -196,7 +196,7 @@ const Form = () => {
                             </button>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Consultation Preference */}
 
@@ -215,11 +215,11 @@ const Form = () => {
                 )}
 
                 {/* Submit Button */}
-                <div className="pt-6 flex justify-center">
+                <div className="pt-4 sm:pt-6 flex justify-center">
                     <button
                         type="submit"
                         disabled={status.type === 'loading'}
-                        className={`px-16 py-3 border border-[#0FB1AB] text-[#0FB1AB] text-sm font-extrabold uppercase rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FB1AB] focus:ring-offset-2 tracking-wider ${status.type === 'loading'
+                        className={`w-full sm:w-auto px-8 sm:px-16 py-3 border border-[#0FB1AB] text-[#0FB1AB] text-xs sm:text-sm font-extrabold uppercase rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#0FB1AB] focus:ring-offset-2 tracking-wider ${status.type === 'loading'
                             ? 'opacity-50 cursor-not-allowed'
                             : 'hover:bg-[#0FB1AB] hover:text-white'
                             }`}

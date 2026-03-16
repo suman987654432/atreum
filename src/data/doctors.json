@@ -2,188 +2,233 @@
   {
     "id": 1,
     "name": "Dr. Avantika S",
-    "department": "pediatrics",
+    "department": "Pediatrics",
     "specialties": [
       "Pediatrics",
       "Neonatal Care"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 1:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 10:00 AM - 1:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 2,
     "name": "Dr. Mohith Shenoy",
-    "department": "urology",
+    "department": "Urology",
     "specialties": [
       "Urology",
       "Trauma Surgery"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Fri : 4:00 PM - 7:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Fri : 4:00 PM - 7:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 3,
     "name": "Dr. Rajesh Kumar",
-    "department": "orthopedics",
+    "department": "Orthopaedics",
     "specialties": [
       "Orthopaedics",
       "Sports Medicine"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 9:00 AM - 12:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 9:00 AM - 12:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 4,
     "name": "Dr. Priya Sharma",
-    "department": "pediatrics",
+    "department": "Pediatrics",
     "specialties": [
       "Pediatrics",
       "Developmental Pediatrics"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 5,
     "name": "Dr. Amit Patel",
-    "department": "urology",
+    "department": "Urology",
     "specialties": [
       "Urology",
       "Kidney Transplant"
     ],
-    "image": "doctor",
-    "schedule": "Tue, Thu, Sat : 10:00 AM - 2:00 PM"
+    "image": "Doctor1",
+    "schedule": "Tue, Thu, Sat : 10:00 AM - 2:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 6,
     "name": "Dr. Sunita Verma",
-    "department": "orthopedics",
+    "department": "Orthopaedics",
     "specialties": [
       "Orthopaedics",
       "Joint Replacement"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Fri : 2:00 PM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Fri : 2:00 PM - 5:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 7,
     "name": "Dr. Meera Reddy",
-    "department": "obstetrics-gynecology",
+    "department": "Gynaecology",
     "specialties": [
       "Obstetrics",
       "Gynecology"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 4:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 10:00 AM - 4:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 8,
     "name": "Dr. Ramesh Hegde",
-    "department": "gastroenterology",
+    "department": "Gastroenterology",
     "specialties": [
       "Gastroenterology",
       "Digestive Care"
     ],
-    "image": "doctor",
-    "schedule": "Mon, Wed, Fri : 9:00 AM - 1:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon, Wed, Fri : 9:00 AM - 1:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 9,
     "name": "Dr. Sarah Johnson",
-    "department": "dermatology",
+    "department": "Dermatology",
     "specialties": [
       "Dermatology",
       "Cosmetology"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 10,
     "name": "Dr. Mahesh Kumar",
-    "department": "endocrinology",
+    "department": "Endocrinology",
     "specialties": [
       "Endocrinology",
       "Diabetology"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Fri : 11:00 AM - 2:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Fri : 11:00 AM - 2:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 11,
     "name": "Dr. Naveen Prasad",
-    "department": "nephrology",
+    "department": "Nephrology",
     "specialties": [
       "Nephrology",
       "Renal Care"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 10:00 AM - 5:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 12,
     "name": "Dr. Sameer Khan",
-    "department": "plastics",
+    "department": "Plastic Surgery",
     "specialties": [
       "Plastics Surgery",
       "Reconstructive Surgery"
     ],
-    "image": "doctor",
-    "schedule": "Mon, Wed, Fri : 3:00 PM - 6:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon, Wed, Fri : 3:00 PM - 6:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 13,
     "name": "Dr. Vinod",
-    "department": "general-surgery",
+    "department": "General Surgery",
     "specialties": [
       "General Surgery",
       "Gastrointestinal Surgery"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 17,
-    "name": "Dr Anil Kumar H",
-    "department": "general-surgery",
+    "name": "Dr. Anil Kumar H",
+    "department": "General Surgery",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM",
+    "qualification": "MBBS, MD",
+    "experience": "18+ years",
+    "designation": "Senior Consultant",
+    "role": "General Physician",
+    "consultationTiming": "Mon - Fri 7:00 PM - 8:30 PM"
   },
   {
     "id": 14,
     "name": "Dr. Sandeep Reddy",
-    "department": "oncology",
+    "department": "Oncology",
     "specialties": [
       "Oncology",
       "Cancer Care"
     ],
-    "image": "doctor",
-    "schedule": "Tue, Thu, Sat : 11:00 AM - 3:00 PM"
+    "image": "Doctor1",
+    "schedule": "Tue, Thu, Sat : 11:00 AM - 3:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 15,
     "name": "Dr. Pradeep Shenoy",
-    "department": "vascular-surgery",
+    "department": "Vascular Surgery",
     "specialties": [
       "Vascular Surgery",
       "Phlebology"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 11:00 AM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 11:00 AM - 5:00 PM",
+    "qualification": "MBBS, MD"
   },
   {
     "id": 16,
     "name": "Dr. Karthik M",
-    "department": "ent",
+    "department": "ENT",
     "specialties": [
       "ENT",
       "Otolaryngology"
     ],
-    "image": "doctor",
-    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM"
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
+    "qualification": "MBBS, MD"
+  },
+  {
+    "id": 18,
+    "name": "Dr. Suresh Babu",
+    "department": "Critical Care",
+    "specialties": [
+      "Critical Care",
+      "Emergency Medicine"
+    ],
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
+    "qualification": "MBBS, MD"
+  },
+  {
+    "id": 19,
+    "name": "Dr. Anjali Rao",
+    "department": "Neurology",
+    "specialties": [
+      "Neurology",
+      "Stroke Specialist"
+    ],
+    "image": "Doctor1",
+    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
+    "qualification": "MBBS, MD"
   }
 ]

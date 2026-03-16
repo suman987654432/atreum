@@ -1,4 +1,3 @@
-import React from 'react';
 import heroortho from "../../images/heroortho.png";
 import { BsChevronDown } from "react-icons/bs";
 

@@ -1,7 +1,9 @@
 import Hero from '../components/HeroPage/Hero'
 import Excellence from '../components/HeroPage/Excellence'
-import Special from '../components/HeroPage/Special'
+// import Excellence from '../components/HeroPage/Excellence'
+// import Special from '../components/HeroPage/Special'
 import Facility from '../components/HeroPage/Facility'
+import Doctor from '../components/HeroPage/Doctor'
 // import Care from '../components/departments/Care'
 
 
@@ -10,8 +12,9 @@ const LandingPage = () => {
     <div className="">
       <Hero />
       <Excellence />
-      <Special />
-      <Facility/>
+      <Doctor />
+      {/* <Special /> */}
+      <Facility />
       {/* <Care /> */}
 
     </div>
