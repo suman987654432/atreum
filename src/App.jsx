@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import SpecialtyPage from './pages/SpecialtyPage';
-import DoctorsPage from './components/DoctorsPage';
+import DoctorsPages from './components/DoctorsPages';
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/department/:slug' element={<SpecialtyPage />} />
-            <Route path='/doctors' element={<DoctorsPage />} />
+            <Route path='/doctors' element={<DoctorsPages />} />
             {/* <Route path='/orthopedics' element={<Navigate to="/department/orthopedics" replace />} /> */}
           </Routes>
         </div>
