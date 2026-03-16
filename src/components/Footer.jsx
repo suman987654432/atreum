@@ -88,7 +88,7 @@ const Footer = () => {
                     <Link
                       to="/plastic-surgery"
                       className="text-sm text-[#000000]"
-                    >
+                    >   
                       Plastic Surgery
                     </Link>
                   </li>
