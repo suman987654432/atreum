@@ -90,14 +90,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-4 sm:top-5 md:top-7 left-0 right-0 w-full flex justify-center px-4 sm:px-6 lg:px-8 z-50 font-sohne font-light">
+    <nav className="fixed top-2 sm:top-5 md:top-7 left-0 right-0 w-full flex justify-center px-4 sm:px-6 lg:px-8 z-50 font-sohne font-light">
       {/* Maximum width container to align with content */}
       <div className="flex items-center w-full max-w-[1800px]">
 
         {/* Logo Section - Separate Box */}
         {/* Logo Section - Separate Box */}
-        <a href="/" className="h-[50px] w-[50px] sm:h-[60px] sm:w-[60px] bg-white flex items-center justify-center rounded-lg shadow-[0px_7px_15.6px_-6px_#00000040] flex-shrink-0 mr-2 sm:mr-3 cursor-pointer hover:shadow-lg transition-shadow">
-          <img src={logo} alt="Logo" className="h-9 w-9 sm:h-11 sm:w-11 object-contain" />
+        <a href="/" className="h-[2.5rem] w-[2.5rem] sm:h-[3.75rem] sm:w-[3.75rem] bg-white flex items-center justify-center rounded-lg shadow-[0px_7px_15.6px_-6px_#00000040] flex-shrink-0 mr-2 sm:mr-3 cursor-pointer hover:shadow-lg transition-shadow">
+          <img src={logo} alt="Logo" className="h-[1.75rem] w-[1.75rem] sm:h-[2.75rem] sm:w-[2.75rem] object-contain" />
         </a>
 
         {/* Main Interface Bar - Desktop */}

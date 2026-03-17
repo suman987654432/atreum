@@ -80,7 +80,7 @@ const DepartmentDoctors = ({ doctors = [] }) => {
 
                             <div>
                                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                                    <h3 className="font-canela text-[1.75rem] sm:text-[2.25rem] leading-none text-[#19628D]">
+                                    <h3 className="font-canela text-[22px] sm:text-[26px] md:text-[28px] leading-tight text-[#19628D]">
                                         Dr <span className="font-bold">{doctorDisplayName}</span>
                                     </h3>
                                     {doctorQualification ? (
@@ -94,7 +94,7 @@ const DepartmentDoctors = ({ doctors = [] }) => {
                                     <span className="mx-2">|</span>
                                     <span className="font-bold italic">{doctorDesignation || 'Senior Consultant'}</span>
                                 </p>
-                                <p className="text-black font-sohne font-medium text-[1.3rem] sm:text-[1.45rem] leading-tight mt-3 uppercase">
+                                <p className="text-black font-sohne font-medium text-[1.1rem] sm:text-[1.17rem] leading-tight mt-3 uppercase">
                                     {doctorRole}
                                 </p>
                                 <p className="text-black font-sohne font-bold text-[0.95rem] sm:text-[1.05rem]  ">
@@ -107,7 +107,7 @@ const DepartmentDoctors = ({ doctors = [] }) => {
                                     <ChevronLeft size={26} strokeWidth={2.5} />
                                 </button>
                                 <a
-                                    href="tel:9606970542" 
+                                    href="tel:9606970542"
                                     className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[13px] sm:text-[16.5px] py-2 sm:py-2.5 rounded-[10px] shadow-sm uppercase tracking-wide transition-all duration-300 transform active:scale-95 whitespace-nowrap px-2.5 sm:px-4"
                                 >
                                     Book An Appointment

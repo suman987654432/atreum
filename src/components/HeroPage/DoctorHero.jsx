@@ -22,9 +22,9 @@ const DoctorHero = () => {
             <div className="max-w-[1720px] mx-auto">
                 {/* Header and Filter Controls */}
                 <div className="flex flex-col xl:flex-row justify-between items-start gap-8 md:gap-12 mb-10">
-                                        <div className="flex-shrink-0 ml-2  lg:ml-20">
+                    <div className="flex-shrink-0 ml-2  lg:ml-20">
                         <h2 className="font-canela  text-[2.3125rem] leading-[2.3125rem] tracking-normal text-[#19628D]">
-                          <span className='font-canela bold italic'>Our</span>   <span>Doctors</span>
+                            <span className='font-canela bold italic'>Our</span>   <span>Doctors</span>
                         </h2>
                     </div>
 
@@ -34,9 +34,9 @@ const DoctorHero = () => {
                             <button
                                 key={dept}
                                 onClick={() => setSelectedDept(dept)}
-                                className={`px-3 py-1 rounded-[8px] border text-[14px] font-sohne font-medium transition-all duration-300 whitespace-nowrap ${selectedDept === dept
-                                        ? 'bg-[#19628D] text-white border-[#19628D]'
-                                        : 'bg-white text-[#19628D] border-[#19628D] hover:bg-[#19628D] hover:text-white'
+                                className={`px-2.5 py-1 rounded-[8px] border text-[0.75rem] sm:text-[0.875rem] font-sohne font-medium transition-all duration-300 whitespace-nowrap ${selectedDept === dept
+                                    ? 'bg-[#19628D] text-white border-[#19628D]'
+                                    : 'bg-white text-[#19628D] border-[#19628D] hover:bg-[#19628D] hover:text-white'
                                     }`}
                             >
                                 {dept}
@@ -44,7 +44,7 @@ const DoctorHero = () => {
                         ))}
                         <button
                             onClick={() => setSelectedDept("View All")}
-                            className={`text-[15px] font-bold font-sohne transition-colors ml-0 sm:ml-2 lg:ml-4 whitespace-nowrap cursor-pointer ${selectedDept === "View All" ? 'text-[#19628D]' : 'text-[#878787] hover:text-[#19628D]'
+                            className={`text-[0.8125rem] sm:text-[0.9375rem] font-bold font-sohne transition-colors ml-0 sm:ml-2 lg:ml-4 whitespace-nowrap cursor-pointer ${selectedDept === "View All" ? 'text-[#19628D]' : 'text-[#878787] hover:text-[#19628D]'
                                 }`}
                         >
                             View All
@@ -67,8 +67,8 @@ const DoctorHero = () => {
                                         <h3 className="font-canela text-[22px] sm:text-[26px] md:text-[28px] leading-tight text-[#19628D] mb-2">
                                             Dr <span className="font-bold">{doctor.name.replace('Dr. ', '').replace('Dr ', '')}</span>
                                         </h3>
-                                        <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[14px] sm:text-[16.5px] py-2 sm:py-2.5 rounded-[10px] shadow-sm uppercase tracking-wide transition-all duration-300 transform active:scale-95 w-full whitespace-nowrap px-3 sm:px-4">
-                                            Book An Appointment
+                                        <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[0.75rem] sm:text-[1rem] py-2 sm:py-2 rounded-[10px] shadow-sm uppercase tracking-wide transition-all duration-300 transform active:scale-95  whitespace-nowrap px-4 sm:px-5">
+                                            Book Appointment
                                         </button>
                                     </div>
 
