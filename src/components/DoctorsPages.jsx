@@ -1,7 +1,29 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import doctorData from '../data/doctors.json';
-import Doctor1 from '../images/doctor/Doctor1.png';
+import doctors1 from '../images/doctors1.png';
+import drbhanu from '../images/derma/drbhanu.avif';
+import drchetan from '../images/ortho/drchetan.avif';
+import drarthika from '../images/pedia/drarthika.avif';
+import drvivek from '../images/pedia/drvivek.avif';
+import drkishor from '../images/neuro/drkishor.avif';
+import drravi from '../images/nephro/drravi.avif';
+import drradha from '../images/gyna/drradha.avif';
+import drsuma from '../images/gyna/drsuma.avif';
+import drsujay from '../images/general/drsujay.avif';
+
+const imageMap = {
+    "Doctor1": doctors1,
+    "drbhanu": drbhanu,
+    "drchetan": drchetan,
+    "drarthika": drarthika,
+    "drvivek": drvivek,
+    "drkishor": drkishor,
+    "drravi": drravi,
+    "drradha": drradha,
+    "drsuma": drsuma,
+    "drsujay": drsujay
+};
 
 const departments = [
     'Orthopaedics', 'Urology', 'Plastic Surgery', 'Gynaecology', 'Pediatrics',
@@ -71,7 +93,7 @@ const DoctorsPages = () => {
                     {filteredDoctors.map((doctor) => {
                         const displayName = doctor.name.replace(/^Dr\.?\s*/i, '');
                         const qualification = doctor.qualification || doctor.qualifications || 'MBBS, MD';
-                        const experience = doctor.experience || '18+ years';
+                        const experience = doctor.experience;
                         const designation = doctor.designation || 'Senior Consultant';
                         const role = doctor.role || doctor.department;
                         const timingRaw = doctor.consultationTiming || doctor.schedule || doctor.timing || '';
@@ -81,7 +103,7 @@ const DoctorsPages = () => {
                             <article key={doctor.id} className="rounded-[14px] sm:rounded-[16px] overflow-hidden h-full flex flex-col">
                                 <div className="relative h-[160px] sm:h-[190px] md:h-[210px] bg-[#D9D9D933] overflow-hidden">
                                     <img
-                                        src={Doctor1}
+                                        src={imageMap[doctor.image]}
                                         alt={doctor.name}
                                         className="w-full h-full object-contain object-bottom transform translate-y-4 sm:translate-y-5"
                                     />
@@ -96,11 +118,19 @@ const DoctorsPages = () => {
                                         <span className="font-sohne font-normal text-black text-[0.48em] ml-2 align-middle">({qualification})</span>
                                     </h3>
 
-                                    <p className="text-black font-sohne text-[12px] sm:text-[14px] mt-1 leading-snug">
-                                        Experience - <span className="font-bold">{experience}</span>
-                                        <span className="mx-1.5">|</span>
-                                        <span className="font-bold italic">{designation}</span>
-                                    </p>
+                                    {experience && (
+                                        <p className="text-black font-sohne text-[12px] sm:text-[14px] mt-1 leading-snug">
+                                            Experience - <span className="font-bold">{experience}</span>
+                                            <span className="mx-1.5">|</span>
+                                            <span className="font-bold italic">{designation}</span>
+                                        </p>
+                                    )}
+
+                                    {!experience && designation && (
+                                        <p className="text-black font-sohne text-[12px] sm:text-[14px] mt-1 leading-snug">
+                                            <span className="font-bold italic">{designation}</span>
+                                        </p>
+                                    )}
 
                                     <p className="text-black font-sohne font-medium text-[1rem] sm:text-[1.2rem] leading-tight uppercase">
                                         {role}

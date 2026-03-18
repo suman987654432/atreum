@@ -7,6 +7,16 @@ import Form from '../components/departments/Form';
 import { departmentsData } from '../data/departmentsData';
 import doctorsData from '../data/doctors.json';
 
+const normalizeDepartmentName = (value = '') => (
+    value
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/gynaec/g, 'gynec')
+        .replace(/paedi/g, 'pedi')
+        .replace(/orthopaed/g, 'orthoped')
+        .replace(/[^a-z]/g, '')
+);
+
 const SpecialtyPage = () => {
     const { slug } = useParams();
     const department = departmentsData[slug];
@@ -22,20 +32,31 @@ const SpecialtyPage = () => {
         return <Navigate to="/" />;
     }
 
-    // Filter doctors for this department
-    const filteredDoctors = doctorsData.filter(doc =>
-        doc.specialties.some(s =>
-            s.toLowerCase().includes(department.name.toLowerCase()) ||
-            department.name.toLowerCase().includes(s.toLowerCase())
-        )
-    );
+    // Match using normalized department names so spelling variants still map correctly.
+    const normalizedDepartmentName = normalizeDepartmentName(department.name);
+    const normalizedSlug = normalizeDepartmentName(slug);
+
+    const filteredDoctors = doctorsData.filter((doc) => {
+        const normalizedDocDepartment = normalizeDepartmentName(doc.department || '');
+        const normalizedSpecialties = Array.isArray(doc.specialties)
+            ? doc.specialties.map((specialty) => normalizeDepartmentName(specialty))
+            : [];
+
+        return [normalizedDocDepartment, ...normalizedSpecialties].some((normalizedValue) => (
+            normalizedValue.includes(normalizedDepartmentName) ||
+            normalizedDepartmentName.includes(normalizedValue) ||
+            normalizedValue.includes(normalizedSlug) ||
+            normalizedSlug.includes(normalizedValue)
+        ));
+    });
 
     return (
         <div className="specialty-page">
-            <DepartmentHero data={department.hero} />
+            <DepartmentHero data={department.hero} doctors={filteredDoctors} />
             <DepartmentCare data={department.care} />
             <DepartmentDoctors
                 doctors={filteredDoctors}
+                departmentName={department.name}
                 title={department.doctors.title}
                 subtitle={department.doctors.subtitle}
                 description={department.doctors.description}

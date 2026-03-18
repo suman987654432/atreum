@@ -1,7 +1,29 @@
 
 import React, { useState } from 'react';
 import doctorData from '../../data/doctors.json';
-import Doctor1 from "../../images/doctor/Doctor1.png";
+import doctors1 from "../../images/doctors1.png";
+import drbhanu from '../../images/derma/drbhanu.avif';
+import drchetan from '../../images/ortho/drchetan.avif';
+import drarthika from '../../images/pedia/drarthika.avif';
+import drvivek from '../../images/pedia/drvivek.avif';
+import drkishor from '../../images/neuro/drkishor.avif';
+import drravi from '../../images/nephro/drravi.avif';
+import drradha from '../../images/gyna/drradha.avif';
+import drsuma from '../../images/gyna/drsuma.avif';
+import drsujay from '../../images/general/drsujay.avif';
+
+const imageMap = {
+    "doctors1": doctors1,
+    "drbhanu": drbhanu,
+    "drchetan": drchetan,
+    "drarthika": drarthika,
+    "drvivek": drvivek,
+    "drkishor": drkishor,
+    "drravi": drravi,
+    "drradha": drradha,
+    "drsuma": drsuma,
+    "drsujay": drsujay
+};
 
 const departments = [
     "Orthopaedics", "Urology", "Plastic Surgery", "Gynaecology", "Pediatrics",
@@ -55,34 +77,38 @@ const DoctorHero = () => {
                 {/* Doctors Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 xl:gap-8 max-w-[1400px] mx-auto">
                     {filteredDoctors.length > 0 ? (
-                        filteredDoctors.map((doctor) => (
-                            <div
-                                key={doctor.id}
-                                className="bg-[#D9D9D933] rounded-[18px] overflow-hidden flex flex-col relative h-[300px] sm:h-[320px] md:h-[340px] max-w-[681px] w-full mx-auto"
-                            >
-                                {/* Content Wrapper */}
-                                <div className="p-5 sm:p-8 md:p-10 relative h-full flex flex-col">
-                                    {/* Text Info - Top Right */}
-                                    <div className="absolute top-6 left-4 right-4 sm:left-auto sm:right-6 md:top-10 md:right-10 z-10 text-left max-w-[calc(100%-2rem)] sm:max-w-[280px]">
-                                        <h3 className="font-canela text-[22px] sm:text-[26px] md:text-[28px] leading-tight text-[#19628D] mb-2">
-                                            Dr <span className="font-bold">{doctor.name.replace('Dr. ', '').replace('Dr ', '')}</span>
-                                        </h3>
-                                        <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[0.75rem] sm:text-[1rem] py-2 sm:py-2 rounded-[10px] shadow-sm uppercase tracking-wide transition-all duration-300 transform active:scale-95  whitespace-nowrap px-4 sm:px-5">
-                                            Book Appointment
-                                        </button>
-                                    </div>
+                        filteredDoctors.map((doctor) => {
+                            const doctorImage = imageMap[doctor.image] || doctors1;
 
-                                    {/* Doctor Image Area */}
-                                    <div className="absolute bottom-0 left-0 w-full h-[105%] flex justify-center items-end overflow-hidden pointer-events-none">
-                                        <img
-                                            src={Doctor1}
-                                            alt={doctor.name}
-                                            className="w-full h-auto max-h-full object-contain object-bottom transform translate-x-4 translate-y-6 sm:translate-x-8 sm:translate-y-8"
-                                        />
+                            return (
+                                <div
+                                    key={doctor.id}
+                                    className="bg-[#D9D9D933] rounded-[18px] overflow-hidden flex flex-col relative h-[300px] sm:h-[320px] md:h-[340px] max-w-[681px] w-full mx-auto"
+                                >
+                                    {/* Content Wrapper */}
+                                    <div className="p-5 sm:p-8 md:p-10 relative h-full flex flex-col">
+                                        {/* Text Info - Top Right */}
+                                        <div className="absolute top-6 left-4 right-4 sm:left-auto sm:right-6 md:top-10 md:right-10 z-10 text-left max-w-[calc(100%-2rem)] sm:max-w-[280px]">
+                                            <h3 className="font-canela text-[22px] sm:text-[26px] md:text-[28px] leading-tight text-[#19628D] mb-2">
+                                                Dr <span className="font-bold">{doctor.name.replace('Dr. ', '').replace('Dr ', '')}</span>
+                                            </h3>
+                                            <button className="bg-[#1EBAB3] hover:bg-[#189d97] text-white font-sohne font-bold text-[0.75rem] sm:text-[1rem] py-2 sm:py-2 rounded-[10px] shadow-sm uppercase tracking-wide transition-all duration-300 transform active:scale-95  whitespace-nowrap px-4 sm:px-5">
+                                                Book Appointment
+                                            </button>
+                                        </div>
+
+                                        {/* Doctor Image Area */}
+                                        <div className="absolute bottom-0 left-0 w-full h-[105%] flex justify-center items-end overflow-hidden pointer-events-none">
+                                            <img
+                                                src={doctorImage}
+                                                alt={doctor.name}
+                                                className="w-full h-auto max-h-full object-contain object-bottom transform translate-x-4 translate-y-6 sm:translate-x-8 sm:translate-y-8"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
+                            );
+                        })
                     ) : (
                         <div className="col-span-full py-20 text-center">
                             <p className="font-sohne text-[24px] text-gray-400">No doctors found in this department.</p>

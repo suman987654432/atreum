@@ -1,24 +1,75 @@
 import React, { useState } from 'react';
 
+const INITIAL_FORM_DATA = {
+    fullName: '',
+    age: '',
+    gender: '',
+    mobileNumber: '',
+    email: '',
+    concern: '',
+    affectedArea: [],
+    consultationPreference: ''
+};
+
+const validateForm = (values) => {
+    const nextErrors = {};
+
+    if (!values.fullName.trim()) {
+        nextErrors.fullName = 'Full Name is required.';
+    }
+
+    if (!values.age.trim()) {
+        nextErrors.age = 'Age is required.';
+    } else if (!/^\d+$/.test(values.age.trim()) || Number(values.age.trim()) <= 0 || Number(values.age.trim()) > 120) {
+        nextErrors.age = 'Enter a valid age.';
+    }
+
+    if (!values.gender) {
+        nextErrors.gender = 'Please select gender.';
+    }
+
+    if (!values.mobileNumber.trim()) {
+        nextErrors.mobileNumber = 'Mobile Number is required.';
+    } else if (!/^\d{10}$/.test(values.mobileNumber.trim())) {
+        nextErrors.mobileNumber = 'Enter a valid 10-digit mobile number.';
+    }
+
+    if (!values.email.trim()) {
+        nextErrors.email = 'Email ID is required.';
+    } else if (!/^\S+@\S+\.\S+$/.test(values.email.trim())) {
+        nextErrors.email = 'Enter a valid email address.';
+    }
+
+    if (!values.concern.trim()) {
+        nextErrors.concern = 'Please describe your concern.';
+    }
+
+    return nextErrors;
+};
+
 const Form = () => {
-    const [formData, setFormData] = useState({
-        fullName: '',
-        age: '',
-        gender: '',
-        mobileNumber: '',
-        email: '',
-        concern: '',
-        affectedArea: [],
-        consultationPreference: ''
-    });
+    const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+    const [errors, setErrors] = useState({});
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
+        setErrors((prev) => {
+            if (!prev[name]) return prev;
+            const updated = { ...prev };
+            delete updated[name];
+            return updated;
+        });
     };
 
     const handleGenderSelect = (gender) => {
         setFormData(prev => ({ ...prev, gender }));
+        setErrors((prev) => {
+            if (!prev.gender) return prev;
+            const updated = { ...prev };
+            delete updated.gender;
+            return updated;
+        });
     };
 
     // const handleAreaSelect = (area) => {
@@ -36,6 +87,15 @@ const Form = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const validationErrors = validateForm(formData);
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            setStatus({ type: 'error', message: 'Please fill all required fields correctly.' });
+            return;
+        }
+
+        setErrors({});
         setStatus({ type: 'loading', message: 'Sending your inquiry...' });
 
         try {
@@ -52,16 +112,8 @@ const Form = () => {
             if (response.ok) {
                 setStatus({ type: 'success', message: 'Thank you! Our Team will get back to you shortly.' });
                 // Reset form
-                setFormData({
-                    fullName: '',
-                    age: '',
-                    gender: '',
-                    mobileNumber: '',
-                    email: '',
-                    concern: '',
-                    affectedArea: [],
-                    consultationPreference: ''
-                });
+                setFormData(INITIAL_FORM_DATA);
+                setErrors({});
             } else {
                 setStatus({ type: 'error', message: data.error?.message || 'Failed to send inquiry. Please try again.' });
             }
@@ -86,11 +138,16 @@ const Form = () => {
                     <input
                         type="text"
                         name="fullName"
+                        required
                         placeholder="Full Name"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
+                        className={`w-full px-4 py-2.5 border rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 placeholder-black font-sohne ${errors.fullName
+                            ? 'border-red-400 focus:ring-red-300'
+                            : 'border-[#0FB1AB] focus:ring-[#0FB1AB]'
+                            }`}
                     />
+                    {errors.fullName ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.fullName}</p> : null}
                 </div>
 
                 {/* Age */}
@@ -98,39 +155,49 @@ const Form = () => {
                     <input
                         type="text"
                         name="age"
+                        required
+                        inputMode="numeric"
+                        maxLength={3}
                         placeholder="Age"
                         value={formData.age}
                         onChange={handleInputChange}
-                        className="w-full sm:w-1/3 px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
+                        className={`w-full sm:w-1/3 px-4 py-2.5 border rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 placeholder-black font-sohne ${errors.age
+                            ? 'border-red-400 focus:ring-red-300'
+                            : 'border-[#0FB1AB] focus:ring-[#0FB1AB]'
+                            }`}
                     />
+                    {errors.age ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.age}</p> : null}
                 </div>
 
                 {/* Gender */}
-                <div className="flex items-center border border-[#0FB1AB] rounded-lg bg-white overflow-hidden w-full sm:w-fit">
-                    <span className="px-3 sm:px-4 py-2.5 text-black bg-transparent font-sohne text-sm sm:text-base whitespace-nowrap">Gender</span>
-                    <div className="flex border-l border-[#0FB1AB] flex-1 sm:flex-initial">
-                        <button
-                            type="button"
-                            onClick={() => handleGenderSelect('MALE')}
-                            className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'MALE'
-                                ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
-                                : 'text-black hover:text-[#0FB1AB]'
-                                }`}
-                        >
-                            MALE
-                        </button>
-                        <div className="w-px bg-[#0FB1AB]"></div>
-                        <button
-                            type="button"
-                            onClick={() => handleGenderSelect('FEMALE')}
-                            className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'FEMALE'
-                                ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
-                                : 'text-black hover:text-[#0FB1AB]'
-                                }`}
-                        >
-                            FEMALE
-                        </button>
+                <div>
+                    <div className={`flex items-center border rounded-lg bg-white overflow-hidden w-full sm:w-fit ${errors.gender ? 'border-red-400' : 'border-[#0FB1AB]'}`}>
+                        <span className="px-3 sm:px-4 py-2.5 text-black bg-transparent font-sohne text-sm sm:text-base whitespace-nowrap">Gender</span>
+                        <div className={`flex border-l flex-1 sm:flex-initial ${errors.gender ? 'border-red-400' : 'border-[#0FB1AB]'}`}>
+                            <button
+                                type="button"
+                                onClick={() => handleGenderSelect('MALE')}
+                                className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'MALE'
+                                    ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
+                                    : 'text-black hover:text-[#0FB1AB]'
+                                    }`}
+                            >
+                                MALE
+                            </button>
+                            <div className={`w-px ${errors.gender ? 'bg-red-400' : 'bg-[#0FB1AB]'}`}></div>
+                            <button
+                                type="button"
+                                onClick={() => handleGenderSelect('FEMALE')}
+                                className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold transition-colors flex-1 ${formData.gender === 'FEMALE'
+                                    ? 'text-[#0FB1AB] bg-[#0FB1AB]/10'
+                                    : 'text-black hover:text-[#0FB1AB]'
+                                    }`}
+                            >
+                                FEMALE
+                            </button>
+                        </div>
                     </div>
+                    {errors.gender ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.gender}</p> : null}
                 </div>
 
                 {/* Mobile Number */}
@@ -138,11 +205,18 @@ const Form = () => {
                     <input
                         type="tel"
                         name="mobileNumber"
+                        required
+                        inputMode="numeric"
+                        maxLength={10}
                         placeholder="Mobile Number"
                         value={formData.mobileNumber}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black  font-sohne"
+                        className={`w-full px-4 py-2.5 border rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 placeholder-black  font-sohne ${errors.mobileNumber
+                            ? 'border-red-400 focus:ring-red-300'
+                            : 'border-[#0FB1AB] focus:ring-[#0FB1AB]'
+                            }`}
                     />
+                    {errors.mobileNumber ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.mobileNumber}</p> : null}
                 </div>
 
                 {/* Email ID */}
@@ -150,11 +224,16 @@ const Form = () => {
                     <input
                         type="email"
                         name="email"
+                        required
                         placeholder="Email ID"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black font-sohne"
+                        className={`w-full px-4 py-2.5 border rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-1 placeholder-black font-sohne ${errors.email
+                            ? 'border-red-400 focus:ring-red-300'
+                            : 'border-[#0FB1AB] focus:ring-[#0FB1AB]'
+                            }`}
                     />
+                    {errors.email ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.email}</p> : null}
                 </div>
 
                 {/* Orthopedic Concern */}
@@ -162,12 +241,17 @@ const Form = () => {
                     <label className="block text-black text-base mb-1">Orthopedic Concern</label>
                     <textarea
                         name="concern"
+                        required
                         placeholder="Please describe your orthopedic concern to us here"
                         value={formData.concern}
                         onChange={handleInputChange}
                         rows="4"
-                        className="w-full px-4 py-2.5 border border-[#0FB1AB] rounded-lg text-gray-700 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-[#0FB1AB] placeholder-black italic text-sm font-sohne"
+                        className={`w-full px-4 py-2.5 border rounded-lg text-gray-700 bg-gray-50 focus:outline-none focus:ring-1 placeholder-black italic text-sm font-sohne ${errors.concern
+                            ? 'border-red-400 focus:ring-red-300'
+                            : 'border-[#0FB1AB] focus:ring-[#0FB1AB]'
+                            }`}
                     ></textarea>
+                    {errors.concern ? <p className="mt-1 text-xs text-red-600 font-sohne">{errors.concern}</p> : null}
                 </div>
 
                 {/* Affected Area */}

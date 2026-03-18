@@ -1,234 +1,444 @@
 [
-  {
-    "id": 1,
-    "name": "Dr. Avantika S",
-    "department": "Pediatrics",
-    "specialties": [
-      "Pediatrics",
-      "Neonatal Care"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 10:00 AM - 1:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 2,
-    "name": "Dr. Mohith Shenoy",
-    "department": "Urology",
-    "specialties": [
-      "Urology",
-      "Trauma Surgery"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Fri : 4:00 PM - 7:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 3,
-    "name": "Dr. Rajesh Kumar",
-    "department": "Orthopaedics",
-    "specialties": [
-      "Orthopaedics",
-      "Sports Medicine"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 9:00 AM - 12:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 4,
-    "name": "Dr. Priya Sharma",
-    "department": "Pediatrics",
-    "specialties": [
-      "Pediatrics",
-      "Developmental Pediatrics"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 5,
-    "name": "Dr. Amit Patel",
-    "department": "Urology",
-    "specialties": [
-      "Urology",
-      "Kidney Transplant"
-    ],
-    "image": "Doctor1",
-    "schedule": "Tue, Thu, Sat : 10:00 AM - 2:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 6,
-    "name": "Dr. Sunita Verma",
-    "department": "Orthopaedics",
-    "specialties": [
-      "Orthopaedics",
-      "Joint Replacement"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Fri : 2:00 PM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 7,
-    "name": "Dr. Meera Reddy",
-    "department": "Gynaecology",
-    "specialties": [
-      "Obstetrics",
-      "Gynecology"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 10:00 AM - 4:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 8,
-    "name": "Dr. Ramesh Hegde",
-    "department": "Gastroenterology",
-    "specialties": [
-      "Gastroenterology",
-      "Digestive Care"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon, Wed, Fri : 9:00 AM - 1:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 9,
-    "name": "Dr. Sarah Johnson",
-    "department": "Dermatology",
-    "specialties": [
-      "Dermatology",
-      "Cosmetology"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 10,
-    "name": "Dr. Mahesh Kumar",
-    "department": "Endocrinology",
-    "specialties": [
-      "Endocrinology",
-      "Diabetology"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Fri : 11:00 AM - 2:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 11,
-    "name": "Dr. Naveen Prasad",
-    "department": "Nephrology",
-    "specialties": [
-      "Nephrology",
-      "Renal Care"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 10:00 AM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 12,
-    "name": "Dr. Sameer Khan",
-    "department": "Plastic Surgery",
-    "specialties": [
-      "Plastics Surgery",
-      "Reconstructive Surgery"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon, Wed, Fri : 3:00 PM - 6:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 13,
-    "name": "Dr. Vinod",
-    "department": "General Surgery",
-    "specialties": [
-      "General Surgery",
-      "Gastrointestinal Surgery"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 2:00 PM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 17,
-    "name": "Dr. Anil Kumar H",
-    "department": "General Surgery",
-    "specialties": [
-      "General Surgery",
-      "Laparoscopic Surgery"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 10:00 AM - 6:00 PM",
-    "qualification": "MBBS, MD",
-    "experience": "18+ years",
-    "designation": "Senior Consultant",
-    "role": "General Physician",
-    "consultationTiming": "Mon - Fri 7:00 PM - 8:30 PM"
-  },
-  {
-    "id": 14,
-    "name": "Dr. Sandeep Reddy",
-    "department": "Oncology",
-    "specialties": [
-      "Oncology",
-      "Cancer Care"
-    ],
-    "image": "Doctor1",
-    "schedule": "Tue, Thu, Sat : 11:00 AM - 3:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 15,
-    "name": "Dr. Pradeep Shenoy",
-    "department": "Vascular Surgery",
-    "specialties": [
-      "Vascular Surgery",
-      "Phlebology"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 11:00 AM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 16,
-    "name": "Dr. Karthik M",
-    "department": "ENT",
-    "specialties": [
-      "ENT",
-      "Otolaryngology"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 18,
-    "name": "Dr. Suresh Babu",
-    "department": "Critical Care",
-    "specialties": [
-      "Critical Care",
-      "Emergency Medicine"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  },
-  {
-    "id": 19,
-    "name": "Dr. Anjali Rao",
-    "department": "Neurology",
-    "specialties": [
-      "Neurology",
-      "Stroke Specialist"
-    ],
-    "image": "Doctor1",
-    "schedule": "Mon-Sat : 9:00 AM - 5:00 PM",
-    "qualification": "MBBS, MD"
-  }
+    {
+        "id": 1,
+        "name": "Dr Anil Kumar B T",
+        "qualification": "MBBS, MD, DNB",
+        "experience": "20+ years",
+        "designation": "Senior Consultant",
+        "department": "Nephrology",
+        "specialties": [
+            "Nephrology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 2,
+        "name": "Dr Ravi Kiran",
+        "qualification": "MBBS, MD,",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Nephrology",
+        "specialties": [
+            "Nephrology"
+        ],
+        "schedule": "5:30 PM - 6:30 PM",
+        "image": "drravi"
+    },
+    {
+        "id": 3,
+        "name": "Dr Shivaranjan",
+        "qualification": "",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Gastroenterology",
+        "specialties": [
+            "Gastroenterology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 4,
+        "name": "Dr Rajegowda",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Gastroenterology",
+        "specialties": [
+            "Surgical Gastroenterology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 5,
+        "name": "Dr Bhanu Prakash",
+        "qualification": "MBBS, MD",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "Dermatology",
+        "specialties": [
+            "Dermatology"
+        ],
+        "schedule": "MONDAY, WEDNESDAY, FRIDAY 12:00 PM - 1:00 PM",
+        "image": "drbhanu"
+    },
+    {
+        "id": 6,
+        "name": "Dr M S Palkear",
+        "qualification": "",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "Dermatology",
+        "specialties": [
+            "Dermatology"
+        ],
+        "schedule": "7:30 PM - 8:30 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 7,
+        "name": "Dr Nischitha",
+        "qualification": "MBBS, MD",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Endocrinology",
+        "specialties": [
+            "Endocrinology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 8,
+        "name": "Dr Vivekananda",
+        "qualification": "MBS, MD,",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Pediatrics",
+        "specialties": [
+            "Pediatrics"
+        ],
+        "schedule": "9:30 AM - 1:00 PM",
+        "image": "drvivek"
+    },
+    {
+        "id": 9,
+        "name": "Dr Rohith H R",
+        "qualification": "MBBS, MD",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Pediatrics",
+        "specialties": [
+            "Pediatrics"
+        ],
+        "schedule": "1:00 PM - 2:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 10,
+        "name": "Dr Vanitha",
+        "qualification": "MBBS, MD, DNB",
+        "experience": "",
+        "designation": "Junior Consultant",
+        "department": "Pediatrics",
+        "specialties": [
+            "Pediatrics"
+        ],
+        "schedule": "7:00 PM - 8:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 11,
+        "name": "Dr Artika",
+        "qualification": "MBBS, MD",
+        "experience": "",
+        "designation": "Junior Consultant",
+        "department": "Pediatrics",
+        "specialties": [
+            "Pediatrics"
+        ],
+        "schedule": "1:00 PM - 7:00 PM",
+        "image": "drarthika"
+    },
+    {
+        "id": 12,
+        "name": "Dr Mamatha Harish",
+        "qualification": "MBBS, DGO",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Gynaecology",
+        "specialties": [
+            "Obstetrics and Gynaecology"
+        ],
+        "schedule": "5:30 PM - 9:30 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 13,
+        "name": "Dr Radha D S",
+        "qualification": "MBBS, DGO",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Gynaecology",
+        "specialties": [
+            "Obstetrics and Gynaecology"
+        ],
+        "schedule": "10:30 AM - 12:00 PM",
+        "image": "drradha"
+    },
+    {
+        "id": 14,
+        "name": "Dr Suma B R",
+        "qualification": "MBBS, DGO",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Gynaecology",
+        "specialties": [
+            "Obstetrics and Gynaecology"
+        ],
+        "schedule": "12:00 PM - 3:00 PM",
+        "image": "drsuma"
+    },
+    {
+        "id": 15,
+        "name": "Dr Amith B",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Urology",
+        "specialties": [
+            "Urology"
+        ],
+        "schedule": "10:30 AM - 12:00 PM / 6:00 PM - 8:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 16,
+        "name": "Dr Kishor Rao",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Neurology",
+        "specialties": [
+            "Neuro Surgery"
+        ],
+        "schedule": "8:00 AM & 5:00 PM",
+        "image": "drkishor"
+    },
+    {
+        "id": 17,
+        "name": "Dr Ramya Deepti N",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Plastic Surgery",
+        "specialties": [
+            "Plastic Surgery"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 18,
+        "name": "Dr Gopal Krishna",
+        "qualification": "MBBS, DNB",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Orthopaedics",
+        "specialties": [
+            "Orthopedics"
+        ],
+        "schedule": "10:30 AM - 1:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 19,
+        "name": "Dr Chethan Kumar P",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Orthopaedics",
+        "specialties": [
+            "Orthopedics"
+        ],
+        "schedule": "1:00 PM - 4:00 PM",
+        "image": "drchetan"
+    },
+    {
+        "id": 20,
+        "name": "Dr Chidanand",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Orthopaedics",
+        "specialties": [
+            "Orthopedics"
+        ],
+        "schedule": "6:30 PM - 8:30 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 21,
+        "name": "Dr Nikhil Shantappa",
+        "qualification": "MBBS",
+        "experience": "",
+        "designation": "Consultant",
+        "department": "Orthopaedics",
+        "specialties": [
+            "Orthopedics"
+        ],
+        "schedule": "4:00 PM - 6:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 22,
+        "name": "Dr Sujay B R",
+        "qualification": "MBBS, MSMS",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "General Surgery",
+        "specialties": [
+            "General Surgery"
+        ],
+        "schedule": "10:30 AM - 12:30 PM",
+        "image": "drsujay"
+    },
+    {
+        "id": 23,
+        "name": "Dr Shivakumar S",
+        "qualification": "MBBS, MSMS",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "General Surgery",
+        "specialties": [
+            "General Surgery"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 33,
+        "name": "Dr Anil Kumar H",
+        "qualification": "MBBS, MD",
+        "experience": "18+ years",
+        "designation": "Senior Consultant",
+        "department": "General Surgery",
+        "specialties": [
+            "General Physician"
+        ],
+        "schedule": "7:00 PM - 8:30 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 34,
+        "name": "Dr Vinod",
+        "qualification": "MBBS, MD",
+        "experience": "17+ years",
+        "designation": "Consultant",
+        "department": "General Surgery",
+        "specialties": [
+            "General Physician"
+        ],
+        "schedule": "9:30 AM - 4:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 24,
+        "name": "Dr Vivek Belathur",
+        "qualification": "MBBS, DM",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "Oncology",
+        "specialties": [
+            "Medical Oncology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 25,
+        "name": "Dr Bharath G",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "Oncology",
+        "specialties": [
+            "Surgical Oncology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 26,
+        "name": "Dr Jayanthi Tulsi and Dr Mallika Team",
+        "qualification": "MBBS",
+        "experience": "",
+        "designation": "Consultant Team",
+        "department": "Oncology",
+        "specialties": [
+            "Breast Oncology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 27,
+        "name": "Dr Adarsh M S",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Consultant - VC",
+        "department": "Vascular Surgery",
+        "specialties": [
+            "Vascular Surgery"
+        ],
+        "schedule": "7:30 PM - 8:30 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 28,
+        "name": "Dr Cherlopalli Sunil Kumar C",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "ENT",
+        "specialties": [
+            "ENT"
+        ],
+        "schedule": "8:00 PM - 9:00 PM",
+        "image": "Doctor1"
+    },
+    {
+        "id": 29,
+        "name": "Dr Nalini",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "ENT",
+        "specialties": [
+            "ENT"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 30,
+        "name": "Dr Puneet Nayak",
+        "qualification": "",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "ENT",
+        "specialties": [
+            "ENT"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 31,
+        "name": "Dr Spandana J C",
+        "qualification": "MBBS, MS",
+        "experience": "",
+        "designation": "Senior Consultant - VC",
+        "department": "Gynaecology",
+        "specialties": [
+            "Obstetrics and Gynaecology"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    },
+    {
+        "id": 32,
+        "name": "Dr Malli Chethan",
+        "qualification": "",
+        "experience": "",
+        "designation": "Senior Consultant",
+        "department": "Plastic Surgery",
+        "specialties": [
+            "Plastic Surgery"
+        ],
+        "schedule": "ON CALL",
+        "image": "Doctor1"
+    }
 ]

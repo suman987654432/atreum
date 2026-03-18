@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 
-const DepartmentHero = ({ data }) => {
+const DepartmentHero = ({ data, doctors = [] }) => {
     const { image, title, title1, title2, title3, title4, formTitle, formSubtitle, centerContent } = data;
 
+    const doctorOptions = Array.from(
+        new Map((Array.isArray(doctors) ? doctors : []).map((doctor) => [doctor.name, doctor])).values()
+    );
+
     const [formData, setFormData] = useState({
+        selectedDoctor: '',
         name: '',
         phone: '',
         email: '',
@@ -11,6 +16,7 @@ const DepartmentHero = ({ data }) => {
     });
 
     const [errors, setErrors] = useState({
+        selectedDoctor: '',
         name: '',
         phone: '',
         email: '',
@@ -18,6 +24,7 @@ const DepartmentHero = ({ data }) => {
     });
 
     const [touched, setTouched] = useState({
+        selectedDoctor: false,
         name: false,
         phone: false,
         email: false,
@@ -47,6 +54,12 @@ const DepartmentHero = ({ data }) => {
         return '';
     };
 
+    const validateDoctor = (selectedDoctor) => {
+        if (doctorOptions.length === 0) return '';
+        if (!selectedDoctor.trim()) return 'Please select a doctor';
+        return '';
+    };
+
   
 
     const handleChange = (e) => {
@@ -55,6 +68,7 @@ const DepartmentHero = ({ data }) => {
 
         if (touched[name]) {
             let error = '';
+            if (name === 'selectedDoctor') error = validateDoctor(value);
             if (name === 'name') error = validateName(value);
             if (name === 'phone') error = validatePhone(value);
             if (name === 'email') error = validateEmail(value);
@@ -67,6 +81,7 @@ const DepartmentHero = ({ data }) => {
         const { name, value } = e.target;
         setTouched(prev => ({ ...prev, [name]: true }));
         let error = '';
+        if (name === 'selectedDoctor') error = validateDoctor(value);
         if (name === 'name') error = validateName(value);
         if (name === 'phone') error = validatePhone(value);
         if (name === 'email') error = validateEmail(value);
@@ -76,18 +91,26 @@ const DepartmentHero = ({ data }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setTouched({ name: true, phone: true, email: true, concern: true });
+        setTouched({ selectedDoctor: true, name: true, phone: true, email: true, concern: true });
+        const selectedDoctorError = validateDoctor(formData.selectedDoctor);
         const nameError = validateName(formData.name);
         const phoneError = validatePhone(formData.phone);
         const emailError = validateEmail(formData.email);
         // const concernError = validateConcern(formData.concern);
-        // setErrors({ name: nameError, phone: phoneError, email: emailError, concern: concernError });
+        setErrors({
+            selectedDoctor: selectedDoctorError,
+            name: nameError,
+            phone: phoneError,
+            email: emailError,
+            concern: ''
+        });
 
-        if (!nameError && !phoneError && !emailError) {
+        if (!selectedDoctorError && !nameError && !phoneError && !emailError) {
             setStatus({ type: 'loading', message: 'Sending your inquiry...' });
 
             try {
                 const payload = {
+                    selectedDoctor: formData.selectedDoctor,
                     fullName: formData.name,
                     age: 'N/A',
                     gender: 'N/A',
@@ -109,7 +132,7 @@ const DepartmentHero = ({ data }) => {
 
                 if (response.ok) {
                     setStatus({ type: 'success', message: 'Thank you! Our Team will get back to you shortly.' });
-                    setFormData({ name: '', phone: '', email: '', concern: '' });
+                    setFormData({ selectedDoctor: '', name: '', phone: '', email: '', concern: '' });
                     setIsSubmitted(true);
                 } else {
                     setStatus({ type: 'error', message: data.error || data.details || 'Failed to send inquiry. Please try again.' });
@@ -131,6 +154,8 @@ const DepartmentHero = ({ data }) => {
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-2.5" noValidate>
+              
+
                 <div className="relative">
                     <input
                         type="text"
@@ -178,6 +203,33 @@ const DepartmentHero = ({ data }) => {
                         <p className="text-red-700 text-[11px] sm:text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.email}</p>
                     )}
                 </div>
+                  <div className="relative">
+                    <select
+                        name="selectedDoctor"
+                        value={formData.selectedDoctor}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        disabled={isSubmitted || status.type === 'loading' || doctorOptions.length === 0}
+                        className={`w-full bg-[#ffffff1a] border ${errors.selectedDoctor && touched.selectedDoctor ? 'border-red-500' : 'border-transparent'} rounded-lg text-white px-3 py-2 sm:py-2.5 text-[13px] sm:text-sm focus:outline-none focus:border-white/50 focus:bg-[#ffffff25] appearance-none cursor-pointer ${formData.selectedDoctor === '' ? 'text-white/70' : 'text-white'} ${isSubmitted ? 'opacity-70 cursor-not-allowed' : ''}`}
+                    >
+                        <option value="" disabled className="text-gray-400 bg-[#19628DE0]">
+                            {doctorOptions.length > 0 ? 'Select Your Doctor' : 'No doctors available'}
+                        </option>
+                        {doctorOptions.map((doctor) => (
+                            <option key={doctor.id || doctor.name} value={doctor.name} className="text-white bg-[#19628DE0]">
+                                {doctor.name}
+                            </option>
+                        ))}
+                    </select>
+                    <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                        <svg width="10" height="7" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-[12px] sm:h-[8px]">
+                            <path d="M1 1.5L6 6.5L11 1.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </div>
+                    {errors.selectedDoctor && touched.selectedDoctor && (
+                        <p className="text-red-700 text-[11px] sm:text-xs mt-1 font-sohne font-medium px-2 py-0.5">{errors.selectedDoctor}</p>
+                    )}
+                </div>
 
                 {/* <div className="relative">
                     <select
@@ -211,7 +263,7 @@ const DepartmentHero = ({ data }) => {
                     )}
                     {!isSubmitted ? (
                         <button type="submit" disabled={status.type === 'loading'} className="w-full sm:w-auto bg-[#0FB1AB33] border border-[#0FFFFFF] hover:bg-[#347d8b] text-white font-bold py-2 sm:py-2.5 px-5 sm:px-7 rounded shadow-lg uppercase tracking-wide text-[10px] sm:text-xs transition-all duration-300">
-                            {status.type === 'loading' ? 'SENDING...' : 'GET COST ESTIMATE'}
+                            {status.type === 'loading' ? 'SENDING...' : 'BOOK AN APPOINTMENT'}
                         </button>
                     ) : (
                         <div className="py-1">

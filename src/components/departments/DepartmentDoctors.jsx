@@ -2,7 +2,29 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import doctorData from '../../data/doctors.json';
-import Doctor1 from "../../images/doctor/Doctor1.png";
+import doctors1 from '../../images/doctors1.png';
+import drbhanu from '../../images/derma/drbhanu.avif';
+import drchetan from '../../images/ortho/drchetan.avif';
+import drarthika from '../../images/pedia/drarthika.avif';
+import drvivek from '../../images/pedia/drvivek.avif';
+import drkishor from '../../images/neuro/drkishor.avif';
+import drravi from '../../images/nephro/drravi.avif';
+import drradha from '../../images/gyna/drradha.avif';
+import drsuma from '../../images/gyna/drsuma.avif';
+import drsujay from '../../images/general/drsujay.avif';
+
+const imageMap = {
+    "doctors1": doctors1,
+    "drbhanu": drbhanu,
+    "drchetan": drchetan,
+    "drarthika": drarthika,
+    "drvivek": drvivek,
+    "drkishor": drkishor,
+    "drravi": drravi,
+    "drradha": drradha,
+    "drsuma": drsuma,
+    "drsujay": drsujay
+};
 
 const departments = [
     "Orthopaedics", "Urology", "Plastic Surgery", "Gynaecology", "Paediatrics",
@@ -10,14 +32,51 @@ const departments = [
     "Oncology", "Vascular Surgery", "ENT", "Dermatology", "Gastroenterology"
 ];
 
-const DepartmentDoctors = ({ doctors = [] }) => {
+const normalizeDepartmentName = (value = '') => (
+    value
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/gynaec/g, 'gynec')
+        .replace(/paedi/g, 'pedi')
+        .replace(/orthopaed/g, 'orthoped')
+        .replace(/[^a-z]/g, '')
+);
+
+const isSameDepartment = (left = '', right = '') => (
+    normalizeDepartmentName(left) === normalizeDepartmentName(right)
+);
+
+const DepartmentDoctors = ({ doctors, departmentName = 'Specialty' }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
 
-    const pageDepartment = doctors.length > 0 ? doctors[0].department : 'View All';
-    const doctorList = doctors.length > 0 ? doctors : doctorData;
+    const hasDoctorsProp = Array.isArray(doctors);
+    const hasDepartmentDoctors = hasDoctorsProp && doctors.length > 0;
+
+    const fallbackDoctor = {
+        id: 'fallback-doctor',
+        name: `Dr ${departmentName} Specialist`,
+        qualification: 'MBBS, MD',
+        experience: '',
+        designation: 'Consultant',
+        department: departmentName,
+        specialties: [departmentName],
+        role: `${departmentName} Specialist`,
+        schedule: 'Doctor details will be updated soon',
+        image: 'Doctor1'
+    };
+
+    const doctorList = hasDoctorsProp
+        ? (hasDepartmentDoctors ? doctors : [fallbackDoctor])
+        : doctorData;
+
+    const pageDepartment = hasDoctorsProp
+        ? (hasDepartmentDoctors ? doctors[0].department : departmentName)
+        : (doctorList.length > 0 ? doctorList[0].department : 'View All');
 
     if (!doctorList || doctorList.length === 0) return null;
+
+    const safeCurrentIndex = currentIndex % doctorList.length;
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % doctorList.length);
@@ -27,16 +86,19 @@ const DepartmentDoctors = ({ doctors = [] }) => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + doctorList.length) % doctorList.length);
     };
 
-    const currentDoctor = doctorList[currentIndex];
-    const doctorDisplayName = currentDoctor.name.replace(/^Dr\.?\s*/i, '');
+    const currentDoctor = doctorList[safeCurrentIndex];
+    const doctorName = currentDoctor.name || `Dr ${departmentName} Specialist`;
+    const doctorDisplayName = doctorName.replace(/^Dr\.?\s*/i, '');
     const doctorSpecialties = Array.isArray(currentDoctor.specialties)
         ? currentDoctor.specialties
         : [currentDoctor.specialty].filter(Boolean);
     const doctorQualification = currentDoctor.qualification || currentDoctor.qualifications || '';
     const doctorExperience = currentDoctor.experience || '';
     const doctorDesignation = currentDoctor.designation || '';
-    const doctorRole = currentDoctor.role || currentDoctor.department || doctorSpecialties[0] || '';
-    const doctorTiming = currentDoctor.consultationTiming || currentDoctor.schedule || currentDoctor.timing || '';
+    const hasExperience = Boolean(String(doctorExperience).trim());
+    const doctorRole = currentDoctor.role || currentDoctor.department || doctorSpecialties[0] || `${departmentName} Specialist`;
+    const doctorTiming = currentDoctor.consultationTiming || currentDoctor.schedule || currentDoctor.timing || 'Doctor details will be updated soon';
+    const doctorImage = imageMap[currentDoctor.image] || doctors1;
 
     return (
         <div id="doctor-specialists" className="w-full pt-0 pb-8 sm:pb-10 overflow-hidden relative z-30 mt-6 sm:mt-10">
@@ -46,7 +108,7 @@ const DepartmentDoctors = ({ doctors = [] }) => {
                         <div className="w-full lg:w-[60%] relative min-h-[16rem] sm:min-h-[22rem] lg:min-h-[28rem] bg-[#D9D9D933] rounded-[18px] overflow-hidden">
                             <div className="absolute bottom-0 left-0 w-full h-[105%] flex justify-center items-end overflow-hidden pointer-events-none">
                                 <img
-                                    src={Doctor1}
+                                    src={doctorImage}
                                     alt={currentDoctor.name}
                                     className="w-full h-auto max-h-full object-contain object-bottom transform translate-x-4 translate-y-6 sm:translate-x-8 sm:translate-y-8"
                                 />
@@ -55,21 +117,25 @@ const DepartmentDoctors = ({ doctors = [] }) => {
 
                         <div className="w-full lg:w-[40%] p-0 sm:p-2 lg:p-0 flex flex-col gap-3 sm:gap-4">
                             <div className="flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-2">
-                                {departments.map((dept) => (
-                                    <button
-                                        key={dept}
-                                        onClick={() => {
-                                            if (dept === pageDepartment) setCurrentIndex(0);
-                                        }}
-                                        disabled={dept !== pageDepartment}
-                                        className={`px-2.5 sm:px-3 py-1 rounded-[8px] border text-[13px] sm:text-[14px] font-sohne font-medium transition-all duration-300 whitespace-nowrap ${pageDepartment === dept
-                                            ? 'bg-[#19628D] text-white border-[#19628D] cursor-pointer'
-                                            : 'bg-white text-[#19628D] border-[#19628D] cursor-not-allowed'
-                                            }`}
-                                    >
-                                        {dept}
-                                    </button>
-                                ))}
+                                {departments.map((dept) => {
+                                    const isCurrentDepartment = isSameDepartment(pageDepartment, dept);
+
+                                    return (
+                                        <button
+                                            key={dept}
+                                            onClick={() => {
+                                                if (isCurrentDepartment) setCurrentIndex(0);
+                                            }}
+                                            disabled={!isCurrentDepartment}
+                                            className={`px-2.5 sm:px-3 py-1 rounded-[8px] border text-[13px] sm:text-[14px] font-sohne font-medium transition-all duration-300 whitespace-nowrap ${isCurrentDepartment
+                                                ? 'bg-[#19628D] text-white border-[#19628D] cursor-pointer'
+                                                : 'bg-white text-[#19628D] border-[#19628D] cursor-not-allowed'
+                                                }`}
+                                        >
+                                            {dept}
+                                        </button>
+                                    );
+                                })}
                                 <button
                                     onClick={() => navigate('/#our-doctors')}
                                     className="text-[14px] sm:text-[15px] font-bold font-sohne transition-colors ml-0 sm:ml-2 lg:ml-4 whitespace-nowrap text-[#878787] hover:text-[#19628D] cursor-pointer"
@@ -89,11 +155,17 @@ const DepartmentDoctors = ({ doctors = [] }) => {
                                         </span>
                                     ) : null}
                                 </div>
-                                <p className="text-[#111827] font-sohne text-[0.95rem] sm:text-[1rem] mt-1">
-                                    Experience - <span className="font-bold">{doctorExperience || '18+ years'}</span>
-                                    <span className="mx-2">|</span>
-                                    <span className="font-bold italic">{doctorDesignation || 'Senior Consultant'}</span>
-                                </p>
+                                {hasExperience ? (
+                                    <p className="text-[#111827] font-sohne text-[0.95rem] sm:text-[1rem] mt-1">
+                                        Experience - <span className="font-bold">{doctorExperience}</span>
+                                        {doctorDesignation ? <span className="mx-2">|</span> : null}
+                                        {doctorDesignation ? <span className="font-bold italic">{doctorDesignation}</span> : null}
+                                    </p>
+                                ) : doctorDesignation ? (
+                                    <p className="text-[#111827] font-sohne text-[0.95rem] sm:text-[1rem] mt-1">
+                                        <span className="font-bold italic">{doctorDesignation}</span>
+                                    </p>
+                                ) : null}
                                 <p className="text-black font-sohne font-medium text-[1.1rem] sm:text-[1.17rem] leading-tight mt-3 uppercase">
                                     {doctorRole}
                                 </p>

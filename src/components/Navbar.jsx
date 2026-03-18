@@ -38,22 +38,16 @@ const Navbar = () => {
     { name: "Orthopedics", path: "/department/orthopedics" },
     { name: "Urology", path: "/department/urology" },
     { name: "Obstetrics & Gynecology", path: "/department/obstetrics-gynecology" },
-
     { name: "Neurology", path: "/department/neurology" },
     { name: "Nephrology", path: "/department/nephrology" },
     { name: "Gastroenterology", path: "/department/gastroenterology" },
     { name: "Pediatrics", path: "/department/pediatrics" },
     { name: "Dermatology", path: "/department/dermatology" },
     { name: "Endocrinology", path: "/department/endocrinology" },
-
-
-
-
     { name: "Plastics Surgery", path: "/department/plastics" },
     { name: "General Surgery", path: "/department/general-surgery" },
     { name: "Vascular Surgery", path: "/department/vascular-surgery" },
     { name: "Oncology", path: "/department/oncology" },
-
     { name: "ENT", path: "/department/ent" }
   ];
 
