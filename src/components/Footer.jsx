@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="relative z-20 mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 py-5 sm:py-7 md:py-8 px-0">
+    <footer className="py-6 px-4 md:px-6 lg:px-8">
       <div className="w-full max-w-[1800px] mx-auto">
         {/* Card container to match reference footer */}
         <div
-          className="backdrop-blur-md border-b border-white/30 rounded-xl sm:rounded-2xl px-3 sm:px-5 md:px-8 lg:px-10 py-5 sm:py-6 md:py-8 shadow-sm"
+          className="border bg-[#F1F1F1] border-teal-500 rounded-xl sm:rounded-2xl px-3 sm:px-5 md:px-8 lg:px-10 py-5 sm:py-6 md:py-8 shadow-sm"
           style={{ backgroundColor: '#D9D9D933' }}
         >
           <div className="flex flex-col md:flex-row md:items-start gap-7 sm:gap-8 md:gap-10 lg:gap-16">
             {/* Brand Section */}
-            <div className="md:w-1/3 lg:w-1/4 space-y-3 sm:space-y-4 pt-1 sm:pt-3 md:pt-8">
-              <div className="flex items-center justify-center md:justify-start gap-3">
+ <div className="md:w-1/3 lg:w-1/4 space-y-4 pt-8">
+              <div className="flex items-center gap-3">
                 <div className="w-14 h-14 rounded-lg flex items-center justify-center">
                   <img src={image} alt="logo" className='w-14 h-14' />
                 </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-[15px] sm:text-[16px] md:text-[17px] font-sohne font-normal text-[#006492] leading-snug mt-6 sm:mt-8 md:mt-10 text-center md:text-left">
+             <p className="text-[17px] font-sohne font-normal text-[#006492] leading-tight mt-10">
                 Welcome to Atreum! We're South Bangalore&apos;s first and premier
                 multi-specialty facility that offers comprehensive care.
               </p>
@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="hidden md:block w-px bg-gray-500 self-stretch" />
 
             {/* Right side columns */}
-            <div className="flex-1 grid grid-cols-2 lg:grid-cols-5 gap-x-4 sm:gap-x-6 gap-y-6">
+    <div className="flex-1 grid grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-6">
               {/* Clinical Specialities */}
               <div>
                 <h4 className="text-base font-semibold text-gray-900 mb-3">

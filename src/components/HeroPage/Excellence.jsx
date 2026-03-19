@@ -157,7 +157,7 @@ const Excellence = () => {
                         <div 
                             key={item.id} 
                             onClick={() => navigate(`/department/${item.slug}`)}
-                            className="bg-[#F9F9F9] rounded-2xl px-3 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5 flex flex-row justify-between items-center gap-3 sm:gap-4 w-full min-h-[11rem] sm:min-h-[11.5rem] lg:min-h-[12.5rem] cursor-pointer hover:bg-gray-50 hover:shadow-sm transition-all duration-300"
+                            className="bg-[#F9F9F9] rounded-2xl px-3 py-2 sm:px-4 sm:py-4 md:px-5 md:py-5 flex flex-row justify-between items-center gap-3 sm:gap-4 w-full min-h-[11rem] sm:min-h-[11.5rem] lg:min-h-[12.5rem] cursor-pointer hover:bg-gray-50 hover:shadow-sm transition-all duration-300"
                         >
                             <div className="flex flex-col flex-1 min-w-0">
                                 <h3 className="font-canela font-bold text-[19px] sm:text-[21px] md:text-[23px] lg:text-[26px] leading-[115%] tracking-normal text-[#19628D] mb-1 sm:mb-2 md:mb-3">

@@ -68,6 +68,14 @@
     font-style: italic;
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'Canela Text Trial';
+    src: url('/fonts/CanelaText-Light-Trial.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
 }
 
 @layer utilities {

@@ -144,7 +144,8 @@ const Navbar = () => {
             {/* Other Navigation Links */}
             {[
               { name: "Doctors", path: "/doctors" },
-              { name: "Packages", path: "#" }
+              { name: "Packages", path: "#" },  
+              { name: "About Us", path: "/about" }
             ].map((item) => (
               <a
                 key={item.name}
@@ -239,7 +240,8 @@ const Navbar = () => {
               {/* Other Menu Items */}
               {[
                 { name: "Doctors", path: "#doctor-specialists" },
-                { name: "Packages", path: "#" }
+                { name: "Packages", path: "#" },
+                { name: "About Us", path: "/about" }
               ].map((item) => (
                 <li key={item.name}>
                   <a

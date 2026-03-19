@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import SpecialtyPage from './pages/SpecialtyPage';
 import DoctorsPages from './components/DoctorsPages';
+import AboutPage from './pages/AboutPage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path='/' element={<LandingPage />} />
             <Route path='/department/:slug' element={<SpecialtyPage />} />
             <Route path='/doctors' element={<DoctorsPages />} />
+            <Route path='/about' element={<AboutPage />} />
             {/* <Route path='/orthopedics' element={<Navigate to="/department/orthopedics" replace />} /> */}
           </Routes>
         </div>
