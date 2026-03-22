@@ -43,12 +43,12 @@ const AboutDoctor = () => {
                     <img
                         src={image}
                         alt="Dr. Harish Kumar"
-                        className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[360px] xl:w-[420px] h-auto object-contain lg:translate-x-0 xl:translate-x-0 translate-y-[2px] filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] scale-100 lg:scale-[1.05] origin-bottom"
+                        className="w-[280px] sm:w-[350px] md:w-[400px] lg:w-[380px] xl:w-[440px] h-auto object-contain mx-auto lg:mx-0 lg:translate-x-0 xl:translate-x-0 translate-y-[1px] filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] scale-100 lg:scale-[1.05] origin-bottom"
                     />
                 </div>
 
                 {/* 2px Horizontal line strictly touching the doctor's base - moved up by changing bottom value */}
-                <div className="absolute bottom-6 sm:bottom-8 lg:bottom-16 left-0 w-full px-6 sm:px-8 md:px-10 lg:px-16">
+                <div className="absolute bottom-[52px] sm:bottom-16 lg:bottom-16 left-0 w-full px-6 sm:px-8 md:px-10 lg:px-16">
                     <div className="w-full h-[2px] bg-[#FFFFFF] rounded-full"></div>
                 </div>
             </div>
